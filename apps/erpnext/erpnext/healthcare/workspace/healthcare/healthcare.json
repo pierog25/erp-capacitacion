@@ -1,0 +1,144 @@
+{
+ "category": "Domains",
+ "charts": [],
+ "charts_label": "",
+ "creation": "2020-03-02 17:23:17.919682",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "icon": "healthcare",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Healthcare",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Maestros",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Paciente",
+   "link_to": "Patient",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Registros e historia",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Descanso Medico",
+   "link_to": "Apartado Descanso Medico",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Historia Clinica",
+   "link_to": "Historia Clinica",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reportes de Stock",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Mayor de Inventarios",
+   "link_to": "Stock Ledger",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Balance de Inventarios",
+   "link_to": "Stock Balance",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Resumen de Existencia",
+   "link_to": "stock-balance",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2023-08-02 17:04:06.286063",
+ "modified_by": "bryansaune@overskull.pe",
+ "module": "Healthcare",
+ "name": "Healthcare",
+ "onboarding": "Healthcare",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "restrict_to_domain": "Healthcare",
+ "shortcuts": [
+  {
+   "doc_view": "",
+   "label": "Paciente",
+   "link_to": "Patient",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Examenes Emo",
+   "link_to": "EXAMENES EMO",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Triaje Postulante",
+   "link_to": "Triaje de Postulante 2",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Registro de Atenciones",
+   "link_to": "Registro de Atenciones",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Descanso Medico",
+   "link_to": "Apartado Descanso Medico",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Historia Clinica",
+   "link_to": "Historia Clinica",
+   "type": "DocType"
+  }
+ ]
+}

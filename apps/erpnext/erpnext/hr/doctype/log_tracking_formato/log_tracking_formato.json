@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "creation": "2023-07-17 17:09:42.982106",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tipo",
+  "section_break_2",
+  "payload",
+  "column_break_4",
+  "response",
+  "formato"
+ ],
+ "fields": [
+  {
+   "fieldname": "tipo",
+   "fieldtype": "Select",
+   "label": "tipo",
+   "options": "insert\nupdate\nlist"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "payload",
+   "fieldtype": "Small Text",
+   "label": "payload"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "response",
+   "fieldtype": "Small Text",
+   "label": "response"
+  },
+  {
+   "fieldname": "formato",
+   "fieldtype": "Select",
+   "label": "Formato",
+   "options": "\nHoras Extras\nHoras Nocturnas"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-21 20:25:04.662601",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Log Tracking Formato",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-05-10 17:30:11.855360",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "banco",
+  "data_2",
+  "data_3",
+  "lft",
+  "rgt",
+  "is_group",
+  "old_parent",
+  "parent_shalom_empresarila"
+ ],
+ "fields": [
+  {
+   "fieldname": "banco",
+   "fieldtype": "Select",
+   "label": "Banco",
+   "options": "BBVA"
+  },
+  {
+   "fieldname": "data_2",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "data_3",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "label": "Old Parent",
+   "options": "Shalom Empresarila"
+  },
+  {
+   "fieldname": "parent_shalom_empresarila",
+   "fieldtype": "Link",
+   "label": "Parent Shalom Empresarila",
+   "options": "Shalom Empresarila"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "CTA-CONTABLE-"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_tree": 1,
+ "links": [],
+ "modified": "2023-09-21 20:19:24.092046",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Shalom Empresarila",
+ "nsm_parent_field": "parent_shalom_empresarila",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

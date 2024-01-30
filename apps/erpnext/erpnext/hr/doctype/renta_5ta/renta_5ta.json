@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2022-03-07 14:06:03.654700",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "mes",
+  "uit",
+  "column_break_4",
+  "ano",
+  "traer_datos",
+  "section_break_7",
+  "tabla_renta",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Serie",
+   "options": "Renta-5TA-"
+  },
+  {
+   "fieldname": "mes",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Mes",
+   "options": "\nEnero\nFebrero\nMarzo\nAbril\nMayo\nJunio\nJulio\nAgosto\nSetiembre\nOctubre\nNoviembre\nDiciembre",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ano",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "A\u00f1o",
+   "options": "\n2022\n2023\n2024\n2025",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "tabla_renta",
+   "fieldtype": "Table",
+   "label": "Tabla Empleados",
+   "options": "tabla_5ta",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Renta 5TA",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "uit",
+   "fieldtype": "Currency",
+   "label": "UIT",
+   "reqd": 1
+  },
+  {
+   "fieldname": "traer_datos",
+   "fieldtype": "Button",
+   "label": "Traer Datos "
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-10-13 09:11:44.340684",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Renta 5TA",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

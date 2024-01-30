@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "creation": "2023-08-04 17:03:50.139027",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "n_mes",
+  "mes_ano",
+  "h_basico",
+  "asig_familiar",
+  "total_remuneraciones"
+ ],
+ "fields": [
+  {
+   "fieldname": "n_mes",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "N Mes"
+  },
+  {
+   "fieldname": "mes_ano",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mes Ano"
+  },
+  {
+   "fieldname": "h_basico",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "H Basico",
+   "precision": "2"
+  },
+  {
+   "fieldname": "asig_familiar",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Asig Familiar",
+   "precision": "2"
+  },
+  {
+   "fieldname": "total_remuneraciones",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Remuneraciones",
+   "precision": "2"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-21 21:25:00.430333",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Conceptos Remunerativos Subsidio",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

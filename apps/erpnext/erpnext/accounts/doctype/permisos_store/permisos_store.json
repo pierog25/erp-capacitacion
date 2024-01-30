@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "creation": "2023-01-04 13:29:57.410537",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "usuario",
+  "perfil_de_pos",
+  "column_break_3",
+  "documento",
+  "sucursal",
+  "almacen",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee.passport_number",
+   "fieldname": "documento",
+   "fieldtype": "Data",
+   "label": "Documento"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.user_id",
+   "fieldname": "usuario",
+   "fieldtype": "Data",
+   "label": "Usuario"
+  },
+  {
+   "fetch_from": "employee.branch",
+   "fieldname": "sucursal",
+   "fieldtype": "Data",
+   "label": "Sucursal"
+  },
+  {
+   "fieldname": "perfil_de_pos",
+   "fieldtype": "Link",
+   "label": "Perfil de POS",
+   "options": "POS Profile"
+  },
+  {
+   "fieldname": "almacen",
+   "fieldtype": "Link",
+   "label": "Almacen",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Permisos Store",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-01-04 13:45:57.482605",
+ "modified_by": "Administrator",
+ "module": "Accounts",
+ "name": "Permisos Store",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

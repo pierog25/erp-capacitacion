@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "creation": "2023-01-20 16:48:32.230125",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "sucursal",
+  "log_type",
+  "column_break_4",
+  "time",
+  "departamento"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "sucursal",
+   "fieldtype": "Link",
+   "label": "sucursal",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "log_type",
+   "fieldtype": "Select",
+   "label": "log_type",
+   "options": "\nEntrada\nSalida\nSalida Refrigerio\nLlegada Refrigerio"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Datetime",
+   "label": "time"
+  },
+  {
+   "fieldname": "departamento",
+   "fieldtype": "Link",
+   "label": "Departamento",
+   "options": "Department"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-21 20:19:18.726448",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Historial de Marcaciones",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

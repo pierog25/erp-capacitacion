@@ -1,0 +1,509 @@
+{
+ "actions": [],
+ "autoname": "SHE-REG-HSE-.#####",
+ "creation": "2023-06-10 00:59:06.432654",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "codigo",
+  "version",
+  "aprobado",
+  "datos_del_empleador_principal_section",
+  "denominacion_social",
+  "ruc",
+  "domicilio",
+  "column_break_7",
+  "n_trabajadores_en_el_centro_laboral",
+  "tipo_de_actividad_economica",
+  "section_break_18",
+  "n_trabajadores_afiliados_al_sctr",
+  "column_break_13",
+  "n_trabajadores_no_afiliados_al_sctr",
+  "column_break_15",
+  "nombre_de_la_aseguradora",
+  "datos_del_empleador_de_intermediacion_section",
+  "razon_social_o_denominacion_social",
+  "domicilio_del_tercero",
+  "ruc_del_tercero",
+  "column_break_21",
+  "tipo_de_actividad_economica_del_tercero",
+  "n_trabajadores_en_el_centro_laboral_del_tercero",
+  "sctr_del_empleador_tercero_section",
+  "n_trabajadores_afiliados_al_sctr_t",
+  "column_break_26",
+  "n_trabajadores_no_afiliados_al_sctr_t",
+  "column_break_28",
+  "nombre_de_la_aseguradora_t",
+  "datos_del_trabajador_section",
+  "empleado",
+  "apellidos_y_nombres_del_trabajador_accidentado",
+  "n_dni_ce",
+  "edad",
+  "column_break_35",
+  "departamento",
+  "puesto_de_trabajo",
+  "antiguedad_en_el_empleo",
+  "sexo",
+  "column_break_40",
+  "turno",
+  "tipo_de_contrato",
+  "tiempo_de_experiencia_en_el_puesto_de_trabajo",
+  "n_horas_trabajadas",
+  "investigacion_del_accidente_de_trabajo_section",
+  "fecha_de_ocurrencia_del_accidente",
+  "hora_de_ocurrencia_del_accidente",
+  "fecha_de_inicio_de_investigacion",
+  "column_break_49",
+  "lugar_exacto_donde_ocurrio_el_accidente",
+  "gravedad_del_accidente_de_trabajo",
+  "grado_del_accidente_incapacitante",
+  "column_break_53",
+  "dias_de_descanso_medico",
+  "n_de_trabajadores_afectados",
+  "amended_from",
+  "parte_del_cuerpo_lesionado",
+  "descripcion_del_accidente_de_trabajo_section",
+  "text_editor_51",
+  "descripcion_del_accidente",
+  "section_break_53",
+  "medidas_correctivas",
+  "responsables_del_registro_section",
+  "1er_responsable",
+  "nombre_del_1er_responsable",
+  "cargo_del_1er_responsable",
+  "fecha_1er",
+  "column_break_68",
+  "2do_responsable",
+  "nombre_del_2do_responsable",
+  "cargo_del_2do_responsable",
+  "fecha_2do"
+ ],
+ "fields": [
+  {
+   "default": "SHA-REG-HSE-006",
+   "fieldname": "codigo",
+   "fieldtype": "Data",
+   "label": "Codigo",
+   "read_only": 1
+  },
+  {
+   "default": "01",
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Version"
+  },
+  {
+   "fieldname": "aprobado",
+   "fieldtype": "Date",
+   "label": "Aprobado",
+   "read_only": 1
+  },
+  {
+   "fieldname": "datos_del_empleador_principal_section",
+   "fieldtype": "Section Break",
+   "hide_border": 1,
+   "label": "Datos del Empleador Principal"
+  },
+  {
+   "fieldname": "denominacion_social",
+   "fieldtype": "Link",
+   "label": "Denominacion social",
+   "options": "Company"
+  },
+  {
+   "fieldname": "n_trabajadores_en_el_centro_laboral",
+   "fieldtype": "Data",
+   "label": "N\u00b0 Trabajadores en el Centro Laboral"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "denominacion_social.ruc",
+   "fieldname": "ruc",
+   "fieldtype": "Data",
+   "label": "RUC"
+  },
+  {
+   "fetch_from": "denominacion_social.domain",
+   "fieldname": "tipo_de_actividad_economica",
+   "fieldtype": "Data",
+   "label": "Tipo de Actividad Economica"
+  },
+  {
+   "fetch_from": "denominacion_social.direccion",
+   "fieldname": "domicilio",
+   "fieldtype": "Data",
+   "label": "Domicilio"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Registro de accidentes de trabajo",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "description": "Completar s\u00f3lo si contrata servicios de intermediaci\u00f3n o tercerizaci\u00f3n",
+   "fieldname": "datos_del_empleador_de_intermediacion_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del Empleador de Intermediacion"
+  },
+  {
+   "fieldname": "razon_social_o_denominacion_social",
+   "fieldtype": "Link",
+   "label": "Razon Social o Denominacion Social",
+   "options": "Supplier"
+  },
+  {
+   "fetch_from": "razon_social_o_denominacion_social.direcci\u00f3n",
+   "fieldname": "domicilio_del_tercero",
+   "fieldtype": "Data",
+   "label": "Domicilio del tercero"
+  },
+  {
+   "fetch_from": "razon_social_o_denominacion_social.tax_id",
+   "fieldname": "ruc_del_tercero",
+   "fieldtype": "Data",
+   "label": "RUC del Tercero"
+  },
+  {
+   "fieldname": "tipo_de_actividad_economica_del_tercero",
+   "fieldtype": "Data",
+   "label": "Tipo de Actividad Economica del Tercero"
+  },
+  {
+   "fieldname": "n_trabajadores_en_el_centro_laboral_del_tercero",
+   "fieldtype": "Data",
+   "label": "N\u00b0 Trabajadores en el Centro Laboral del Tercero"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "description": "Completar s\u00f3lo en caso que las actividades del empleador sean consideradas de alto riesgo",
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break",
+   "label": "SCTR del Empleador Principal"
+  },
+  {
+   "fieldname": "n_trabajadores_afiliados_al_sctr",
+   "fieldtype": "Data",
+   "label": "N\u00b0 trabajadores afiliados al SCTR"
+  },
+  {
+   "fieldname": "n_trabajadores_no_afiliados_al_sctr",
+   "fieldtype": "Data",
+   "label": "N\u00b0 Trabajadores no afiliados al SCTR"
+  },
+  {
+   "fieldname": "nombre_de_la_aseguradora",
+   "fieldtype": "Data",
+   "label": "Nombre de la Aseguradora"
+  },
+  {
+   "collapsible": 1,
+   "description": "Completar s\u00f3lo en caso que las actividades del empleador sean consideradas de alto riesgo",
+   "fieldname": "sctr_del_empleador_tercero_section",
+   "fieldtype": "Section Break",
+   "label": "SCTR del Empleador Tercero"
+  },
+  {
+   "fieldname": "n_trabajadores_afiliados_al_sctr_t",
+   "fieldtype": "Data",
+   "label": "N\u00b0 trabajadores afiliados al SCTR Tercero"
+  },
+  {
+   "fieldname": "n_trabajadores_no_afiliados_al_sctr_t",
+   "fieldtype": "Data",
+   "label": "N\u00b0 Trabajadores no afiliados al SCTR Tercer"
+  },
+  {
+   "fieldname": "nombre_de_la_aseguradora_t",
+   "fieldtype": "Data",
+   "label": "Nombre de la Aseguradora Tercero"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "datos_del_trabajador_section",
+   "fieldtype": "Section Break",
+   "hide_border": 1,
+   "label": "Datos del Trabajador"
+  },
+  {
+   "fieldname": "empleado",
+   "fieldtype": "Link",
+   "label": "Empleado",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "empleado.nombre_completo",
+   "fieldname": "apellidos_y_nombres_del_trabajador_accidentado",
+   "fieldtype": "Data",
+   "label": "Apellidos y Nombres del Trabajador Accidentado"
+  },
+  {
+   "fetch_from": "empleado.passport_number",
+   "fieldname": "n_dni_ce",
+   "fieldtype": "Data",
+   "label": "N\u00b0 DNI/CE"
+  },
+  {
+   "fieldname": "edad",
+   "fieldtype": "Data",
+   "label": "Edad"
+  },
+  {
+   "fetch_from": "empleado.department",
+   "fieldname": "departamento",
+   "fieldtype": "Link",
+   "label": "Departamento",
+   "options": "Department"
+  },
+  {
+   "fetch_from": "empleado.designation",
+   "fieldname": "puesto_de_trabajo",
+   "fieldtype": "Link",
+   "label": "Puesto de Trabajo",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "antiguedad_en_el_empleo",
+   "fieldtype": "Data",
+   "label": "Antiguedad en el empleo"
+  },
+  {
+   "fetch_from": "empleado.gender",
+   "fieldname": "sexo",
+   "fieldtype": "Data",
+   "label": "Sexo"
+  },
+  {
+   "fetch_from": "empleado.tipo_de_jornada",
+   "fieldname": "turno",
+   "fieldtype": "Data",
+   "label": "Turno"
+  },
+  {
+   "fetch_from": "empleado.employment_type",
+   "fieldname": "tipo_de_contrato",
+   "fieldtype": "Data",
+   "label": "Tipo de Contrato"
+  },
+  {
+   "fieldname": "tiempo_de_experiencia_en_el_puesto_de_trabajo",
+   "fieldtype": "Data",
+   "label": "Tiempo de experiencia en el Puesto de Trabajo"
+  },
+  {
+   "description": "N\u00b0 de Horas Trabajadas en la Jornada Laboral (Antes del accidente)",
+   "fieldname": "n_horas_trabajadas",
+   "fieldtype": "Data",
+   "label": "N\u00b0 Horas Trabajadas"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "investigacion_del_accidente_de_trabajo_section",
+   "fieldtype": "Section Break",
+   "label": "Investigacion del accidente de trabajo"
+  },
+  {
+   "fieldname": "fecha_de_ocurrencia_del_accidente",
+   "fieldtype": "Date",
+   "label": "Fecha de Ocurrencia del Accidente"
+  },
+  {
+   "fieldname": "hora_de_ocurrencia_del_accidente",
+   "fieldtype": "Time",
+   "label": "Hora de Ocurrencia del Accidente"
+  },
+  {
+   "fieldname": "fecha_de_inicio_de_investigacion",
+   "fieldtype": "Date",
+   "label": "Fecha de Inicio de Investigacion"
+  },
+  {
+   "fieldname": "lugar_exacto_donde_ocurrio_el_accidente",
+   "fieldtype": "Data",
+   "label": "Lugar Exacto donde Ocurrio el Accidente"
+  },
+  {
+   "description": "Marcar con (X) Gravedad del Accidente de Trabajo",
+   "fieldname": "gravedad_del_accidente_de_trabajo",
+   "fieldtype": "Select",
+   "label": "Gravedad del Accidente de Trabajo",
+   "options": "Accidente Leve\nAccidente Incapacitante\nMortal"
+  },
+  {
+   "description": "Marcar con (X) Grado del Accidente Incapacitante (De ser el caso)",
+   "fieldname": "grado_del_accidente_incapacitante",
+   "fieldtype": "Select",
+   "label": "Grado del Accidente Incapacitante",
+   "options": "Total Temporal\nParcial Temporal\nParcial Permanente"
+  },
+  {
+   "fieldname": "dias_de_descanso_medico",
+   "fieldtype": "Data",
+   "label": "Dias de Descanso Medico"
+  },
+  {
+   "fieldname": "n_de_trabajadores_afectados",
+   "fieldtype": "Data",
+   "label": "N de Trabajadores Afectados"
+  },
+  {
+   "description": "Describir Parte del Cuerpo Lesionado (De ser el caso)",
+   "fieldname": "parte_del_cuerpo_lesionado",
+   "fieldtype": "Small Text",
+   "label": "Parte del Cuerpo Lesionado"
+  },
+  {
+   "collapsible": 1,
+   "description": "Describa solo los hechos, no escriba informacion subjetiva que no pueda ser comprobada.",
+   "fieldname": "descripcion_del_accidente_de_trabajo_section",
+   "fieldtype": "Section Break",
+   "label": "Descripcion del Accidente de Trabajo"
+  },
+  {
+   "fieldname": "descripcion_del_accidente",
+   "fieldtype": "Small Text",
+   "label": "Descripcion del Accidente"
+  },
+  {
+   "default": "Adjuntar\n-Declaraci\u00f3n del afectado sobre el accidente de trabajo.\n-Declaraci\u00f3n de testigos (de ser el caso).\n-Procedimientos, planos, registros, entre otros que ayuden a la investigaci\u00f3n de ser el caso.",
+   "fieldname": "text_editor_51",
+   "fieldtype": "Text Editor",
+   "read_only": 1
+  },
+  {
+   "fieldname": "responsables_del_registro_section",
+   "fieldtype": "Section Break",
+   "label": "Responsables del Registro"
+  },
+  {
+   "fieldname": "1er_responsable",
+   "fieldtype": "Link",
+   "label": "1er Responsable",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "1er_responsable.nombre_completo",
+   "fieldname": "nombre_del_1er_responsable",
+   "fieldtype": "Data",
+   "label": "Nombre"
+  },
+  {
+   "fieldname": "2do_responsable",
+   "fieldtype": "Link",
+   "label": "2do Responsable",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "2do_responsable.nombre_completo",
+   "fieldname": "nombre_del_2do_responsable",
+   "fieldtype": "Data",
+   "label": "Nombre"
+  },
+  {
+   "fetch_from": "1er_responsable.designation",
+   "fieldname": "cargo_del_1er_responsable",
+   "fieldtype": "Data",
+   "label": "Cargo"
+  },
+  {
+   "fieldname": "fecha_1er",
+   "fieldtype": "Date",
+   "label": "Fecha"
+  },
+  {
+   "fetch_from": "2do_responsable.designation",
+   "fieldname": "cargo_del_2do_responsable",
+   "fieldtype": "Data",
+   "label": "Cargo"
+  },
+  {
+   "fieldname": "fecha_2do",
+   "fieldtype": "Date",
+   "label": "Fecha"
+  },
+  {
+   "fieldname": "section_break_53",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Insertar tantos reglones como sean necesarios.",
+   "fieldname": "medidas_correctivas",
+   "fieldtype": "Table",
+   "label": "Medidas Correctivas",
+   "options": "Medidas Correctivas"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_40",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_49",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_53",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_68",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-09-21 20:19:29.097804",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Registro de accidentes de trabajo",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

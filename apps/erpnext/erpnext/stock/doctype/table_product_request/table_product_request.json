@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "creation": "2023-04-20 15:30:34.088010",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "branch_erp",
+  "human_resources_area",
+  "designation_erp",
+  "item_attribute_erp",
+  "item_attribute_values_erp"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "branch_erp",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Agencia",
+   "options": "Branch"
+  },
+  {
+   "columns": 2,
+   "fieldname": "human_resources_area",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Zona RH",
+   "options": "Zona"
+  },
+  {
+   "columns": 2,
+   "fieldname": "designation_erp",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Producto",
+   "options": "Item"
+  },
+  {
+   "columns": 2,
+   "fieldname": "item_attribute_erp",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Atributo",
+   "options": "Item Attribute"
+  },
+  {
+   "columns": 2,
+   "fieldname": "item_attribute_values_erp",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Valor de Atributo"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-04-20 15:39:57.617878",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "table_product_request",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

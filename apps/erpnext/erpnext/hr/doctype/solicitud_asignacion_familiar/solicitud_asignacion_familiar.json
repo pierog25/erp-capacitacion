@@ -1,0 +1,243 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-04-27 15:46:46.094901",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "datos_de_empleado_section",
+  "id_empleado",
+  "nombre",
+  "puesto",
+  "column_break_19",
+  "agencia",
+  "zona_nacional",
+  "fecha_ingreso",
+  "column_break_7",
+  "id_agencia",
+  "departamento",
+  "column_break_20",
+  "dni",
+  "zona_rh",
+  "datos_del_hijo_section",
+  "dni_hijo",
+  "edad_hijo",
+  "afiliacion_al_essalud",
+  "adjuntar_documento",
+  "section_break_18",
+  "nombre_hijo",
+  "dni_doc",
+  "column_break_22",
+  "fecha_hijo",
+  "ver_documento_dni",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "datos_de_empleado_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de Empleado"
+  },
+  {
+   "fieldname": "id_empleado",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Empleado",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "id_empleado.nombre_completo",
+   "fieldname": "nombre",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Nombre Completo",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "id_empleado.designation",
+   "fieldname": "puesto",
+   "fieldtype": "Data",
+   "label": "Puesto",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "id_empleado.branch",
+   "fieldname": "agencia",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Agencia",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "agencia.zona_nacional",
+   "fieldname": "zona_nacional",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Zona Nacional",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "id_empleado.fecha_de_ingreso_real",
+   "fieldname": "fecha_ingreso",
+   "fieldtype": "Date",
+   "label": "Fecha de Ingreso",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "agencia.ideentificador",
+   "fieldname": "id_agencia",
+   "fieldtype": "Data",
+   "label": "ID Agencia",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "id_empleado.department",
+   "fieldname": "departamento",
+   "fieldtype": "Data",
+   "label": "Departamento",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "id_empleado.passport_number",
+   "fieldname": "dni",
+   "fieldtype": "Data",
+   "label": "N\u00famero de Documeto",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "agencia.zona_recursos_humanos",
+   "fieldname": "zona_rh",
+   "fieldtype": "Data",
+   "label": "Zona RRHH",
+   "read_only": 1
+  },
+  {
+   "fieldname": "datos_del_hijo_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del Hijo"
+  },
+  {
+   "fieldname": "dni_hijo",
+   "fieldtype": "Data",
+   "label": "DNI"
+  },
+  {
+   "fieldname": "edad_hijo",
+   "fieldtype": "Data",
+   "label": "Edad"
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nombre_hijo",
+   "fieldtype": "Data",
+   "label": "Nombre Completo"
+  },
+  {
+   "fieldname": "dni_doc",
+   "fieldtype": "Attach",
+   "label": "Documento DNI"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fecha_hijo",
+   "fieldtype": "Data",
+   "label": "Fecha de Nacimiento"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Solicitud Asignacion Familiar",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Solicitud Asignacion Familiar",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "naming_series",
+   "options": "SAF-"
+  },
+  {
+   "fieldname": "ver_documento_dni",
+   "fieldtype": "Button",
+   "label": "Ver Documento DNI"
+  },
+  {
+   "fieldname": "afiliacion_al_essalud",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Afiliacion al Essalud",
+   "options": "\nSi\nNo"
+  },
+  {
+   "description": "Este documento lo adjunta RRHH, el cual realiza la afiliaci\u00f3n del menor.",
+   "fieldname": "adjuntar_documento",
+   "fieldtype": "Attach",
+   "label": "Adjuntar Documento",
+   "read_only_depends_on": "eval:doc.afiliacion_al_essalud != 'Si'"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-09-21 20:19:31.827801",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Solicitud Asignacion Familiar",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "nombre"
+}

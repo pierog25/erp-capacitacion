@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "creation": "2023-02-10 11:09:35.853854",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "asd",
+  "id_de_so",
+  "observacion",
+  "recomendaciones"
+ ],
+ "fields": [
+  {
+   "fieldname": "id_de_so",
+   "fieldtype": "Data",
+   "label": "ID DE SO"
+  },
+  {
+   "fieldname": "observacion",
+   "fieldtype": "Long Text",
+   "label": "OBSERVACION"
+  },
+  {
+   "columns": 1,
+   "fieldname": "recomendaciones",
+   "fieldtype": "Small Text",
+   "label": "RECOMENDACIONES",
+   "width": "10"
+  },
+  {
+   "fieldname": "asd",
+   "fieldtype": "Button",
+   "label": "asd"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-21 20:19:19.856693",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "PUENTE",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

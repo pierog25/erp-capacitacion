@@ -1,0 +1,22 @@
+{
+ "creation": "2023-09-01 11:24:43.815413",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "filters_json": "{\"date_init\":\"2023-09-01\",\"date_end\":\"2023-09-30\"}",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "label": "Suma programacion",
+ "modified": "2023-09-01 11:28:21.464154",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Suma programacion",
+ "owner": "Administrator",
+ "report_field": "total_programaciones",
+ "report_function": "Sum",
+ "report_name": "Programacion Supervisores",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Report"
+}

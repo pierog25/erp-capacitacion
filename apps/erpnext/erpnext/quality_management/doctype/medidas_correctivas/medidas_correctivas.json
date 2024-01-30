@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "creation": "2023-06-10 02:25:58.081378",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "descripcion_de_la_medida_correctiva",
+  "responsable",
+  "nombre_del_responsable",
+  "fecha_de_ejecucion",
+  "estado"
+ ],
+ "fields": [
+  {
+   "fieldname": "descripcion_de_la_medida_correctiva",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Descripcion de la Medida Correctiva"
+  },
+  {
+   "fieldname": "responsable",
+   "fieldtype": "Link",
+   "label": "Responsable",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "nombre_del_responsable",
+   "fieldtype": "Data",
+   "label": "Nombre del Responsable"
+  },
+  {
+   "fieldname": "fecha_de_ejecucion",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Fecha de Ejecucion"
+  },
+  {
+   "description": "Completar en la fecha de ejecuci\u00f3n propuesta, el ESTADO de la implementaci\u00f3n de la medida correctiva",
+   "fieldname": "estado",
+   "fieldtype": "Select",
+   "label": "Estado",
+   "options": "Realizada\nPendiente\nEn Ejecucion"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-21 21:24:56.052052",
+ "modified_by": "Administrator",
+ "module": "Quality Management",
+ "name": "Medidas Correctivas",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

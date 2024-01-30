@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-05-15 14:41:43.932786",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "lft",
+  "rgt",
+  "is_group",
+  "old_parent",
+  "parent_cuentas_contables",
+  "amended_from",
+  "arbol"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "CTA-CONTABLE-"
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "label": "Old Parent",
+   "options": "Cuentas Contables"
+  },
+  {
+   "fieldname": "parent_cuentas_contables",
+   "fieldtype": "Link",
+   "label": "Parent Cuentas Contables",
+   "options": "Cuentas Contables"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Cuentas Contables",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "arbol",
+   "fieldtype": "Table",
+   "label": "Arbol",
+   "options": "Tabla Cuentas Contables"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "is_tree": 1,
+ "links": [],
+ "modified": "2023-09-21 20:19:24.272315",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Cuentas Contables",
+ "nsm_parent_field": "parent_cuentas_contables",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

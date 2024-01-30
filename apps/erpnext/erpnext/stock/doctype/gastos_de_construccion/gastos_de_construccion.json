@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "autoname": "naming_series",
+ "creation": "2023-01-13 09:53:32.868133",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "datos_de_la_construccion_section",
+  "id_presupuesto",
+  "fecha",
+  "column_break_3",
+  "area",
+  "presupuestado",
+  "column_break_5",
+  "id_area",
+  "pagado",
+  "column_break_7",
+  "estado_del_documento",
+  "datos_de_pagos_section",
+  "detalle_de_pagos_section",
+  "table_13"
+ ],
+ "fields": [
+  {
+   "fieldname": "id_presupuesto",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ID Presupuesto",
+   "unique": 1
+  },
+  {
+   "fieldname": "datos_de_la_construccion_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de la Construccion"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Link",
+   "label": "\u00c1rea",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "area.ideentificador",
+   "fieldname": "id_area",
+   "fieldtype": "Data",
+   "label": "ID Area"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "En Proceso",
+   "fieldname": "estado_del_documento",
+   "fieldtype": "Select",
+   "label": "Estado del Documento",
+   "options": "En Proceso\nTerminado"
+  },
+  {
+   "fieldname": "fecha",
+   "fieldtype": "Date",
+   "label": "Fecha"
+  },
+  {
+   "fieldname": "presupuestado",
+   "fieldtype": "Currency",
+   "label": "Presupuestado",
+   "precision": "2"
+  },
+  {
+   "fieldname": "pagado",
+   "fieldtype": "Currency",
+   "label": "Pagado",
+   "precision": "2"
+  },
+  {
+   "fieldname": "datos_de_pagos_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de Pagos"
+  },
+  {
+   "fieldname": "table_13",
+   "fieldtype": "Table",
+   "options": "tabla_pagos_construccion"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "GC-"
+  },
+  {
+   "fieldname": "detalle_de_pagos_section",
+   "fieldtype": "Section Break",
+   "label": "Detalle de Pagos"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-01-20 14:27:24.125897",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "Gastos de Construccion",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

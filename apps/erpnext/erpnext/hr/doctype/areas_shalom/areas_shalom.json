@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "autoname": "field:nombre",
+ "creation": "2023-07-13 10:34:22.134836",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nombre",
+  "departamento"
+ ],
+ "fields": [
+  {
+   "fieldname": "nombre",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "departamento",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Departamento",
+   "options": "Department",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-21 20:36:44.730047",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Areas Shalom",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "nombre"
+}

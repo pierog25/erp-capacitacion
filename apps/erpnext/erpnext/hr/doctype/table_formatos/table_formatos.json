@@ -1,0 +1,39 @@
+{
+ "actions": [],
+ "creation": "2022-11-25 14:26:59.529283",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "formatos",
+  "estado"
+ ],
+ "fields": [
+  {
+   "allow_on_submit": 1,
+   "fieldname": "formatos",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Formatos",
+   "read_only": 1
+  },
+  {
+   "fieldname": "estado",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Estado",
+   "options": "\nEnviado\nFaltante"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-21 21:24:45.736157",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "table_formatos",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

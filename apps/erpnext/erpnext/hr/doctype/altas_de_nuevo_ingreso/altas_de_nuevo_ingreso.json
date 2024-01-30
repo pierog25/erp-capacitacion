@@ -1,0 +1,286 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-05-26 14:46:34.076934",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "datos_de_empleado_section",
+  "empleado",
+  "nombre_completo",
+  "puesto",
+  "column_break_6",
+  "agencia",
+  "zona_nacional",
+  "fecha_de_ingreso",
+  "filtro_mes",
+  "column_break_10",
+  "id_angencia",
+  "departamento",
+  "fecha_de_nacimiento",
+  "column_break_13",
+  "numero_de_documento",
+  "zona_rrhh",
+  "tipo_de_empleo",
+  "alta_del_trabajador_section",
+  "alta_archivo",
+  "descargar_alta",
+  "data_20",
+  "subir_alta",
+  "descargar_alta_firmada",
+  "data_21",
+  "subir_alta_1",
+  "descargar_alta_firmada_1",
+  "amended_from",
+  "estados_section",
+  "estado_documento",
+  "column_break_25",
+  "estado_alta",
+  "fecha_validacion",
+  "cambio_de_modalidad"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "ANI-"
+  },
+  {
+   "fieldname": "datos_de_empleado_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de Empleado"
+  },
+  {
+   "fieldname": "empleado",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Empleado",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "empleado.nombre_completo",
+   "fieldname": "nombre_completo",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Nombre Completo",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.designation",
+   "fieldname": "puesto",
+   "fieldtype": "Data",
+   "label": "Puesto",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "empleado.branch",
+   "fieldname": "agencia",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Agencia",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.zona_nacional",
+   "fieldname": "zona_nacional",
+   "fieldtype": "Data",
+   "label": "Zona Nacional",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.fecha_de_ingreso_real",
+   "fieldname": "fecha_de_ingreso",
+   "fieldtype": "Data",
+   "label": "Fecha de Ingreso",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "agencia.ideentificador",
+   "fieldname": "id_angencia",
+   "fieldtype": "Data",
+   "label": "ID Angencia",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.department",
+   "fieldname": "departamento",
+   "fieldtype": "Data",
+   "label": "Departamento",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "empleado.passport_number",
+   "fieldname": "numero_de_documento",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Numero de Documento",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.zona_recursos",
+   "fieldname": "zona_rrhh",
+   "fieldtype": "Data",
+   "label": "Zona RRHH",
+   "read_only": 1
+  },
+  {
+   "fieldname": "alta_del_trabajador_section",
+   "fieldtype": "Section Break",
+   "label": "Alta del Trabajador",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "alta_archivo",
+   "fieldtype": "Attach",
+   "label": "Alta Archivo",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "subir_alta",
+   "fieldtype": "Attach",
+   "label": "Subir Alta Firmada"
+  },
+  {
+   "fieldname": "data_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Altas de Nuevo Ingreso",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "descargar_alta",
+   "fieldtype": "Button",
+   "label": "Descargar Alta"
+  },
+  {
+   "fieldname": "descargar_alta_firmada",
+   "fieldtype": "Button",
+   "label": "Descargar Alta Firmada"
+  },
+  {
+   "fieldname": "estados_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Estados"
+  },
+  {
+   "default": "Borrador",
+   "fieldname": "estado_documento",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Estado",
+   "options": "Borrador\nValidado"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Alta Pendiente RRHH",
+   "fieldname": "estado_alta",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Estado RRHH",
+   "options": "Alta Pendiente RRHH\nAlta Adjuntado RRHH"
+  },
+  {
+   "fieldname": "fecha_validacion",
+   "fieldtype": "Datetime",
+   "hidden": 1,
+   "label": "Fecha Validacion"
+  },
+  {
+   "fetch_from": "empleado.date_of_birth",
+   "fieldname": "fecha_de_nacimiento",
+   "fieldtype": "Data",
+   "label": "Fecha de Nacimiento"
+  },
+  {
+   "fetch_from": "empleado.employment_type",
+   "fieldname": "tipo_de_empleo",
+   "fieldtype": "Data",
+   "label": "Tipo de Empleo"
+  },
+  {
+   "fieldname": "filtro_mes",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Filtro Mes",
+   "options": "\nEnero\nFebrero\nMarzo\nAbril\nMayo\nJunio\nJulio\nAgosto\nSetiembre\nOctubre\nNoviembre\nDiciembre"
+  },
+  {
+   "fieldname": "data_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subir_alta_1",
+   "fieldtype": "Attach",
+   "label": "Subir Alta Firmada 2"
+  },
+  {
+   "fieldname": "descargar_alta_firmada_1",
+   "fieldtype": "Button",
+   "label": "Descargar Alta Firmada 2"
+  },
+  {
+   "default": "0",
+   "fieldname": "cambio_de_modalidad",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Cambio de Modalidad"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-22 03:06:55.288922",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Altas de Nuevo Ingreso",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "nombre_completo"
+}

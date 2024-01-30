@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "autoname": "format:EDU-CA-{YYYY}-{#####}",
+ "beta": 1,
+ "creation": "2018-10-01 17:35:54.391413",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "enrollment",
+  "course",
+  "student",
+  "dni",
+  "content_type",
+  "content",
+  "activity_date",
+  "primer_nombre",
+  "segundo_nombre",
+  "apellidos"
+ ],
+ "fields": [
+  {
+   "fieldname": "enrollment",
+   "fieldtype": "Link",
+   "label": "Course Enrollment",
+   "options": "Course Enrollment",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fetch_from": "enrollment.course",
+   "fieldname": "course",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Course",
+   "read_only": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fetch_from": "enrollment.student",
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Student",
+   "options": "Student",
+   "read_only": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "content_type",
+   "fieldtype": "Select",
+   "label": "Content Type",
+   "options": "\nArticle\nVideo",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "content",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Content",
+   "options": "content_type",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "activity_date",
+   "fieldtype": "Datetime",
+   "label": "Activity Date",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fetch_from": "student.dni",
+   "fieldname": "dni",
+   "fieldtype": "Data",
+   "label": "DNI"
+  },
+  {
+   "fetch_from": "student.first_name",
+   "fieldname": "primer_nombre",
+   "fieldtype": "Data",
+   "label": "Primer Nombre"
+  },
+  {
+   "fetch_from": "student.middle_name",
+   "fieldname": "segundo_nombre",
+   "fieldtype": "Data",
+   "label": "Segundo Nombre"
+  },
+  {
+   "fetch_from": "student.last_name",
+   "fieldname": "apellidos",
+   "fieldtype": "Data",
+   "label": "Apellidos"
+  }
+ ],
+ "links": [],
+ "modified": "2023-09-21 20:57:33.793068",
+ "modified_by": "Administrator",
+ "module": "Education",
+ "name": "Course Activity",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Academics User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "LMS User",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Instructor",
+   "share": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

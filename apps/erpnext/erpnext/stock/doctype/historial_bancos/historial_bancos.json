@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "creation": "2023-05-26 10:16:43.059872",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fecha_inicial",
+  "fecha_final",
+  "monto_inicial",
+  "monto_ingresado",
+  "monto_egresado",
+  "validado"
+ ],
+ "fields": [
+  {
+   "fieldname": "monto_inicial",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Monto Inicial"
+  },
+  {
+   "fieldname": "monto_ingresado",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Monto Ingresado"
+  },
+  {
+   "fieldname": "monto_egresado",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Monto Egresado"
+  },
+  {
+   "default": "0",
+   "fieldname": "validado",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Validado"
+  },
+  {
+   "fieldname": "fecha_inicial",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Fecha Inicial"
+  },
+  {
+   "fieldname": "fecha_final",
+   "fieldtype": "Date",
+   "label": "Fecha FInal"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-21 21:24:55.233364",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "Historial Bancos",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

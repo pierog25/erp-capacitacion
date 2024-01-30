@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-06-09 19:14:10.027030",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "data_2",
+  "data_3",
+  "data_4",
+  "column_break_5",
+  "data_5",
+  "responsable",
+  "meta_",
+  "criterios_de_aceptaci\u00f3n_section",
+  "bueno",
+  "regular",
+  "malo",
+  "column_break_19",
+  "frecuencia_de_medici\u00f3n",
+  "tema"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "I-SS-"
+  },
+  {
+   "fieldname": "data_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "data_3",
+   "fieldtype": "Data",
+   "label": "Indicador"
+  },
+  {
+   "fieldname": "data_4",
+   "fieldtype": "Small Text",
+   "label": "Formula"
+  },
+  {
+   "fieldname": "data_5",
+   "fieldtype": "Data",
+   "label": "Fuente"
+  },
+  {
+   "fieldname": "responsable",
+   "fieldtype": "Link",
+   "label": "Responsable",
+   "options": "Department"
+  },
+  {
+   "fieldname": "meta_",
+   "fieldtype": "Data",
+   "label": "Meta (%)"
+  },
+  {
+   "fieldname": "criterios_de_aceptaci\u00f3n_section",
+   "fieldtype": "Section Break",
+   "label": "Criterios de Aceptaci\u00f3n"
+  },
+  {
+   "fieldname": "frecuencia_de_medici\u00f3n",
+   "fieldtype": "Select",
+   "label": "Frecuencia de Medici\u00f3n ",
+   "options": "\nCAPACITACIONES\nSSOMA\nRRHH\nCSST/SSOMA\nMEDICO OCUPACIONAL\nCSSOMA/ASISTENTE CALIDAD"
+  },
+  {
+   "fieldname": "tema",
+   "fieldtype": "Select",
+   "label": "Tema",
+   "options": "\nSALUD\nSST"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bueno",
+   "fieldtype": "Select",
+   "label": "Bueno",
+   "options": "<50%\n40% - 49%\n50% - 59%\n60% - 69%\n70% - 79%\n80% - 89%\n90% - 100%\n80% - 99%\n100%\n0\n1\n>1"
+  },
+  {
+   "fieldname": "malo",
+   "fieldtype": "Select",
+   "label": "Malo",
+   "options": "<50%\n40% - 49%\n50% - 59%\n60% - 69%\n70% - 79%\n80% - 89%\n90% - 100%\n80% - 99%\n100%\n0\n1\n>1"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "regular",
+   "fieldtype": "Select",
+   "label": "Regular",
+   "options": "<50%\n40% - 49%\n50% - 59%\n60% - 69%\n70% - 79%\n80% - 89%\n90% - 100%\n80% - 99%\n100%\n0\n1\n>1"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-21 20:19:29.846000",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Indicadores SSOMA",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

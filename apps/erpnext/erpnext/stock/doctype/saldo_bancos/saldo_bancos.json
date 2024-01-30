@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "autoname": "DET-BANCOS-.#####",
+ "creation": "2023-01-11 16:07:04.533339",
+ "doctype": "DocType",
+ "documentation": "https://docs.google.com/document/d/135uUBWK1t13ahy4JPQF3cUSsQF2x3rDp4gZ88BORe9A/edit?usp=sharing",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "banco",
+  "data_2",
+  "monto_ingresado",
+  "monto",
+  "column_break_5",
+  "moneda",
+  "cuenta_contable",
+  "monto_egresado",
+  "historial_bancos_section",
+  "table_10"
+ ],
+ "fields": [
+  {
+   "fieldname": "banco",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Banco",
+   "options": "BCP\nBBVA\nBANBIF\nBANCO DE LA NACION\nFINANCIERO\nSCOTIABANK\nPICHINCHA"
+  },
+  {
+   "fieldname": "data_2",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Nro de cuenta"
+  },
+  {
+   "default": "0",
+   "fieldname": "monto",
+   "fieldtype": "Currency",
+   "label": "Monto Inicial"
+  },
+  {
+   "fieldname": "moneda",
+   "fieldtype": "Link",
+   "label": "Moneda",
+   "options": "Currency"
+  },
+  {
+   "default": "0",
+   "fieldname": "monto_egresado",
+   "fieldtype": "Currency",
+   "label": "Monto Egresado"
+  },
+  {
+   "default": "0",
+   "fieldname": "monto_ingresado",
+   "fieldtype": "Currency",
+   "label": "Monto Ingresado"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cuenta_contable",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Cuenta Contable"
+  },
+  {
+   "fieldname": "historial_bancos_section",
+   "fieldtype": "Section Break",
+   "label": "Historial Bancos"
+  },
+  {
+   "fieldname": "table_10",
+   "fieldtype": "Table",
+   "options": "Historial Bancos"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-11 17:35:38.164432",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "Saldo Bancos",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

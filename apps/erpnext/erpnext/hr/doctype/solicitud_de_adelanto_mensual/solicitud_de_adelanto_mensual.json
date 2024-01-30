@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-03-21 15:34:35.605729",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "datos_de_la_agencia_section",
+  "sucursal",
+  "departamento",
+  "zona_recursos",
+  "column_break_4",
+  "id",
+  "column_break_6",
+  "mes",
+  "column_break_8",
+  "anio",
+  "datos_de_la_solicitud_section",
+  "actualizar_lista",
+  "table_12",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "SAM-"
+  },
+  {
+   "fieldname": "datos_de_la_agencia_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de la Agencia"
+  },
+  {
+   "fieldname": "datos_de_la_solicitud_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de la Solicitud"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Solicitud de Adelanto Mensual",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "sucursal",
+   "fieldtype": "Link",
+   "label": "Sucursal",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "sucursal.ideentificador",
+   "fieldname": "id",
+   "fieldtype": "Data",
+   "label": "ID Sucursal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mes",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Mes",
+   "options": "\nEnero\nFebrero\nMarzo\nAbril\nMayo\nJunio\nJulio\nAgosto\nSetiembre\nOctubre\nNoviembre\nDiciembre"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "anio",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "A\u00f1o",
+   "options": "\n2023\n2024\n2025"
+  },
+  {
+   "fetch_from": "sucursal.zona_recursos_humanos",
+   "fieldname": "zona_recursos",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Zona Recursos",
+   "options": "Zona"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "table_12",
+   "fieldtype": "Table",
+   "options": "table_employee_advance_salary"
+  },
+  {
+   "fieldname": "departamento",
+   "fieldtype": "Link",
+   "label": "Departamento",
+   "options": "Department"
+  },
+  {
+   "fieldname": "actualizar_lista",
+   "fieldtype": "Button",
+   "label": "Actualizar Lista"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-10-16 13:16:28.481565",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Solicitud de Adelanto Mensual",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "sucursal",
+ "track_changes": 1
+}

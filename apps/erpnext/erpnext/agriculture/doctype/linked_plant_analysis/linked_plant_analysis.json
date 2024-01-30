@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "creation": "2017-11-22 15:04:25.180446",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "plant_analysis"
+ ],
+ "fields": [
+  {
+   "fieldname": "plant_analysis",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Plant Analysis",
+   "options": "Plant Analysis",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-21 19:48:21.864160",
+ "modified_by": "Administrator",
+ "module": "Agriculture",
+ "name": "Linked Plant Analysis",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "restrict_to_domain": "Agriculture",
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

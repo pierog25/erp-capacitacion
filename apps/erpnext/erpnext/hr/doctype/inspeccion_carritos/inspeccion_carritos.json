@@ -1,0 +1,169 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-08-31 17:59:25.477479",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "codigo",
+  "version",
+  "column_break_3",
+  "aprobado",
+  "agencia",
+  "section_break_6",
+  "check_list_de_carritos",
+  "section_break_8",
+  "inspector",
+  "nombre_responsable",
+  "column_break_11",
+  "fecha",
+  "section_break_13",
+  "tabla_resumen_inspeccion_1",
+  "tabla_resumen_inspeccion_2",
+  "tabla_resumen_inspeccion_3",
+  "estado"
+ ],
+ "fields": [
+  {
+   "default": "SHA-REG-HSE-015",
+   "fieldname": "codigo",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Codigo ",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "2",
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Version ",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "2023-07-05",
+   "fieldname": "aprobado",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Aprobado ",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "agencia",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Agencia",
+   "options": "Branch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "check_list_de_carritos",
+   "fieldtype": "Table",
+   "label": "Check list de carritos",
+   "options": "Check list de carritos"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "inspector",
+   "fieldtype": "Link",
+   "label": "Nombre del inspector",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "inspector.nombre_completo",
+   "fieldname": "nombre_responsable",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fecha",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Fecha "
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "estado",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Estado",
+   "options": "Proceso\nCerrado\nObservado\nRecibido\nApproved\nRechazado"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "options": "IC-"
+  },
+  {
+   "fieldname": "tabla_resumen_inspeccion_1",
+   "fieldtype": "Table",
+   "label": "Tabla Resumen",
+   "options": "Tabla de Resumen de Inspeccion de Carritos",
+   "read_only_depends_on": "eval:!frappe.user.has_role('Usuario SSOMA') "
+  },
+  {
+   "fieldname": "tabla_resumen_inspeccion_2",
+   "fieldtype": "Table",
+   "label": "Tabla Resumen Mes 2",
+   "options": "Tabla de Resumen de Inspeccion de Carritos",
+   "read_only_depends_on": "eval:!frappe.user_roles.includes(\"Usuario SSOMA\")"
+  },
+  {
+   "fieldname": "tabla_resumen_inspeccion_3",
+   "fieldtype": "Table",
+   "label": "Tabla Resumen Mes 3",
+   "options": "Tabla de Resumen de Inspeccion de Carritos",
+   "read_only_depends_on": "eval:!frappe.user_roles.includes(\"Usuario SSOMA\")"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-11-02 11:54:41.766244",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Inspeccion Carritos",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "agencia"
+}

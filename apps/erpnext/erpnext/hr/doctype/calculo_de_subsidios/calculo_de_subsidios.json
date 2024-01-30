@@ -1,0 +1,268 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-08-04 16:36:35.191659",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "datos_del_trabajador_section",
+  "id_trabajadora",
+  "banco",
+  "column_break_5",
+  "fecha_de_ingreso",
+  "numero_de_cuenta",
+  "column_break_8",
+  "sucursal",
+  "dni",
+  "column_break_11",
+  "nombre_completo",
+  "informacion_actualizada",
+  "datos_del_subsidio_section",
+  "mes_inicio_prestaci\u00f3n",
+  "column_break_15",
+  "inicio_de_periodo",
+  "column_break_17",
+  "fin_de_periodo",
+  "column_break_19",
+  "d\u00edas_de_periodo",
+  "tipo_de_subsidio",
+  "datos_del_calculo_section",
+  "fecha_de_\u00faltimo_contrato",
+  "column_break_23",
+  "vacaciones_pendientes",
+  "column_break_25",
+  "citt",
+  "conceptos_remunerativos_subsidio_section",
+  "table_16",
+  "total_remuneraciones",
+  "subsidio_diario",
+  "total_subsidio_solicitado",
+  "pago_subsidio_por_mes_section",
+  "table_18"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "CS-"
+  },
+  {
+   "fieldname": "id_trabajadora",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "ID Trabajador/a",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "id_trabajadora.nombre_completo",
+   "fieldname": "nombre_completo",
+   "fieldtype": "Data",
+   "label": "Nombre Completo",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "id_trabajadora.fecha_de_ingreso_real",
+   "fieldname": "fecha_de_ingreso",
+   "fieldtype": "Data",
+   "label": "Fecha de ingreso",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "id_trabajadora.passport_number",
+   "fieldname": "dni",
+   "fieldtype": "Data",
+   "label": "DNI",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "id_trabajadora.branch",
+   "fieldname": "sucursal",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Sucursal",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "id_trabajadora.bank_name",
+   "fieldname": "banco",
+   "fieldtype": "Data",
+   "label": "Banco",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "id_trabajadora.bank_ac_no",
+   "fieldname": "numero_de_cuenta",
+   "fieldtype": "Data",
+   "label": "Numero de Cuenta",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fecha_de_\u00faltimo_contrato",
+   "fieldtype": "Date",
+   "label": "Fecha de \u00faltimo contrato"
+  },
+  {
+   "fieldname": "vacaciones_pendientes",
+   "fieldtype": "Int",
+   "label": "Vacaciones pendientes"
+  },
+  {
+   "fieldname": "inicio_de_periodo",
+   "fieldtype": "Date",
+   "label": "Inicio de periodo"
+  },
+  {
+   "fieldname": "fin_de_periodo",
+   "fieldtype": "Date",
+   "label": "Fin de periodo"
+  },
+  {
+   "fieldname": "d\u00edas_de_periodo",
+   "fieldtype": "Int",
+   "label": "D\u00edas de periodo"
+  },
+  {
+   "fieldname": "mes_inicio_prestaci\u00f3n",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Mes Inicio Prestaci\u00f3n",
+   "options": "\nEnero\nFebrero\nMarzo\nAbril\nMayo\nJunio\nJulio\nAgosto\nSetiembre\nOctubre\nNoviembre\nDiciembre"
+  },
+  {
+   "fieldname": "citt",
+   "fieldtype": "Select",
+   "label": "CITT",
+   "options": "\nSI\nNO"
+  },
+  {
+   "fieldname": "table_16",
+   "fieldtype": "Table",
+   "options": "Conceptos Remunerativos Subsidio"
+  },
+  {
+   "fieldname": "datos_del_trabajador_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del Trabajador"
+  },
+  {
+   "fieldname": "table_18",
+   "fieldtype": "Table",
+   "options": "Pago Subsidio por Mes"
+  },
+  {
+   "fieldname": "datos_del_calculo_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del Calculo"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "datos_del_subsidio_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del Subsidio"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "conceptos_remunerativos_subsidio_section",
+   "fieldtype": "Section Break",
+   "label": "Conceptos Remunerativos Subsidio"
+  },
+  {
+   "fieldname": "pago_subsidio_por_mes_section",
+   "fieldtype": "Section Break",
+   "label": "Pago Subsidio por Mes"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "informacion_actualizada",
+   "fieldtype": "Check",
+   "label": "Informacion Actualizada"
+  },
+  {
+   "fieldname": "total_remuneraciones",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Remuneraciones",
+   "precision": "2"
+  },
+  {
+   "fieldname": "subsidio_diario",
+   "fieldtype": "Float",
+   "label": "Subsidio diario",
+   "precision": "2"
+  },
+  {
+   "fieldname": "total_subsidio_solicitado",
+   "fieldtype": "Float",
+   "label": "Total subsidio solicitado",
+   "precision": "2"
+  },
+  {
+   "default": "Por Maternidad",
+   "fieldname": "tipo_de_subsidio",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tipo de Subsidio",
+   "options": "Por Maternidad\nPor Incapacidad Temporal"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-07 21:44:14.189345",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Calculo de Subsidios",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "nombre_completo"
+}

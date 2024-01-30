@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-03-10 09:56:19.895266",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "datos_de_la_agencia_section",
+  "sucursal",
+  "column_break_4",
+  "id_sucursal",
+  "column_break_6",
+  "mes",
+  "column_break_8",
+  "a\u00f1o",
+  "cesados_section",
+  "table_11"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "LQM-"
+  },
+  {
+   "fieldname": "datos_de_la_agencia_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de la Agencia"
+  },
+  {
+   "fieldname": "sucursal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sucursal",
+   "options": "Branch",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "id_sucursal",
+   "fieldtype": "Data",
+   "label": "ID Sucursal",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mes",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Mes",
+   "options": "\nEnero\nFebrero\nMarzo\nAbril\nMayo\nJunio\nJulio\nAgosto\nSetiembre\nOctubre\nNoviembre\nDiciembre",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "a\u00f1o",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "A\u00f1o",
+   "options": "\n2023\n2024\n2025",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "cesados_section",
+   "fieldtype": "Section Break",
+   "label": "Cesados"
+  },
+  {
+   "fieldname": "table_11",
+   "fieldtype": "Table",
+   "options": "Liquidacion Mensual Cesados"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-19 12:11:35.889820",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "LIquidacion Mensual",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

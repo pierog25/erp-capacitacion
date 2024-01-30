@@ -1,0 +1,45 @@
+{
+ "actions": [],
+ "creation": "2023-03-01 17:19:48.549975",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nombres_y_apellidos",
+  "sucursal",
+  "cargo"
+ ],
+ "fields": [
+  {
+   "fieldname": "nombres_y_apellidos",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombres y Apellidos"
+  },
+  {
+   "fieldname": "sucursal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sucursal",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "cargo",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cargo",
+   "options": "Designation"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-21 21:24:50.145658",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "tabla_personal_empresa",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,251 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-09-13 12:46:13.050091",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "datos_del_empleado_section",
+  "empleado",
+  "nombre_completo",
+  "puesto",
+  "column_break_6",
+  "agencia",
+  "fecha_de_ingreso",
+  "column_break_9",
+  "id_agencia",
+  "departamento",
+  "column_break_12",
+  "n\u00famero_de_documento",
+  "zona_rrhh",
+  "datos_de_solicitud_section",
+  "mes_inicio",
+  "agencia_destino",
+  "column_break_19",
+  "mes_fin",
+  "convenio_viatico",
+  "ver_documento_viatico",
+  "column_break_21",
+  "monto",
+  "amended_from",
+  "status",
+  "domicilio",
+  "diacreacion",
+  "mescreacion",
+  "a\u00f1ocreacion"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "options": "SVT-"
+  },
+  {
+   "fieldname": "datos_del_empleado_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del Empleado"
+  },
+  {
+   "fieldname": "empleado",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Empleado",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "empleado.nombre_completo",
+   "fieldname": "nombre_completo",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Nombre Completo",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.designation",
+   "fieldname": "puesto",
+   "fieldtype": "Data",
+   "label": "Puesto",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "empleado.branch",
+   "fieldname": "agencia",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Agencia",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.fecha_de_ingreso_real",
+   "fieldname": "fecha_de_ingreso",
+   "fieldtype": "Data",
+   "label": "Fecha de Ingreso",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "empleado.id_sucursal",
+   "fieldname": "id_agencia",
+   "fieldtype": "Data",
+   "label": "ID Agencia",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.department",
+   "fieldname": "departamento",
+   "fieldtype": "Data",
+   "label": "Departamento",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "empleado.passport_number",
+   "fieldname": "n\u00famero_de_documento",
+   "fieldtype": "Data",
+   "label": "N\u00famero de Documento",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.zona_recursos",
+   "fieldname": "zona_rrhh",
+   "fieldtype": "Data",
+   "label": "Zona RRHH",
+   "read_only": 1
+  },
+  {
+   "fieldname": "datos_de_solicitud_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de Solicitud"
+  },
+  {
+   "fieldname": "mes_inicio",
+   "fieldtype": "Select",
+   "label": "Mes Inicio",
+   "reqd": 1
+  },
+  {
+   "fieldname": "agencia_destino",
+   "fieldtype": "Link",
+   "label": "Agencia Destino",
+   "options": "Branch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.mes_inicio !== undefined",
+   "fieldname": "mes_fin",
+   "fieldtype": "Select",
+   "label": "Mes Fin",
+   "reqd": 1
+  },
+  {
+   "fieldname": "convenio_viatico",
+   "fieldtype": "Attach",
+   "label": "Convenio Viatico"
+  },
+  {
+   "fieldname": "ver_documento_viatico",
+   "fieldtype": "Button",
+   "label": "Ver documento Viatico"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "monto",
+   "fieldtype": "Int",
+   "label": "Monto",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Solicitud de Viaticos Temporales",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Estado",
+   "options": "Borrador\nValidado\nCancelado"
+  },
+  {
+   "fetch_from": "empleado.current_address",
+   "fieldname": "domicilio",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Domicilio"
+  },
+  {
+   "fieldname": "diacreacion",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "diaCreacion"
+  },
+  {
+   "fieldname": "mescreacion",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "mesCreacion"
+  },
+  {
+   "fieldname": "a\u00f1ocreacion",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "a\u00f1oCreacion"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-12-01 14:18:57.736723",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Solicitud de Viaticos Temporales",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "nombre_completo",
+ "track_changes": 1
+}

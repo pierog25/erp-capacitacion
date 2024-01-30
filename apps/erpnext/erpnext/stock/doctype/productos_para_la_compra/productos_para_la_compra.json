@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "creation": "2023-03-31 11:02:13.031337",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "cod_producto",
+  "almacen",
+  "cantidad",
+  "uom"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "cod_producto",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "C\u00f3digo del Producto",
+   "options": "Item"
+  },
+  {
+   "columns": 2,
+   "fieldname": "almacen",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Almac\u00e9n",
+   "options": "Warehouse"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "cod_producto.stock_uom",
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "columns": 1,
+   "fieldname": "cantidad",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Cantidad"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-21 21:24:52.156557",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "Productos para la compra",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,157 @@
+{
+ "_liked_by": "[\"Administrator\"]",
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-02-22 16:41:00.578719",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "datos_de_la_linea_section",
+  "numero",
+  "departamento",
+  "responsable",
+  "area",
+  "column_break_4",
+  "plan",
+  "ubicacion",
+  "nombre_completo",
+  "estado",
+  "historial_de_lineas_moviles_section",
+  "table_8"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "LM-"
+  },
+  {
+   "fieldname": "datos_de_la_linea_section",
+   "fieldtype": "Section Break",
+   "label": "DATOS DE LA LINEA"
+  },
+  {
+   "fieldname": "numero",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Numero",
+   "length": 3,
+   "reqd": 1
+  },
+  {
+   "fieldname": "departamento",
+   "fieldtype": "Select",
+   "label": "Departamento",
+   "options": "\nAmazonas\n\u00c1ncash\nApur\u00edmac\nArequipa\nAyacucho\nCajamarca\nCallao\nCusco\nHuancavelica\nHu\u00e1nuco\nIca\nJun\u00edn\nLa Libertad\nLambayeque\nLima Metropolitana\nLima (departamento)\nLoreto\nMadre de Dios\nMoquegua\nPasco\nPiura\nPuno\nSan Mart\u00edn\nTacna\nTumbes\nUcayali"
+  },
+  {
+   "fieldname": "responsable",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_standard_filter": 1,
+   "label": "Responsable",
+   "options": "Employee",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "\u00c1rea",
+   "options": "OFICINA\nDISTRIBUCION\nINCIDENCIAS\nALMACEN\nCAJA Y CUENTAS\nUNIDAD MOVIL\nADMINISTRADOR\nPDA\nOPERACIONES",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "plan",
+   "fieldtype": "Data",
+   "label": "Plan"
+  },
+  {
+   "fieldname": "ubicacion",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_standard_filter": 1,
+   "label": "Agencia",
+   "options": "Branch"
+  },
+  {
+   "fetch_from": "responsable.employee_name",
+   "fieldname": "nombre_completo",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre Completo"
+  },
+  {
+   "fieldname": "estado",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Estado",
+   "options": "Activo\nStock"
+  },
+  {
+   "fieldname": "historial_de_lineas_moviles_section",
+   "fieldtype": "Section Break",
+   "label": "Historial de lineas moviles"
+  },
+  {
+   "fieldname": "table_8",
+   "fieldtype": "Table",
+   "in_standard_filter": 1,
+   "options": "Historial de lineas moviles"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-21 20:53:13.711756",
+ "modified_by": "Administrator",
+ "module": "Quality Management",
+ "name": "Lineas moviles 2",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrador de agencia",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrador de agencia",
+   "select": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "numero"
+}

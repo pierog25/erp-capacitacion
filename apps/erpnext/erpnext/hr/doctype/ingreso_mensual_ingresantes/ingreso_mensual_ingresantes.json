@@ -1,0 +1,110 @@
+{
+ "actions": [],
+ "creation": "2023-03-07 17:05:14.024317",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "empleado",
+  "nombre_completo",
+  "fecha_de_ingreso",
+  "column_break_3",
+  "puesto",
+  "alta",
+  "imprimir_documentos",
+  "data_6",
+  "todos_los_documentos",
+  "contrato_de_trabajo",
+  "convenio_de_descuento",
+  "alta_documento"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "empleado",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Empleado",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "empleado.nombre_completo",
+   "fieldname": "nombre_completo",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre Completo"
+  },
+  {
+   "columns": 2,
+   "fetch_from": "empleado.fecha_de_ingreso_real",
+   "fieldname": "fecha_de_ingreso",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Fecha de Ingreso"
+  },
+  {
+   "columns": 2,
+   "fetch_from": "empleado.designation",
+   "fieldname": "puesto",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Puesto",
+   "options": "Designation"
+  },
+  {
+   "columns": 1,
+   "fieldname": "alta",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Alta",
+   "permlevel": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "imprimir_documentos",
+   "fieldtype": "Button",
+   "in_list_view": 1,
+   "label": "Imprimir Documentos"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "data_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Por si tiene todos los documentos firmados en un solo archivo",
+   "fieldname": "todos_los_documentos",
+   "fieldtype": "Attach",
+   "label": "Todos los documentos"
+  },
+  {
+   "fieldname": "contrato_de_trabajo",
+   "fieldtype": "Attach",
+   "label": "Contrato de Trabajo"
+  },
+  {
+   "fieldname": "convenio_de_descuento",
+   "fieldtype": "Attach",
+   "label": "Convenio de Descuento"
+  },
+  {
+   "fieldname": "alta_documento",
+   "fieldtype": "Attach",
+   "label": "Alta Documento"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-21 21:24:50.475064",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Ingreso Mensual Ingresantes",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,274 @@
+{
+ "actions": [],
+ "autoname": "RPT-PROD-.YYYY.-.#####",
+ "creation": "2022-01-11 09:03:20.722213",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fecha",
+  "column_break_2",
+  "sucursal",
+  "concesionario",
+  "departamento",
+  "section_break_4",
+  "almacen",
+  "generate_reconciliacion",
+  "traer",
+  "column_break_6",
+  "tipo_de_almacen",
+  "foto_shalom_store",
+  "stock_reconciliation",
+  "section_break_7",
+  "tabsupervicion",
+  "section_break_9",
+  "status",
+  "usuario",
+  "column_break_12",
+  "total_esperado",
+  "total_encontrado",
+  "factura_y_reconocimiento_section",
+  "boton_crear_factura_reconocimiento",
+  "factura_pos",
+  "column_break_26",
+  "precio_de_venta_total_del_faltante",
+  "reconocimiento_de_deuda",
+  "section_break_15",
+  "crear_factura_y_liquidacion",
+  "factura_pos_concesionaria",
+  "column_break_30",
+  "precio_de_venta_total_del_faltante_dos",
+  "section_break16",
+  "observaciones"
+ ],
+ "fields": [
+  {
+   "fieldname": "fecha",
+   "fieldtype": "Datetime",
+   "in_standard_filter": 1,
+   "label": "Fecha y Hora"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sucursal",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_standard_filter": 1,
+   "label": "Sucursal",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "departamento",
+   "fieldtype": "Data",
+   "label": "Departamento",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "almacen",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_standard_filter": 1,
+   "label": "Almacen",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "generate_reconciliacion",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Generar Reconciliaci\u00f3n"
+  },
+  {
+   "depends_on": "almacen",
+   "fieldname": "traer",
+   "fieldtype": "Button",
+   "label": "Traer"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "almacen.warehouse_type",
+   "fieldname": "tipo_de_almacen",
+   "fieldtype": "Link",
+   "label": "Tipo de Almacen",
+   "options": "Warehouse Type"
+  },
+  {
+   "fieldname": "foto_shalom_store",
+   "fieldtype": "Attach",
+   "label": "Foto Shalom Store",
+   "mandatory_depends_on": "eval:doc.tipo_de_almacen==\"Tienda\"\n"
+  },
+  {
+   "fieldname": "stock_reconciliation",
+   "fieldtype": "Link",
+   "label": "Reconciliaci\u00f3n de inventarios",
+   "options": "Stock Reconciliation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tabsupervicion",
+   "fieldtype": "Table",
+   "label": "TabSupervision",
+   "options": "TabSupervicion"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nSubmitted\nDraft\nCon Errores\nQueued",
+   "read_only": 1
+  },
+  {
+   "fieldname": "usuario",
+   "fieldtype": "Data",
+   "label": "Usuario",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_esperado",
+   "fieldtype": "Data",
+   "label": "Total Esperado",
+   "print_hide": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_encontrado",
+   "fieldtype": "Data",
+   "label": "Total Encontrado"
+  },
+  {
+   "default": "0",
+   "fieldname": "precio_de_venta_total_del_faltante",
+   "fieldtype": "Float",
+   "label": "PRECIO DE VENTA TOTAL DEL FALTANTE",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "RECONCILIACION DE PRODUCTOS - CONCESIONARIAS"
+  },
+  {
+   "fieldname": "observaciones",
+   "fieldtype": "Text",
+   "label": "Observaciones"
+  },
+  {
+   "fieldname": "section_break16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "boton_crear_factura_reconocimiento",
+   "fieldtype": "Button",
+   "label": "CREAR FACTURA Y REC. DEUDA"
+  },
+  {
+   "fieldname": "factura_y_reconocimiento_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "FACTURA Y RECONOCIMIENTO PARA AGENCIAS PROPIAS"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "factura_pos",
+   "fieldtype": "Link",
+   "label": "Factura POS",
+   "options": "POS Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reconocimiento_de_deuda",
+   "fieldtype": "Link",
+   "label": "Reconocimiento de Deuda",
+   "options": "Reconociemientos de Deuda",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fetch_from": "sucursal.concesionario",
+   "fieldname": "concesionario",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "Concesionario",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:(!doc.factura_pos_concesionaria && doc.tipo_de_almacen == \"Tienda\")",
+   "fieldname": "crear_factura_y_liquidacion",
+   "fieldtype": "Button",
+   "label": "CREAR FACTURA Y LIQUIDACION"
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "precio_de_venta_total_del_faltante_dos",
+   "fieldtype": "Data",
+   "label": "PRECIO DE VENTA TOTAL DEL FALTANTE",
+   "read_only": 1
+  },
+  {
+   "fieldname": "factura_pos_concesionaria",
+   "fieldtype": "Link",
+   "label": "Factura POS Concesionaria",
+   "options": "POS Invoice",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-18 14:05:48.219269",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "Supervicion Almacen",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "almacen",
+ "track_changes": 1
+}

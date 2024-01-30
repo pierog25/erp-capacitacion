@@ -1,0 +1,47 @@
+{
+ "actions": [],
+ "creation": "2022-11-28 09:11:00.351788",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fecha",
+  "url",
+  "ver_documento"
+ ],
+ "fields": [
+  {
+   "allow_on_submit": 1,
+   "fieldname": "fecha",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fecha"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Url"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "ver_documento",
+   "fieldtype": "Button",
+   "in_list_view": 1,
+   "label": "Ver Documento"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-11-28 09:11:00.351788",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Archivos Transados",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

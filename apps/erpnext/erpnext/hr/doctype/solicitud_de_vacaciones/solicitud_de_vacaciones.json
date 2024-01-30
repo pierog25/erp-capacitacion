@@ -1,0 +1,320 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-03-28 18:37:26.426931",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "encargado_section",
+  "encargado",
+  "column_break_3",
+  "nombre_encargado",
+  "column_break_5",
+  "puesto_encargado",
+  "column_break_1",
+  "tipo_de_licencia",
+  "datos_de_empleado_section",
+  "employee",
+  "nombre_completo",
+  "designation",
+  "column_break_4",
+  "branch",
+  "compa\u00f1ia",
+  "zona_nacional",
+  "zona_rrhh",
+  "column_break_7",
+  "id_sucursal",
+  "department",
+  "fecha_texto",
+  "column_break_10",
+  "fecha_ingreso_real",
+  "numero_de_documento",
+  "documento",
+  "tiempo_de_vacaciones_section",
+  "desde_la_fecha",
+  "inicio_texto",
+  "column_break_23",
+  "hasta_la_fecha",
+  "fin_texto",
+  "column_break_25",
+  "dias",
+  "column_break_27",
+  "periodo",
+  "naming_series",
+  "status_vacation_request",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Empleado",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "description": "Es necesario que se suba aqu\u00ed el memor\u00e1ndum de vacaciones firmado el cual se puede imprimir desde la opci\u00f3n \"Imprimir\"",
+   "fieldname": "documento",
+   "fieldtype": "Attach",
+   "label": "Adjuntar Documento Firmado"
+  },
+  {
+   "fieldname": "datos_de_empleado_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de Empleado"
+  },
+  {
+   "fetch_from": "employee.branch",
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Agencia",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.nombre_completo",
+   "fieldname": "nombre_completo",
+   "fieldtype": "Data",
+   "label": "Nombre Completo",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.designation",
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Puesto",
+   "options": "Designation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.id_sucursal",
+   "fieldname": "id_sucursal",
+   "fieldtype": "Data",
+   "label": "ID Agencia",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Departamento",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.fecha_de_ingreso_real",
+   "fieldname": "fecha_ingreso_real",
+   "fieldtype": "Date",
+   "label": "Fecha de ingreso",
+   "read_only": 1
+  },
+  {
+   "fieldname": "encargado",
+   "fieldtype": "Link",
+   "label": "Encargado",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "encargado.nombre_completo",
+   "fieldname": "nombre_encargado",
+   "fieldtype": "Data",
+   "label": "Nombre Encargado",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "default": "VACACIONES",
+   "fieldname": "tipo_de_licencia",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tipo de Licencia",
+   "options": "Leave Type",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.passport_number",
+   "fieldname": "numero_de_documento",
+   "fieldtype": "Data",
+   "label": "Numero de Documento",
+   "read_only": 1
+  },
+  {
+   "fieldname": "encargado_section",
+   "fieldtype": "Section Break",
+   "label": "Encargado"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "employee.company",
+   "fieldname": "compa\u00f1ia",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Compa\u00f1ia",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tiempo_de_vacaciones_section",
+   "fieldtype": "Section Break",
+   "label": "Tiempo de Vacaciones"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "desde_la_fecha",
+   "fieldtype": "Date",
+   "label": "Desde la Fecha"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "hasta_la_fecha",
+   "fieldtype": "Date",
+   "label": "Hasta la Fecha"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "periodo",
+   "fieldtype": "Select",
+   "label": "Periodo",
+   "options": "2014-2015\n2015-2016\n2016-2017\n2017-2018\n2018-2019\n2019-2020\n2020-2021\n2021-2022\n2022-2023\n2023-2024\n2024-2025\n2025-2026\n2026-2027\n2027-2028\n2028-2029\n2029-2030\n2030-2031\n2031-2032"
+  },
+  {
+   "fieldname": "dias",
+   "fieldtype": "Data",
+   "label": "Cantidad de Vacaciones Asignadas"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "encargado.designation",
+   "fieldname": "puesto_encargado",
+   "fieldtype": "Link",
+   "label": "Puesto Encargado",
+   "options": "Designation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fecha_texto",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Fecha Texto"
+  },
+  {
+   "fieldname": "inicio_texto",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "inicio_texto"
+  },
+  {
+   "fieldname": "fin_texto",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "fin_texto"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "SV-"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status_vacation_request",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_standard_filter": 1,
+   "label": "Estado",
+   "options": "Borrador\nValidado"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Solicitud de Vacaciones",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "branch.zona_nacional",
+   "fieldname": "zona_nacional",
+   "fieldtype": "Link",
+   "label": "Zona Nacional",
+   "options": "Zonas Nacional",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "branch.zona_recursos_humanos",
+   "fieldname": "zona_rrhh",
+   "fieldtype": "Data",
+   "label": "Zona RRHH",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-09-29 16:37:39.160243",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Solicitud de Vacaciones",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "nombre_completo"
+}

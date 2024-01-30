@@ -1,0 +1,59 @@
+{
+ "actions": [],
+ "creation": "2023-01-09 10:01:41.800396",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nombre_titular_cuenta",
+  "dni_titular_cuenta",
+  "column_break_3",
+  "nombre_banco",
+  "cuenta_bancaria_o_cci"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "nombre_titular_cuenta",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre Titular Cuenta"
+  },
+  {
+   "columns": 1,
+   "fieldname": "dni_titular_cuenta",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "DNI"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "nombre_banco",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre Banco"
+  },
+  {
+   "columns": 2,
+   "fieldname": "cuenta_bancaria_o_cci",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Cuenta Bancaria o CCI"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-21 21:24:47.384145",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "tabla_pago_banco",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,245 @@
+{
+ "actions": [],
+ "autoname": "SCSP-.####",
+ "creation": "2023-05-04 16:37:41.577121",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "datos_del_trabajador_section",
+  "id_empleado",
+  "column_break_3",
+  "nombre_completo",
+  "column_break_5",
+  "puesto",
+  "column_break_7",
+  "numero_de_documento",
+  "datos_de_la_agencia_section",
+  "id_sucursal",
+  "column_break_11",
+  "sucursal",
+  "column_break_13",
+  "zona_recursos",
+  "column_break_15",
+  "zona_nacional",
+  "informaci\u00f3n_pensionaria_actual_section",
+  "fondo_de_pensiones",
+  "columna_1",
+  "fecha_de_afiliacion_actual",
+  "informaci\u00f3n_pensionaria_section",
+  "sistema_pensionario",
+  "cuspp",
+  "column_break_19",
+  "tipo_de_afp",
+  "amended_from",
+  "fecha_afiliacion",
+  "tipo_cambio"
+ ],
+ "fields": [
+  {
+   "fieldname": "datos_del_trabajador_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del Trabajador"
+  },
+  {
+   "fieldname": "id_empleado",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "ID Empleado",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "id_empleado.nombre_completo",
+   "fieldname": "nombre_completo",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Nombre Completo",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "id_empleado.designation",
+   "fieldname": "puesto",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Puesto",
+   "options": "Designation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "id_empleado.passport_number",
+   "fieldname": "numero_de_documento",
+   "fieldtype": "Data",
+   "label": "Numero de Documento",
+   "read_only": 1
+  },
+  {
+   "fieldname": "datos_de_la_agencia_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de la Agencia"
+  },
+  {
+   "fetch_from": "sucursal.ideentificador",
+   "fieldname": "id_sucursal",
+   "fieldtype": "Data",
+   "label": "ID Sucursal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "id_empleado.branch",
+   "fieldname": "sucursal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sucursal",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "sucursal.zona_recursos_humanos",
+   "fieldname": "zona_recursos",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Zona Recursos",
+   "options": "Zona",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "sucursal.zona_nacional",
+   "fieldname": "zona_nacional",
+   "fieldtype": "Link",
+   "label": "Zona Nacional",
+   "options": "Zonas Nacional",
+   "read_only": 1
+  },
+  {
+   "fieldname": "informaci\u00f3n_pensionaria_actual_section",
+   "fieldtype": "Section Break",
+   "label": "Informaci\u00f3n Pensionaria Actual"
+  },
+  {
+   "fetch_from": "id_empleado.fondo_de_pensiones",
+   "fieldname": "fondo_de_pensiones",
+   "fieldtype": "Data",
+   "label": "Fondo de  Pensiones Actual",
+   "read_only": 1
+  },
+  {
+   "fieldname": "columna_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "id_empleado.fecha_de_afiliacion",
+   "fieldname": "fecha_de_afiliacion_actual",
+   "fieldtype": "Data",
+   "label": "Fecha de Afiliacion Actual",
+   "read_only": 1
+  },
+  {
+   "fieldname": "informaci\u00f3n_pensionaria_section",
+   "fieldtype": "Section Break",
+   "label": "Informaci\u00f3n Pensionaria Nueva"
+  },
+  {
+   "fieldname": "sistema_pensionario",
+   "fieldtype": "Select",
+   "label": "Sistema Pensionario",
+   "options": "\nAFP\nONP",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.sistema_pensionario == \"AFP\"",
+   "fieldname": "cuspp",
+   "fieldtype": "Data",
+   "label": "CUSPP",
+   "mandatory_depends_on": "eval:doc.sistema_pensionario == \"AFP\"",
+   "read_only_depends_on": "eval:doc.tipo_cambio != \"DE ONP A AFP\""
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tipo_de_afp",
+   "fieldtype": "Select",
+   "label": "Tipo de AFP",
+   "options": "\nAFP Habitat\nAFP Profuturo\nAFP Prima\nAFP Integra",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Solicitud de Cambio de Sistema Pensionario",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.sistema_pensionario == \"AFP\"",
+   "fieldname": "fecha_afiliacion",
+   "fieldtype": "Date",
+   "label": "Fecha de Afiliacion",
+   "mandatory_depends_on": "eval:doc.sistema_pensionario == \"AFP\""
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "tipo_cambio",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tipo de cambio",
+   "options": "ENTRE AFP\nDE ONP A AFP\nDE AFP A ONP"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-09-21 20:25:04.396613",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Solicitud de Cambio de Sistema Pensionario",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "nombre_completo"
+}

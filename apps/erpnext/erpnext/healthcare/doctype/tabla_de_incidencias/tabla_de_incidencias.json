@@ -1,0 +1,38 @@
+{
+ "actions": [],
+ "creation": "2023-02-09 17:30:47.501120",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fecha",
+  "contacto"
+ ],
+ "fields": [
+  {
+   "columns": 3,
+   "fieldname": "fecha",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Fecha"
+  },
+  {
+   "columns": 7,
+   "fieldname": "contacto",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Contacto"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-21 21:24:49.389276",
+ "modified_by": "Administrator",
+ "module": "Healthcare",
+ "name": "Tabla de incidencias",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

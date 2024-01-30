@@ -1,0 +1,227 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-04-20 10:17:00.669281",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "amended_from",
+  "datos_del_trabajador_section",
+  "empleado",
+  "column_break_5",
+  "nombre_completo",
+  "column_break_7",
+  "puesto",
+  "column_break_9",
+  "numero_de_documento",
+  "datos_de_la_agencia_section",
+  "id_sucursal",
+  "column_break_13",
+  "sucursal",
+  "column_break_15",
+  "zona_recursos",
+  "column_break_17",
+  "zona_nacional",
+  "informacion_bancaria_actual_section",
+  "nombre_de_banco",
+  "num_de_cuenta_bancaria",
+  "column_break_21",
+  "nombre_de_banco_nuevo",
+  "nuevo_num_de_cuenta_bancaria",
+  "documento_cuenta"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "CCB-"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Cambio de Cuenta Bancaria",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "datos_del_trabajador_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del Trabajador"
+  },
+  {
+   "fieldname": "empleado",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "ID Empleado",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "empleado.nombre_completo",
+   "fieldname": "nombre_completo",
+   "fieldtype": "Data",
+   "label": "Nombre Completo",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "empleado.designation",
+   "fieldname": "puesto",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Puesto",
+   "options": "Designation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "empleado.passport_number",
+   "fieldname": "numero_de_documento",
+   "fieldtype": "Data",
+   "label": "Numero de Documento",
+   "read_only": 1
+  },
+  {
+   "fieldname": "datos_de_la_agencia_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de la Agencia",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "sucursal.ideentificador",
+   "fieldname": "id_sucursal",
+   "fieldtype": "Data",
+   "label": "ID Sucursal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "empleado.branch",
+   "fieldname": "sucursal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sucursal",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "sucursal.zona_recursos_humanos",
+   "fieldname": "zona_recursos",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "label": "Zona Recursos",
+   "options": "Zona",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "sucursal.zona_nacional",
+   "fieldname": "zona_nacional",
+   "fieldtype": "Link",
+   "label": "Zona Nacional",
+   "options": "Zonas Nacional",
+   "read_only": 1
+  },
+  {
+   "fieldname": "informacion_bancaria_actual_section",
+   "fieldtype": "Section Break",
+   "label": "Informacion Bancaria"
+  },
+  {
+   "fetch_from": "empleado.bank_name",
+   "fetch_if_empty": 1,
+   "fieldname": "nombre_de_banco",
+   "fieldtype": "Select",
+   "label": "Nombre de Banco",
+   "options": "\nBanco de Cr\u00e9dito del Per\u00fa\nInterbank\nCitibank del Per\u00fa\nScotiabank Per\u00fa\nBBVA Banco Continental\nBanco de la Nacion\nBanco Falabella\nBanco de Comercio\nBanco Pichincha\nBanco Interamericano de Finanzas\nCrediscotia Financiera\nBanco GNB\nSantander\nBanzo Azteca\nBanco Cencosud\nBanco Ripley\nICBC Per\u00fa Bank\nMiBanco\nFinanc. Credinka\nFinanc. ProEmpresa\nFinanc. Confianza\nCrediRaiz\nCompartamos Financiera\nFinanciera Qapaq\nFinanciera TFC S A\nFinanciera Efectiva\nAmerika Financiera\nFinanciera OH!\nCaja Metropolitana de Lima\nCMAC Trujillo\nCMAC Arequipa\nCMAC Sullana\nCMAC Cusco\nCMAC Huancayo\nCMAC Tacna\nCMAC Del Santa\nCMAC Ica\nCMAC Piura\nCMAC Maynas\nCMAC Paita\nCRAC Sipan\nCRAC Del Centro\nCRAC Incasur\nCRAC Prymera\nCRAC Los Andres",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.bank_ac_no",
+   "fetch_if_empty": 1,
+   "fieldname": "num_de_cuenta_bancaria",
+   "fieldtype": "Data",
+   "label": "Num de Cuenta Bancaria",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nombre_de_banco_nuevo",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Nuevo Nombre de Banco",
+   "options": "\nBanco de Cr\u00e9dito del Per\u00fa\nInterbank\nCitibank del Per\u00fa\nScotiabank Per\u00fa\nBBVA Banco Continental\nBanco de la Nacion\nBanco Falabella\nBanco de Comercio\nBanco Pichincha\nBanco Interamericano de Finanzas\nCrediscotia Financiera\nBanco GNB\nSantander\nBanzo Azteca\nBanco Cencosud\nBanco Ripley\nICBC Per\u00fa Bank\nMiBanco\nFinanc. Credinka\nFinanc. ProEmpresa\nFinanc. Confianza\nCrediRaiz\nCompartamos Financiera\nFinanciera Qapaq\nFinanciera TFC S A\nFinanciera Efectiva\nAmerika Financiera\nFinanciera OH!\nCaja Metropolitana de Lima\nCMAC Trujillo\nCMAC Arequipa\nCMAC Sullana\nCMAC Cusco\nCMAC Huancayo\nCMAC Tacna\nCMAC Del Santa\nCMAC Ica\nCMAC Piura\nCMAC Maynas\nCMAC Paita\nCRAC Sipan\nCRAC Del Centro\nCRAC Incasur\nCRAC Prymera\nCRAC Los Andres",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "nuevo_num_de_cuenta_bancaria",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nuevo Num de Cuenta Bancaria",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "documento_cuenta",
+   "fieldtype": "Attach",
+   "label": "Documento Cuenta",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-11-09 17:18:08.410941",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Cambio de Cuenta Bancaria",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "nombre_completo"
+}

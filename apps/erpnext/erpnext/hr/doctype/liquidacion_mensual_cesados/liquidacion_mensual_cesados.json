@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "creation": "2023-03-10 10:01:55.023831",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "empleado",
+  "nombre_completo",
+  "fecha_de_ingreso",
+  "column_break_4",
+  "puesto",
+  "baja_t",
+  "imprimir_documentos",
+  "column_break_8",
+  "todos_los_documentos",
+  "liquidacion",
+  "certificado_trabajo",
+  "carta_liberacion_cts",
+  "ult_boleta_pagos_haberes",
+  "ult_boleta_pagos_cts"
+ ],
+ "fields": [
+  {
+   "fieldname": "empleado",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Empleado",
+   "options": "Employee",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "nombre_completo",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre Completo",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fecha_de_ingreso",
+   "fieldtype": "Date",
+   "label": "Fecha de Ingreso",
+   "read_only": 1
+  },
+  {
+   "fieldname": "puesto",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Puesto",
+   "options": "Designation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "baja_t",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Baja T",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "imprimir_documentos",
+   "fieldtype": "Button",
+   "in_list_view": 1,
+   "label": "Imprimir Documentos"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Por si tiene todos los documentos firmados en un solo archivo",
+   "fieldname": "todos_los_documentos",
+   "fieldtype": "Attach",
+   "label": "Todos los documentos"
+  },
+  {
+   "fieldname": "liquidacion",
+   "fieldtype": "Attach",
+   "label": "Liquidacion"
+  },
+  {
+   "fieldname": "certificado_trabajo",
+   "fieldtype": "Attach",
+   "label": "Certificado de trabajo"
+  },
+  {
+   "fieldname": "carta_liberacion_cts",
+   "fieldtype": "Attach",
+   "label": "Carta de liberacion de CTS"
+  },
+  {
+   "fieldname": "ult_boleta_pagos_haberes",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "label": "Ultima boleta de pagos de haberes"
+  },
+  {
+   "fieldname": "ult_boleta_pagos_cts",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "label": "Ultima boleta de pagos de cts"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-11-10 10:04:31.668565",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Liquidacion Mensual Cesados",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

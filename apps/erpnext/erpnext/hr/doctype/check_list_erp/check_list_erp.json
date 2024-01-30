@@ -1,0 +1,244 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2022-11-25 14:11:37.248867",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "datos_del_personal_section",
+  "empleado",
+  "sucursal",
+  "id_de_la_sucursal",
+  "cargo",
+  "column_break_6",
+  "nombre_del_empleado",
+  "departamento",
+  "zona_nacional",
+  "puesto",
+  "column_break_10",
+  "fecha_de_registro",
+  "fecha_de_ingreso",
+  "formatos_section",
+  "table_14",
+  "requerimientos_section",
+  "table_16",
+  "section_break_17",
+  "table_18",
+  "constancias_section",
+  "table_20",
+  "estados_check_list",
+  "estado_del_documento_section",
+  "estado",
+  "column_break_24",
+  "calificacion_de_restriccion",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "CLE-"
+  },
+  {
+   "fieldname": "empleado",
+   "fieldtype": "Link",
+   "label": "Empleado ID",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "empleado.nombre_completo",
+   "fieldname": "nombre_del_empleado",
+   "fieldtype": "Data",
+   "label": "Nombre del Empleado",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "fecha_de_registro",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Fecha de Registro",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.fecha_de_ingreso_real",
+   "fieldname": "fecha_de_ingreso",
+   "fieldtype": "Date",
+   "label": "Fecha de Ingreso",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.department",
+   "fieldname": "departamento",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Departamento",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.branch",
+   "fieldname": "sucursal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sucursal",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.grade",
+   "fieldname": "cargo",
+   "fieldtype": "Link",
+   "label": "Cargo",
+   "options": "Employee Grade",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.designation",
+   "fieldname": "puesto",
+   "fieldtype": "Link",
+   "label": "Puesto",
+   "options": "Designation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "datos_del_personal_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del Personal"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "formatos_section",
+   "fieldtype": "Section Break",
+   "label": "Formatos"
+  },
+  {
+   "fieldname": "table_14",
+   "fieldtype": "Table",
+   "options": "table_formatos"
+  },
+  {
+   "fieldname": "requerimientos_section",
+   "fieldtype": "Section Break",
+   "label": "Requerimientos"
+  },
+  {
+   "fieldname": "table_16",
+   "fieldtype": "Table",
+   "options": "table_requerimientos"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break",
+   "label": "Otros Documentos"
+  },
+  {
+   "fieldname": "table_18",
+   "fieldtype": "Table",
+   "options": "table_otros_documentos"
+  },
+  {
+   "fieldname": "constancias_section",
+   "fieldtype": "Section Break",
+   "label": "Constancias"
+  },
+  {
+   "fieldname": "table_20",
+   "fieldtype": "Table",
+   "options": "table_constancias"
+  },
+  {
+   "depends_on": "eval:(!(doc.departamento=='Transporte - SE'))",
+   "fieldname": "calificacion_de_restriccion",
+   "fieldtype": "Select",
+   "label": "Calificacion de Restriccion",
+   "mandatory_depends_on": "eval:(!(doc.departamento=='Transporte - SE'))",
+   "options": "\nPERSONAL SUJETO A RESTRICCION\nPERSONAL NO SUJETO A RESTRICCION"
+  },
+  {
+   "fieldname": "estados_check_list",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Estados Check List",
+   "options": "Borrador\nPending\nApproved\nRejected"
+  },
+  {
+   "fieldname": "estado_del_documento_section",
+   "fieldtype": "Section Break",
+   "label": "Estado del Documento"
+  },
+  {
+   "fieldname": "estado",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Estado",
+   "options": "\nIncompleto\nCompleto"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Check List ERP",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "sucursal.ideentificador",
+   "fieldname": "id_de_la_sucursal",
+   "fieldtype": "Data",
+   "label": "Id de la sucursal",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "sucursal.zona_nacional",
+   "fieldname": "zona_nacional",
+   "fieldtype": "Link",
+   "label": "Zona Nacional",
+   "options": "Zonas Nacional",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-09-21 20:19:21.930638",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Check List ERP",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "nombre_del_empleado"
+}

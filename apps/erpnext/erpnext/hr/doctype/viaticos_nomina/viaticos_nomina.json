@@ -1,0 +1,198 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2022-02-04 10:00:24.863949",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "datos_del_empleado_section",
+  "empleado",
+  "nombre_del_empleado",
+  "nombre_completo",
+  "dni",
+  "sucursal",
+  "id_de_la_sucursal",
+  "column_break_5",
+  "naming_series",
+  "departamento",
+  "puesto",
+  "amended_from",
+  "detalles_section",
+  "mes",
+  "ano",
+  "monto_total",
+  "column_break_14",
+  "placa_del_vehiculo",
+  "solo_entrada",
+  "viaticos_section",
+  "table_13"
+ ],
+ "fields": [
+  {
+   "fieldname": "datos_del_empleado_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del Empleado"
+  },
+  {
+   "fieldname": "empleado",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Empleado",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "empleado.employee_name",
+   "fieldname": "nombre_del_empleado",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre del empleado",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.nombre_completo",
+   "fieldname": "nombre_completo",
+   "fieldtype": "Data",
+   "label": "Nombre Completo"
+  },
+  {
+   "fetch_from": "empleado.passport_number",
+   "fieldname": "dni",
+   "fieldtype": "Data",
+   "label": "DNI",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.branch",
+   "fieldname": "sucursal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sucursal",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "sucursal.ideentificador",
+   "fieldname": "id_de_la_sucursal",
+   "fieldtype": "Data",
+   "label": "Id de la sucursal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Serie",
+   "options": "Viaticos-"
+  },
+  {
+   "fetch_from": "empleado.department",
+   "fieldname": "departamento",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Departamento",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.designation",
+   "fieldname": "puesto",
+   "fieldtype": "Data",
+   "label": "Puesto",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Viaticos Nomina",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "detalles_section",
+   "fieldtype": "Section Break",
+   "label": "Detalles"
+  },
+  {
+   "fieldname": "mes",
+   "fieldtype": "Select",
+   "label": "Mes",
+   "options": "\nEnero\nFebrero\nMarzo\nAbril\nMayo\nJunio\nJulio\nAgosto\nSetiembre\nOctubre\nNoviembre\nDiciembre",
+   "reqd": 1
+  },
+  {
+   "default": "2023",
+   "fieldname": "ano",
+   "fieldtype": "Select",
+   "label": "A\u00f1o",
+   "options": "2022\n2023",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "monto_total",
+   "fieldtype": "Float",
+   "label": "Monto Total"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "placa_del_vehiculo",
+   "fieldtype": "Data",
+   "label": "Placa del vehiculo"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "solo_entrada",
+   "fieldtype": "Check",
+   "label": "Solo entrada"
+  },
+  {
+   "fieldname": "viaticos_section",
+   "fieldtype": "Section Break",
+   "label": "Viaticos"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "table_13",
+   "fieldtype": "Table",
+   "options": "Historial viaticos",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-09-21 20:25:15.342108",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Viaticos Nomina",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "sucursal"
+}

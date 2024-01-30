@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "creation": "2023-03-08 10:43:56.263210",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fecha",
+  "sucursal",
+  "column_break_3",
+  "usuario_confirma",
+  "id_terminal"
+ ],
+ "fields": [
+  {
+   "fieldname": "fecha",
+   "fieldtype": "Date",
+   "label": "Fecha"
+  },
+  {
+   "fieldname": "sucursal",
+   "fieldtype": "Link",
+   "label": "Sucursal",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "usuario_confirma",
+   "fieldtype": "Data",
+   "label": "Usuario Confirma"
+  },
+  {
+   "fetch_from": "sucursal.ideentificador",
+   "fieldname": "id_terminal",
+   "fieldtype": "Data",
+   "label": "Id Terminal"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-21 20:19:22.237287",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Confirmacion Horas Extras",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

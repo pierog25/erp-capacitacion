@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "creation": "2023-09-05 08:25:07.415009",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sucursal",
+  "apellidos",
+  "column_break_3",
+  "zona_nacional",
+  "supervisor_a_cargo"
+ ],
+ "fields": [
+  {
+   "fieldname": "sucursal",
+   "fieldtype": "Link",
+   "label": "Sucursal",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "apellidos",
+   "fieldtype": "Data",
+   "label": "Apellidos"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "zona_nacional",
+   "fieldtype": "Data",
+   "label": "Zona Nacional"
+  },
+  {
+   "fieldname": "supervisor_a_cargo",
+   "fieldtype": "Data",
+   "label": "Supervisor a cargo"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-05 08:26:08.901921",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Validacion de agencias",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

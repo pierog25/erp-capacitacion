@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-03-07 16:59:15.691118",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "datos_de_la_agencia_section",
+  "sucursal",
+  "column_break_4",
+  "id_sucursal",
+  "column_break_6",
+  "mes",
+  "column_break_8",
+  "a\u00f1o",
+  "ingresantes_section",
+  "table_11"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "INM-"
+  },
+  {
+   "fieldname": "datos_de_la_agencia_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de la Agencia"
+  },
+  {
+   "fieldname": "sucursal",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Sucursal",
+   "options": "Branch",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "sucursal.ideentificador",
+   "fieldname": "id_sucursal",
+   "fieldtype": "Data",
+   "label": "ID Sucursal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mes",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Mes",
+   "options": "\nEnero\nFebrero\nMarzo\nAbril\nMayo\nJunio\nJulio\nAgosto\nSetiembre\nOctubre\nNoviembre\nDiciembre",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "a\u00f1o",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "A\u00f1o",
+   "options": "\n2023\n2024\n2025",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "ingresantes_section",
+   "fieldtype": "Section Break",
+   "label": "Ingresantes"
+  },
+  {
+   "fieldname": "table_11",
+   "fieldtype": "Table",
+   "options": "Ingreso Mensual Ingresantes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-21 20:19:23.300991",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Ingreso Nuevo Mensual",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "set_user_permissions": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "sucursal"
+}

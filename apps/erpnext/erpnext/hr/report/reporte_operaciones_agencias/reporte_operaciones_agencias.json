@@ -1,0 +1,31 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2024-01-08 00:28:42.405255",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{}",
+ "letter_head": "NOMINA",
+ "modified": "2024-01-09 17:51:30.989361",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Reporte Operaciones Agencias",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "POS Invoice",
+ "report_name": "Reporte Operaciones Agencias",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Usuario Finanzas"
+  }
+ ]
+}

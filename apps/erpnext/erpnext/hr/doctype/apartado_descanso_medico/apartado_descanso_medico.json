@@ -1,0 +1,465 @@
+{
+ "actions": [],
+ "autoname": "DES-MED-.#####",
+ "creation": "2023-02-17 20:44:53.694588",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "datos__del_personal_section",
+  "apellidos_y_nombres",
+  "sede",
+  "column_break_10",
+  "nombre_completo",
+  "celular",
+  "section_break_12",
+  "puesto_o_cargo",
+  "edad",
+  "datos_del_accidente_section",
+  "condicion",
+  "fecha_nacimiento",
+  "lugar_de_atencion_medica",
+  "fecha_del_accidente_sintomas_o_dia_que_no_fue_a_laborar",
+  "column_break_4",
+  "contingencia",
+  "hospitalizado",
+  "hora_de_accidente_o_de_sintomas",
+  "proceso_de_ejecuci\u00f3n_section",
+  "estado_de_creacion",
+  "enviado_a_ssoma",
+  "w_column",
+  "descripcion_de_lo_observado",
+  "lapso_de_descanso_medico_section",
+  "fecha_de_inicio_de_dm",
+  "column_break_17",
+  "fecha_de_fin_de_dm",
+  "column_break_19",
+  "dias_de_dm",
+  "crear_asistencia",
+  "seguimiento_de_descanso_medico_section",
+  "seguimiento",
+  "column_break_33",
+  "cantidad_de_llamadas",
+  "section_break_35",
+  "table_35",
+  "diagnostico_section",
+  "se_atendio_con_sctr",
+  "data_13",
+  "descripcion",
+  "column_break_25",
+  "diagnostico",
+  "documentos_a_presentar_section",
+  "documentos_que_present\u00f3",
+  "citt",
+  "descanso_medico",
+  "otros_documentos",
+  "column_break_37",
+  "receta_medica",
+  "documentos_varios",
+  "comprobante_de_medicamentos",
+  "salto_01",
+  "documentos_varios_en_caso_tuviera",
+  "voucher_de_consulta_medica",
+  "voucher_de_medicamento",
+  "sctr",
+  "sucursal",
+  "otros_documentos_hospitalizado_u_otra_contigencia_medica",
+  "documento_de_calculo_section",
+  "calculo_de_subsidioio_creado",
+  "data_for_script_section",
+  "asistencias_pendientes",
+  "column_break_57",
+  "dateinit",
+  "column_break_59",
+  "dateend"
+ ],
+ "fields": [
+  {
+   "fieldname": "datos__del_personal_section",
+   "fieldtype": "Section Break",
+   "label": "DATOS  DEL PERSONAL "
+  },
+  {
+   "default": "employee.nombre_completo",
+   "fieldname": "apellidos_y_nombres",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "EMPLEADO",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "apellidos_y_nombres.branch",
+   "fieldname": "sede",
+   "fieldtype": "Data",
+   "label": "SEDE"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "apellidos_y_nombres.nombre_completo",
+   "fieldname": "nombre_completo",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "NOMBRE COMPLETO"
+  },
+  {
+   "fieldname": "celular",
+   "fieldtype": "Data",
+   "label": "CELULAR"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "apellidos_y_nombres.designation",
+   "fieldname": "puesto_o_cargo",
+   "fieldtype": "Data",
+   "label": "PUESTO O CARGO"
+  },
+  {
+   "fieldname": "edad",
+   "fieldtype": "Data",
+   "label": "EDAD"
+  },
+  {
+   "fieldname": "datos_del_accidente_section",
+   "fieldtype": "Section Break",
+   "label": "DATOS DE LA CONTINGENCIA"
+  },
+  {
+   "fieldname": "condicion",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "CONDICION",
+   "options": "LABORANDO\nNO LABORANDO"
+  },
+  {
+   "fetch_from": "apellidos_y_nombres.date_of_birth",
+   "fieldname": "fecha_nacimiento",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "FECHA NACIMIENTO"
+  },
+  {
+   "fieldname": "lugar_de_atencion_medica",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "LUGAR DE ATENCION MEDICA",
+   "options": "CENTRO COVID\nEPS\nESSALUD\nESSALUD Y PARTICULAR\nMINSA\nNEOPLASICA\nNINGUNO\nSOAT\nDESCANSO MEDICO PARTICULAR\nESSALUD CITT\nPARTICULAR - SOAT\nSEGURO EPS - SEGURO CONTRA ACCIDENTE\nEXCEPCION MEDICA - MINSA (SIS)\nDESCANSO MEDICO POR ACCIDENTE LABORAL"
+  },
+  {
+   "fieldname": "fecha_del_accidente_sintomas_o_dia_que_no_fue_a_laborar",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "FECHA DE LA CONTINGENCIA"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contingencia",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "CONTINGENCIA",
+   "options": "ACC. EXTERNO\nACC. EXTERNO-recurrente\nACC. LABORAL\nACC. LABORAL-recurrente\nENF. COMUN\nENF. COMUN-recurrente\nLIC. X MATERNIDAD"
+  },
+  {
+   "default": "no",
+   "fieldname": "hospitalizado",
+   "fieldtype": "Select",
+   "label": "HOSPITALIZADO U OTRA CONTIGENCIA MEDICA",
+   "options": "no\nsi"
+  },
+  {
+   "fieldname": "hora_de_accidente_o_de_sintomas",
+   "fieldtype": "Time",
+   "label": "HORA DE LA CONTINGENCIA"
+  },
+  {
+   "fieldname": "proceso_de_ejecuci\u00f3n_section",
+   "fieldtype": "Section Break",
+   "label": "PROCESO DE EJECUCI\u00d3N"
+  },
+  {
+   "fieldname": "estado_de_creacion",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "ESTADO DM",
+   "options": "CREADO POR JEFE INMEDIATO\nEN PROCESO DE REVISION\nOBSERVADO POR FALTA DE DOCUMENTO\nVALIDADO POR EL MEDICO\nNO VALIDADO POR EL MEDICO",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "enviado_a_ssoma",
+   "fieldtype": "Check",
+   "label": "ENVIADO A SSOMA"
+  },
+  {
+   "fieldname": "w_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "descripcion_de_lo_observado",
+   "fieldtype": "Small Text",
+   "label": "DESCRIPCION DE LO OBSERVADO"
+  },
+  {
+   "fieldname": "lapso_de_descanso_medico_section",
+   "fieldtype": "Section Break",
+   "label": "LAPSO DE DESCANSO MEDICO"
+  },
+  {
+   "fieldname": "fecha_de_inicio_de_dm",
+   "fieldtype": "Date",
+   "label": "FECHA DE INICIO DE DM"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fecha_de_fin_de_dm",
+   "fieldtype": "Date",
+   "label": "FECHA DE FIN DE DM"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dias_de_dm",
+   "fieldtype": "Data",
+   "label": "DIAS DE DM"
+  },
+  {
+   "fieldname": "crear_asistencia",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Crear Asistencias"
+  },
+  {
+   "depends_on": "eval:(doc.estado_de_creacion == \"VALIDADO POR EL MEDICO\" && doc.contingencia !== \"\" && doc.contingencia !== undefined\n&& doc.contingencia !== \"\" && doc.dias_de_dm !== \"\"  && doc.dias_de_dm !== undefined\n&& doc.dias_de_dm !== 0)",
+   "fieldname": "seguimiento_de_descanso_medico_section",
+   "fieldtype": "Section Break",
+   "label": "SEGUIMIENTO DE DESCANSO MEDICO"
+  },
+  {
+   "default": "SIN SEGUIMIENTO",
+   "fieldname": "seguimiento",
+   "fieldtype": "Select",
+   "label": "SEGUIMIENTO",
+   "options": "CON SEGUIMIENTO\nSIN SEGUIMIENTO",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_33",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "cantidad_de_llamadas",
+   "fieldtype": "Int",
+   "label": "CANTIDAD DE LLAMADAS",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:(doc.estado_de_creacion == \"VALIDADO POR EL MEDICO\" && doc.contingencia !== \"\" && doc.contingencia !== undefined\n&& doc.contingencia !== \"\" && doc.dias_de_dm !== \"\"  && doc.dias_de_dm !== undefined\n&& doc.dias_de_dm !== 0)",
+   "fieldname": "section_break_35",
+   "fieldtype": "Section Break",
+   "label": "HISTORIAL DE SEGUIMIENTO"
+  },
+  {
+   "fieldname": "table_35",
+   "fieldtype": "Table",
+   "options": "table_control"
+  },
+  {
+   "fieldname": "diagnostico_section",
+   "fieldtype": "Section Break",
+   "label": "DIAGNOSTICO"
+  },
+  {
+   "fieldname": "se_atendio_con_sctr",
+   "fieldtype": "Select",
+   "label": "SE ATENDIO CON SCTR",
+   "options": "no\nsi"
+  },
+  {
+   "fieldname": "data_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "descripcion",
+   "fieldtype": "Long Text",
+   "label": "DESCRIPCION"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "diagnostico",
+   "fieldtype": "Long Text",
+   "label": "DIAGNOSTICO"
+  },
+  {
+   "fieldname": "documentos_a_presentar_section",
+   "fieldtype": "Section Break",
+   "label": "DOCUMENTOS A PRESENTAR"
+  },
+  {
+   "fieldname": "documentos_que_present\u00f3",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "DOCUMENTOS QUE PRESENTO",
+   "options": "ESSALUD\nEPS\nPARTICULAR\nSOAT\nMINSA\nCENTRO COVID"
+  },
+  {
+   "fieldname": "citt",
+   "fieldtype": "Attach",
+   "label": "CITT"
+  },
+  {
+   "fieldname": "descanso_medico",
+   "fieldtype": "Attach",
+   "label": "DESCANSO MEDICO"
+  },
+  {
+   "fieldname": "otros_documentos",
+   "fieldtype": "Attach",
+   "label": "OTROS DOCUMENTOS"
+  },
+  {
+   "fieldname": "column_break_37",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "receta_medica",
+   "fieldtype": "Attach",
+   "label": "RECETA MEDICA"
+  },
+  {
+   "fieldname": "documentos_varios",
+   "fieldtype": "Attach",
+   "label": "DOCUMENTOS VARIOS"
+  },
+  {
+   "fieldname": "comprobante_de_medicamentos",
+   "fieldtype": "Attach",
+   "label": "COMPROBANTE DE MEDICAMENTOS"
+  },
+  {
+   "fieldname": "salto_01",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "documentos_varios_en_caso_tuviera",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "label": "DOCUMENTOS VARIOS EN CASO TUVIERA"
+  },
+  {
+   "fieldname": "voucher_de_consulta_medica",
+   "fieldtype": "Attach",
+   "label": "VOUCHER DE CONSULTA MEDICA"
+  },
+  {
+   "fieldname": "voucher_de_medicamento",
+   "fieldtype": "Attach",
+   "label": "VOUCHER DE MEDICAMENTO"
+  },
+  {
+   "fieldname": "sctr",
+   "fieldtype": "Attach",
+   "label": "SCTR"
+  },
+  {
+   "fetch_from": "apellidos_y_nombres.branch",
+   "fieldname": "sucursal",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "SUCURSAL"
+  },
+  {
+   "description": "Puede adjuntar im\u00e1genes, videos, pdfs, excels cualquier detalle para la validaci\u00f3n del descanso medico.",
+   "fieldname": "otros_documentos_hospitalizado_u_otra_contigencia_medica",
+   "fieldtype": "Attach",
+   "label": "Otros Documentos Hospitalizado"
+  },
+  {
+   "fieldname": "documento_de_calculo_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Documento de Calculo"
+  },
+  {
+   "default": "0",
+   "fieldname": "calculo_de_subsidioio_creado",
+   "fieldtype": "Check",
+   "label": "Calculo de Subsidioio creado"
+  },
+  {
+   "fieldname": "data_for_script_section",
+   "fieldtype": "Section Break",
+   "label": "Data for Script"
+  },
+  {
+   "default": "0",
+   "fieldname": "asistencias_pendientes",
+   "fieldtype": "Check",
+   "label": "Asistencias Pendientes"
+  },
+  {
+   "fieldname": "column_break_57",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "dateinit",
+   "fieldtype": "Check",
+   "label": "Input Inicio"
+  },
+  {
+   "fieldname": "column_break_59",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "dateend",
+   "fieldtype": "Check",
+   "label": "Input Fin"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-07 11:36:38.230450",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Apartado Descanso Medico",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

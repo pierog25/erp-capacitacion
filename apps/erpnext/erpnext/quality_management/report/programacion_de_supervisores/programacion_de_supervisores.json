@@ -1,0 +1,29 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2023-05-22 18:19:50.797458",
+ "disable_prepared_report": 0,
+ "disabled": 1,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{\"columns\":[{\"label\":\"NOMBRE SUPERVISOR\",\"fieldname\":\"nombre_supervisor\",\"fieldtype\":\"Data\",\"width\":500,\"id\":\"nombre_supervisor\",\"name\":\"NOMBRE SUPERVISOR\",\"editable\":false,\"compareValue\":null},{\"label\":\"TOTAL DE PROGRAMACIONES\",\"fieldname\":\"total_programaciones\",\"fieldtype\":\"Float\",\"width\":100,\"id\":\"total_programaciones\",\"name\":\"TOTAL DE PROGRAMACIONES\",\"editable\":false,\"compareValue\":null},{\"label\":\"INFORME ADJUNTO\",\"fieldname\":\"informe_adjunto\",\"fieldtype\":\"Float\",\"width\":100,\"id\":\"informe_adjunto\",\"name\":\"INFORME ADJUNTO\",\"editable\":false,\"compareValue\":null},{\"label\":\"% DE EFICIENCIA\",\"fieldname\":\"eficiencia\",\"fieldtype\":\"Data\",\"width\":100,\"id\":\"eficiencia\",\"name\":\"% DE EFICIENCIA\",\"editable\":false,\"compareValue\":null}]}",
+ "letter_head": "NOMINA",
+ "modified": "2023-07-04 20:07:19.247752",
+ "modified_by": "Administrator",
+ "module": "Quality Management",
+ "name": "Programacion de Supervisores",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Programacion de Supervisores",
+ "reference_report": "Programacion Supervisores",
+ "report_name": "Programacion de Supervisores",
+ "report_type": "Custom Report",
+ "roles": [
+  {
+   "role": "Supervisor Nacional"
+  }
+ ]
+}

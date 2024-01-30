@@ -1,0 +1,308 @@
+{
+ "actions": [],
+ "autoname": "PAGO-COM-.#####",
+ "creation": "2022-11-02 15:51:04.411233",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sucursal",
+  "column_break_2",
+  "mes",
+  "year",
+  "datos_del_concesionario_section",
+  "nombre",
+  "numero_de_cuenta",
+  "tipo_de_cuenta",
+  "column_break_9",
+  "ruc",
+  "banco",
+  "numero_de_cuenta_de_detraccion",
+  "factura_section",
+  "tipo_de_documento",
+  "n_serie",
+  "n_documento",
+  "column_break_16",
+  "fecha_de_emisi\u00f3n_de_factura",
+  "documento_adjunto",
+  "section_break_13",
+  "enviados",
+  "total_envios",
+  "descuentos",
+  "igv",
+  "detraccion",
+  "column_break_25",
+  "recibidos",
+  "comision",
+  "gastos_de_distribucion",
+  "total_a_facturar",
+  "total_a_depositar",
+  "detalle_descuentos_section",
+  "operativos",
+  "pinpad",
+  "column_break_28",
+  "equipos",
+  "total_descuentos",
+  "pago_section",
+  "n_operacion",
+  "fecha_de_pago",
+  "column_break_39",
+  "estado_del_documento",
+  "documento_del_pago",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "sucursal",
+   "fieldtype": "Link",
+   "label": "Sucursal",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mes",
+   "fieldtype": "Select",
+   "label": "Mes",
+   "options": "Enero\nFebrero\nMarzo\nAbril\nMayo\nJunio\nJulio\nAgosto\nSetiembre\nOctubre\nNoviembre\nDiciembre"
+  },
+  {
+   "fieldname": "year",
+   "fieldtype": "Select",
+   "label": "Year",
+   "options": "2022\n2023"
+  },
+  {
+   "fieldname": "datos_del_concesionario_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del Concesionario"
+  },
+  {
+   "fieldname": "nombre",
+   "fieldtype": "Data",
+   "label": "Nombre"
+  },
+  {
+   "fieldname": "numero_de_cuenta",
+   "fieldtype": "Data",
+   "label": "Numero de cuenta"
+  },
+  {
+   "fieldname": "tipo_de_cuenta",
+   "fieldtype": "Select",
+   "label": "Tipo de Cuenta",
+   "options": "---Seleccionar---\nAhorros\nCorriente\nInterbancario"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ruc",
+   "fieldtype": "Data",
+   "label": "RUC"
+  },
+  {
+   "fieldname": "banco",
+   "fieldtype": "Select",
+   "label": "Banco",
+   "options": "---Seleccionar---\nBCP\nBBVA\nCCI"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Pago de comisiones",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break",
+   "label": "Detalle Comision"
+  },
+  {
+   "fieldname": "enviados",
+   "fieldtype": "Data",
+   "label": "Enviados"
+  },
+  {
+   "fieldname": "recibidos",
+   "fieldtype": "Data",
+   "label": "Recibidos"
+  },
+  {
+   "fieldname": "total_envios",
+   "fieldtype": "Data",
+   "label": "Total Envios"
+  },
+  {
+   "bold": 1,
+   "fieldname": "comision",
+   "fieldtype": "Currency",
+   "label": "Comision"
+  },
+  {
+   "fieldname": "descuentos",
+   "fieldtype": "Currency",
+   "label": "Descuentos"
+  },
+  {
+   "fieldname": "gastos_de_distribucion",
+   "fieldtype": "Currency",
+   "label": "Gastos de Distribucion"
+  },
+  {
+   "fieldname": "igv",
+   "fieldtype": "Currency",
+   "label": "IGV"
+  },
+  {
+   "fieldname": "total_a_facturar",
+   "fieldtype": "Currency",
+   "label": "Total a Facturar"
+  },
+  {
+   "fieldname": "detraccion",
+   "fieldtype": "Data",
+   "label": "Detraccion"
+  },
+  {
+   "fieldname": "total_a_depositar",
+   "fieldtype": "Currency",
+   "label": "Total a Depositar"
+  },
+  {
+   "fieldname": "detalle_descuentos_section",
+   "fieldtype": "Section Break",
+   "label": "Detalle Descuentos"
+  },
+  {
+   "fieldname": "operativos",
+   "fieldtype": "Currency",
+   "label": "Operativos"
+  },
+  {
+   "fieldname": "equipos",
+   "fieldtype": "Currency",
+   "label": "Equipos"
+  },
+  {
+   "fieldname": "pinpad",
+   "fieldtype": "Currency",
+   "label": "Pinpad"
+  },
+  {
+   "fieldname": "total_descuentos",
+   "fieldtype": "Currency",
+   "label": "Total Descuentos"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tipo_de_documento",
+   "fieldtype": "Select",
+   "label": "Tipo de documento",
+   "options": "Factura de Venta\nBoleta de Venta"
+  },
+  {
+   "fieldname": "n_documento",
+   "fieldtype": "Data",
+   "label": "N Documento"
+  },
+  {
+   "fieldname": "n_serie",
+   "fieldtype": "Data",
+   "label": "N Serie"
+  },
+  {
+   "fieldname": "fecha_de_emisi\u00f3n_de_factura",
+   "fieldtype": "Date",
+   "label": "Fecha de Emisi\u00f3n de Factura"
+  },
+  {
+   "fieldname": "documento_adjunto",
+   "fieldtype": "Attach",
+   "label": "Documento Adjunto"
+  },
+  {
+   "fieldname": "pago_section",
+   "fieldtype": "Section Break",
+   "label": "Pago"
+  },
+  {
+   "fieldname": "fecha_de_pago",
+   "fieldtype": "Data",
+   "label": "Fecha de Pago"
+  },
+  {
+   "fieldname": "n_operacion",
+   "fieldtype": "Data",
+   "label": "N Operacion"
+  },
+  {
+   "fieldname": "estado_del_documento",
+   "fieldtype": "Select",
+   "label": "Estado del Documento",
+   "options": "Pendiente de Adjuntar Factura\nPor Pagar\nPagado"
+  },
+  {
+   "fieldname": "documento_del_pago",
+   "fieldtype": "Attach",
+   "label": "Documento del Pago"
+  },
+  {
+   "fieldname": "factura_section",
+   "fieldtype": "Section Break",
+   "label": "FACTURA"
+  },
+  {
+   "fieldname": "column_break_39",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "numero_de_cuenta_de_detraccion",
+   "fieldtype": "Data",
+   "label": "N\u00famero de Cuenta de Detracci\u00f3n"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-11-03 12:59:59.909067",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "Pago de comisiones",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1
+}

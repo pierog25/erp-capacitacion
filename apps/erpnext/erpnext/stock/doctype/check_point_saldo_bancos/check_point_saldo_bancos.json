@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "autoname": "CHECK-POINT-.####",
+ "creation": "2023-06-02 15:34:05.728154",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fecha",
+  "total_soles",
+  "column_break_3",
+  "usuario",
+  "total_dolares",
+  "section_break_6",
+  "table_7"
+ ],
+ "fields": [
+  {
+   "fieldname": "fecha",
+   "fieldtype": "Date",
+   "label": "Fecha"
+  },
+  {
+   "fieldname": "total_soles",
+   "fieldtype": "Float",
+   "label": "Total Soles"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "usuario",
+   "fieldtype": "Data",
+   "label": "Usuario"
+  },
+  {
+   "fieldname": "total_dolares",
+   "fieldtype": "Float",
+   "label": "Total Dolares"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_7",
+   "fieldtype": "Table",
+   "options": "List Check Banco"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-21 20:19:26.857685",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "Check Point Saldo Bancos",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

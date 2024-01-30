@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "creation": "2023-03-20 10:25:29.027852",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fecha",
+  "motivo",
+  "column_break_3",
+  "imei",
+  "cambio",
+  "entrega"
+ ],
+ "fields": [
+  {
+   "fieldname": "fecha",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Fecha"
+  },
+  {
+   "fieldname": "motivo",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Motivo",
+   "options": "\nCambio\nEntrega"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "imei",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "IMEI"
+  },
+  {
+   "depends_on": "eval: doc.motivo == \"Cambio\"",
+   "fieldname": "cambio",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Cambio",
+   "options": "\nDeterioro por tiempo de uso\nDeterioro por negligencia o mal uso\nFallas internas del equipo"
+  },
+  {
+   "depends_on": "eval: doc.motivo == \"Entrega\"",
+   "fieldname": "entrega",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Entrega",
+   "options": "\nApertura de agencia\nApertura de \u00e1rea\nP\u00e9rdida o robo\nIncremento de actividades"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-21 21:24:50.851277",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Tabla Datos Moviles",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

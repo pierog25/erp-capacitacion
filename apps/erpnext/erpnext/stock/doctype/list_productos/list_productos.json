@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "creation": "2023-05-06 10:39:55.094010",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "codigo_de_producto",
+  "nombre_de_producto",
+  "monto",
+  "tipo"
+ ],
+ "fields": [
+  {
+   "fieldname": "codigo_de_producto",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Codigo de Producto",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "codigo_de_producto.item_name",
+   "fieldname": "nombre_de_producto",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre de Producto"
+  },
+  {
+   "fieldname": "monto",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Monto"
+  },
+  {
+   "fieldname": "tipo",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Tipo",
+   "options": "clientes\ntrabajador"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-21 21:24:53.697074",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "List Productos",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

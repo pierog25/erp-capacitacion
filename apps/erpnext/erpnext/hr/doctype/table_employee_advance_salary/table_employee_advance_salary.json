@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "creation": "2023-03-21 15:56:09.880524",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "datos_del_empleado_section",
+  "id_empleado",
+  "column_break_3",
+  "nombre_completo",
+  "column_break_5",
+  "fecha_de_ingreso",
+  "column_break_7",
+  "dni",
+  "datos_del_adelanto_section",
+  "monto",
+  "grado",
+  "puesto",
+  "tipo_de_empleado"
+ ],
+ "fields": [
+  {
+   "fieldname": "id_empleado",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "ID Empleado",
+   "options": "Employee",
+   "permlevel": 1
+  },
+  {
+   "fetch_from": "id_empleado.nombre_completo",
+   "fieldname": "nombre_completo",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre Completo",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "id_empleado.fecha_de_ingreso_real",
+   "fieldname": "fecha_de_ingreso",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Fecha de Ingreso",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "id_empleado.passport_number",
+   "fieldname": "dni",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "DNI",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "monto",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Monto",
+   "precision": "2"
+  },
+  {
+   "fieldname": "datos_del_empleado_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del Empleado"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "datos_del_adelanto_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del Adelanto"
+  },
+  {
+   "fetch_from": "id_empleado.grade",
+   "fieldname": "grado",
+   "fieldtype": "Data",
+   "label": "Grado"
+  },
+  {
+   "fetch_from": "id_empleado.designation",
+   "fieldname": "puesto",
+   "fieldtype": "Data",
+   "label": "Puesto"
+  },
+  {
+   "fetch_from": "id_empleado.tipo_de_empleado",
+   "fieldname": "tipo_de_empleado",
+   "fieldtype": "Data",
+   "label": "Tipo de Empleado"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-21 21:24:57.882273",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "table_employee_advance_salary",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

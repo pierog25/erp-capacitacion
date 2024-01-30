@@ -1,0 +1,370 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-03-15 10:34:12.923512",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "cambio_salarial_administrativo_section",
+  "cambio_salarial",
+  "datos_del_empleado_section",
+  "empleado",
+  "nombre_completo",
+  "dni",
+  "column_break_4",
+  "agencia",
+  "puesto",
+  "domicilio",
+  "column_break_7",
+  "id_agencia",
+  "departamento",
+  "column_break_9",
+  "zona_nacional",
+  "fecha_de_ingreso",
+  "datos_de_actualizacion_section",
+  "sueldo",
+  "movilidad",
+  "column_break_16",
+  "nuevo_sueldo",
+  "nueva_movilidad",
+  "column_break_18",
+  "fecha_de_actualizacion",
+  "empleado_actualizado",
+  "amended_from",
+  "datos_de_actualizacion_descuento_salarial_section",
+  "puesto_a_ocupar",
+  "column_break_31",
+  "horario_de_inicio",
+  "hora_de_inicio",
+  "horario_de_finalizacion",
+  "column_break_34",
+  "convenio_cambio_condicion_laboral",
+  "diacreacion",
+  "mescreacion",
+  "a\u00f1ocreacion",
+  "dia_de_ingreso",
+  "mes_de_ingreso",
+  "a\u00f1o_de_ingreso",
+  "dia_actualizacion",
+  "mes_actualizacion",
+  "a\u00f1o_actualizacion"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "CSA-"
+  },
+  {
+   "fieldname": "datos_del_empleado_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del Empleado"
+  },
+  {
+   "fieldname": "empleado",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Empleado",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "empleado.nombre_completo",
+   "fieldname": "nombre_completo",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Nombre Completo",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.branch",
+   "fieldname": "agencia",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Agencia",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "agencia.ideentificador",
+   "fieldname": "id_agencia",
+   "fieldtype": "Data",
+   "label": "ID Agencia",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "agencia.zona_nacional",
+   "fieldname": "zona_nacional",
+   "fieldtype": "Link",
+   "label": "Zona Nacional",
+   "options": "Zonas Nacional",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.designation",
+   "fieldname": "puesto",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Puesto",
+   "options": "Designation",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.fecha_de_ingreso_real",
+   "fieldname": "fecha_de_ingreso",
+   "fieldtype": "Date",
+   "label": "Fecha de Ingreso",
+   "read_only": 1
+  },
+  {
+   "fieldname": "datos_de_actualizacion_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de Actualizacion Aumento Salarial"
+  },
+  {
+   "fetch_from": "empleado.remuneracion_mensual",
+   "fieldname": "sueldo",
+   "fieldtype": "Float",
+   "label": "Sueldo",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nuevo_sueldo",
+   "fieldtype": "Float",
+   "label": "Nuevo Sueldo",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fecha_de_actualizacion",
+   "fieldtype": "Select",
+   "label": "Fecha de Actualizacion"
+  },
+  {
+   "fetch_from": "empleado.department",
+   "fieldname": "departamento",
+   "fieldtype": "Link",
+   "label": "Departamento",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.movilidad",
+   "fieldname": "movilidad",
+   "fieldtype": "Float",
+   "label": "Movilidad",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "nueva_movilidad",
+   "fieldtype": "Float",
+   "label": "Nueva Movilidad",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Cambio Salarial Administrativo",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "empleado_actualizado",
+   "fieldtype": "Check",
+   "label": "Empleado Actualizado",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.passport_number",
+   "fieldname": "dni",
+   "fieldtype": "Data",
+   "label": "DNI",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.current_address",
+   "fieldname": "domicilio",
+   "fieldtype": "Data",
+   "label": "Domicilio",
+   "read_only": 1
+  },
+  {
+   "fieldname": "datos_de_actualizacion_descuento_salarial_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de Actualizacion Descuento Salarial"
+  },
+  {
+   "fieldname": "puesto_a_ocupar",
+   "fieldtype": "Link",
+   "label": "Puesto a ocupar",
+   "mandatory_depends_on": "eval:doc.cambio_salarial==='Descuento salarial'",
+   "options": "Designation"
+  },
+  {
+   "fetch_from": "horario_de_inicio.end_time",
+   "fieldname": "horario_de_finalizacion",
+   "fieldtype": "Data",
+   "label": "Horario de finalizacion"
+  },
+  {
+   "fieldname": "horario_de_inicio",
+   "fieldtype": "Link",
+   "label": "Turno",
+   "mandatory_depends_on": "eval:doc.cambio_salarial==='Descuento salarial'",
+   "options": "Shift Type"
+  },
+  {
+   "fieldname": "cambio_salarial_administrativo_section",
+   "fieldtype": "Section Break",
+   "label": "Cambio Salarial Administrativo"
+  },
+  {
+   "default": "Aumento salarial",
+   "fieldname": "cambio_salarial",
+   "fieldtype": "Select",
+   "label": "Cambio Salarial",
+   "options": "Aumento salarial\nDescuento salarial"
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "diacreacion",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Dia de Creaci\u00f3n"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "mescreacion",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Mes de Creaci\u00f3n"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "a\u00f1ocreacion",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "A\u00f1o de Creaci\u00f3n"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "dia_de_ingreso",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Dia de Ingreso"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "mes_de_ingreso",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Mes de Ingreso"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "a\u00f1o_de_ingreso",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "A\u00f1o de Ingreso"
+  },
+  {
+   "fetch_from": "horario_de_inicio.start_time",
+   "fieldname": "hora_de_inicio",
+   "fieldtype": "Data",
+   "label": "Hora de inicio"
+  },
+  {
+   "depends_on": "eval:(doc.puesto_a_ocupar && doc.puesto_a_ocupar != ''\n   && doc.nueva_fecha_de_ingreso && doc.nueva_fecha_de_ingreso != ''\n   && doc.horario_de_inicio && doc.horario_de_inicio != ''\n   && doc.remuneracion_basica && doc.remuneracion_basica != null\n   && doc.movilidad_sujeta_a_asistencia && doc.movilidad_sujeta_a_asistencia != null\n   )",
+   "fieldname": "convenio_cambio_condicion_laboral",
+   "fieldtype": "Attach",
+   "label": "Convenio cambio condicion laboral"
+  },
+  {
+   "fieldname": "dia_actualizacion",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Dia actualizacion"
+  },
+  {
+   "fieldname": "mes_actualizacion",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Mes actualizacion"
+  },
+  {
+   "fieldname": "a\u00f1o_actualizacion",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "A\u00f1o actualizacion"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-10-12 18:21:36.556482",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Cambio Salarial Administrativo",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "empleado",
+ "track_changes": 1
+}

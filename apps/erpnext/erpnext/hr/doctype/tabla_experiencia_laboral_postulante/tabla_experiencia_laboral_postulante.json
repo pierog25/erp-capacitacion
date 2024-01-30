@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "creation": "2023-03-01 17:21:44.287281",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fecha_de_ingreso",
+  "fecha_de_cese",
+  "column_break_3",
+  "empresa",
+  "cargo",
+  "column_break_6",
+  "motivo_de_retiro",
+  "telefono",
+  "section_break_9",
+  "funciones"
+ ],
+ "fields": [
+  {
+   "fieldname": "fecha_de_ingreso",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Fecha de Ingreso"
+  },
+  {
+   "fieldname": "fecha_de_cese",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Fecha de Cese"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "empresa",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Empresa"
+  },
+  {
+   "columns": 1,
+   "fieldname": "cargo",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Cargo"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "motivo_de_retiro",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Motivo de Retiro"
+  },
+  {
+   "columns": 1,
+   "fieldname": "telefono",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Telefono"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "funciones",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Funciones"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-21 21:24:49.920167",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "tabla_experiencia_laboral_postulante",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

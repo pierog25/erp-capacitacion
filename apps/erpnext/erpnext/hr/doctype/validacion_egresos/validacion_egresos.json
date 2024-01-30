@@ -1,0 +1,152 @@
+{
+ "actions": [],
+ "autoname": "VAL-EGR-.####",
+ "creation": "2023-02-16 10:41:44.243351",
+ "doctype": "DocType",
+ "documentation": "https://docs.google.com/document/d/1PPFqI-8Ca8fUU7uCy6FoOD0SfczFmWf0syW86Vk8GjE/edit",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1",
+  "banco",
+  "fecha_de_inicio",
+  "adjuntar_excel",
+  "column_break_4",
+  "fecha_de_fin",
+  "monto_total",
+  "limpiar",
+  "section_break_8",
+  "porcentaje_egresos_validados",
+  "qty_egresos_validados",
+  "column_break_11",
+  "porcentaje_egresos_no_validados",
+  "qty_egresos_no_validados",
+  "section_break_14",
+  "egresos_faltantes",
+  "section_break_7",
+  "egresos_validados"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "banco",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Banco",
+   "options": "BCP\nBBVA"
+  },
+  {
+   "fieldname": "fecha_de_inicio",
+   "fieldtype": "Date",
+   "label": "Fecha de Inicio"
+  },
+  {
+   "fieldname": "fecha_de_fin",
+   "fieldtype": "Date",
+   "label": "Fecha de Fin"
+  },
+  {
+   "fieldname": "adjuntar_excel",
+   "fieldtype": "Attach",
+   "label": "Adjuntar Excel"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "Egresos Validados"
+  },
+  {
+   "fieldname": "egresos_validados",
+   "fieldtype": "Table",
+   "label": "Tabla Validaciones",
+   "options": "Egresos Validados"
+  },
+  {
+   "fieldname": "monto_total",
+   "fieldtype": "Float",
+   "label": "Monto Total"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Estadistica de egresos"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "porcentaje_egresos_validados",
+   "fieldtype": "Data",
+   "label": "Egresos Validados %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "qty_egresos_validados",
+   "fieldtype": "Data",
+   "label": "Cantidad Egresos",
+   "read_only": 1
+  },
+  {
+   "fieldname": "porcentaje_egresos_no_validados",
+   "fieldtype": "Data",
+   "label": "Egresos No Validados %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "qty_egresos_no_validados",
+   "fieldtype": "Data",
+   "label": "Cantidad de Egresos No Validados ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "egresos_faltantes",
+   "fieldtype": "Table",
+   "options": "table documents not validated",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval: (doc.name.includes('new') && frappe.user.has_role('System Manager'))",
+   "fieldname": "limpiar",
+   "fieldtype": "Button",
+   "label": "Limpiar"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-24 17:19:07.628588",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Validacion Egresos",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

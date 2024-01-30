@@ -1,0 +1,113 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2022-03-07 12:43:25.597633",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "mes",
+  "column_break_3",
+  "ano",
+  "column_break_5",
+  "estado",
+  "column_break_6",
+  "tabla_apoyo_nomina",
+  "amended_from",
+  "estado_section"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Serie",
+   "options": "Apoyo-"
+  },
+  {
+   "fieldname": "mes",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Mes",
+   "options": "\nEnero\nFebrero\nMarzo\nAbril\nMayo\nJunio\nJulio\nAgosto\nSetiembre\nOctubre\nNoviembre\nDiciembre",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ano",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "A\u00f1o",
+   "options": "\n2022\n2023\n2024\n2025",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pendiente",
+   "fieldname": "estado",
+   "fieldtype": "Select",
+   "label": "Estado",
+   "options": "Pendiente\nPagado"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "tabla_apoyo_nomina",
+   "fieldtype": "Table",
+   "options": "tabla_apoyo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Apoyo",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "estado_section",
+   "fieldtype": "Section Break",
+   "label": "Estado "
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-09-21 19:34:39.431257",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Apoyo",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

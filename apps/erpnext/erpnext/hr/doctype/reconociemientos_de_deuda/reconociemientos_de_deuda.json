@@ -1,0 +1,238 @@
+{
+ "actions": [],
+ "autoname": "RD-.####",
+ "creation": "2022-12-20 15:33:25.683226",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "datos_del_trabajador_section",
+  "empleado",
+  "tipo_de_documento",
+  "id_surcursal",
+  "column_break_4",
+  "nombre_de_empleado",
+  "numero_de_documento",
+  "zona_nacional",
+  "column_break_7",
+  "sucursal",
+  "cargo",
+  "datos_de_la_compa\u00f1ia_section",
+  "column_break_14",
+  "compania",
+  "column_break_12",
+  "nombre_de_la_compania",
+  "ruc",
+  "datos_del_reconocimiento_section",
+  "motivo",
+  "monto_total",
+  "monto_en_texto",
+  "column_break_18",
+  "table_21",
+  "amended_from",
+  "documento_firmado_section",
+  "reconocimiento_escaneado_firmado",
+  "subido_desde_app_familia"
+ ],
+ "fields": [
+  {
+   "fieldname": "datos_del_trabajador_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del Trabajador"
+  },
+  {
+   "fieldname": "empleado",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Empleado",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "empleado.tipo_de_documento",
+   "fieldname": "tipo_de_documento",
+   "fieldtype": "Data",
+   "label": "Tipo de Documento",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "sucursal.ideentificador",
+   "fieldname": "id_surcursal",
+   "fieldtype": "Data",
+   "label": "ID Surcursal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "empleado.nombre_completo",
+   "fieldname": "nombre_de_empleado",
+   "fieldtype": "Data",
+   "label": "Nombre de Empleado",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.passport_number",
+   "fieldname": "numero_de_documento",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Numero de Documento",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "sucursal.zona_nacional",
+   "fieldname": "zona_nacional",
+   "fieldtype": "Data",
+   "label": "Zona Nacional",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "empleado.branch",
+   "fieldname": "sucursal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sucursal",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.designation",
+   "fieldname": "cargo",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cargo",
+   "options": "Designation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "datos_de_la_compa\u00f1ia_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de la Compa\u00f1ia"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "empleado.company",
+   "fieldname": "compania",
+   "fieldtype": "Link",
+   "label": "Compa\u00f1ia",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "compania.nombre",
+   "fieldname": "nombre_de_la_compania",
+   "fieldtype": "Data",
+   "label": "Nombre de la Compa\u00f1ia",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "compania.ruc",
+   "fieldname": "ruc",
+   "fieldtype": "Data",
+   "label": "Ruc",
+   "read_only": 1
+  },
+  {
+   "fieldname": "datos_del_reconocimiento_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del Reconocimiento"
+  },
+  {
+   "fieldname": "motivo",
+   "fieldtype": "Link",
+   "label": "Motivo",
+   "options": "Lista de Motivos RD"
+  },
+  {
+   "fieldname": "monto_total",
+   "fieldtype": "Float",
+   "label": "Monto Total",
+   "precision": "2"
+  },
+  {
+   "fieldname": "monto_en_texto",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Monto en Texto",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "table_21",
+   "fieldtype": "Table",
+   "options": "table_reconocimiento_deuda"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Reconociemientos de Deuda",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "documento_firmado_section",
+   "fieldtype": "Section Break",
+   "label": "Documento Firmado"
+  },
+  {
+   "allow_on_submit": 1,
+   "description": "Subir aqu\u00ed el memorandum firmado, el memorandum tambien lo tiene disponible el trabajador en el aplicativo Shalom Familia para que pueda descargar y subirlo firmado.",
+   "fieldname": "reconocimiento_escaneado_firmado",
+   "fieldtype": "Attach",
+   "label": "Reconocimiento Escaneado Firmado"
+  },
+  {
+   "default": "0",
+   "fieldname": "subido_desde_app_familia",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Subido desde App Familia",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-07-19 13:23:48.600055",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Reconociemientos de Deuda",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "sucursal",
+ "track_changes": 1,
+ "track_views": 1
+}

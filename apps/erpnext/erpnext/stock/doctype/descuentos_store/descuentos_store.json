@@ -1,0 +1,77 @@
+{
+ "actions": [],
+ "autoname": "DESC-STORE-.#####",
+ "creation": "2022-12-30 09:29:04.298050",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tipo",
+  "column_break_2",
+  "porcentaje",
+  "section_break_4",
+  "lista_de_productos",
+  "section_break_6",
+  "monto"
+ ],
+ "fields": [
+  {
+   "fieldname": "tipo",
+   "fieldtype": "Select",
+   "label": "Tipo",
+   "options": "VENTAS DE CAJA GENERAL\nVENTAS DE MERCHANDISING"
+  },
+  {
+   "fieldname": "porcentaje",
+   "fieldtype": "Float",
+   "label": "Porcentaje"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lista_de_productos",
+   "fieldtype": "Table",
+   "label": "Lista de Productos",
+   "options": "List Productos"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "monto",
+   "fieldtype": "Float",
+   "label": "Monto"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-05-06 10:43:27.000278",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "Descuentos Store",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

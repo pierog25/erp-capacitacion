@@ -1,0 +1,222 @@
+{
+ "actions": [],
+ "autoname": "DEN-.#####",
+ "creation": "2023-01-23 12:33:33.234559",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "estado_denuncias",
+  "identificar",
+  "section_break_2",
+  "celular",
+  "column_break_3",
+  "correo",
+  "section_break_4",
+  "motivo",
+  "continua_ocurriendo",
+  "column_break_7",
+  "sucursal",
+  "section_break_7",
+  "desde",
+  "column_break_11",
+  "hasta",
+  "section_break_11",
+  "conoce_involucrados",
+  "table_16",
+  "detalle",
+  "archivo",
+  "ver_archivo_adjunto",
+  "compromiso",
+  "amended_from",
+  "fecha_proceso",
+  "fecha_atendido",
+  "codigo_aleatorio"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "identificar",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "\u00bfUsted desea identificarse?",
+   "reqd": 1
+  },
+  {
+   "fieldname": "correo",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Correo electr\u00f3nico",
+   "reqd": 1
+  },
+  {
+   "fieldname": "celular",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "N\u00famero celular / WhatsApp",
+   "reqd": 1
+  },
+  {
+   "description": "Los reportes aqu\u00ed registrados ser\u00e1n atendidos por el \u00e1rea de Bienestar y Desarrollo asegurando su adecuado tratamiento para cada situaci\u00f3n. Todas las denuncias ser\u00e1n investigadas y las acciones tomadas le ser\u00e1n informadas a trav\u00e9s de su correo o WhatsApp. \n\nAgradecemos su iniciativa y confianza.",
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "REGISTRO DE LA DENUNCIA"
+  },
+  {
+   "fieldname": "motivo",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Motivo de la denuncia",
+   "options": "Abuso de poder / autoridad\nAcciones deshonestas (robos, hurtos)\nActos de corrupci\u00f3n y/o soborno\nAgresi\u00f3n f\u00edsica o verbal\nConsumo de sustancias prohibidas (alcohol, drogas)\nDiscriminaci\u00f3n\nHostigamiento o acoso sexual\nIncumplimiento del Reglamento Interno de Trabajo\nIncumplimiento de Pol\u00edticas Internas\nUso indebido de bienes o recursos de la empresa\nUso indebido de la informaci\u00f3n",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sucursal",
+   "fieldtype": "Link",
+   "label": "Sucursal d\u00f3nde ocurrieron los hechos",
+   "options": "Branch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "Fecha de ocurrencia de los hechos"
+  },
+  {
+   "fieldname": "desde",
+   "fieldtype": "Date",
+   "label": "Desde",
+   "reqd": 1
+  },
+  {
+   "fieldname": "hasta",
+   "fieldtype": "Date",
+   "label": "Hasta",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "continua_ocurriendo",
+   "fieldtype": "Check",
+   "label": "\u00bfEl hecho denunciado contin\u00faa ocurriendo?",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": "Colaborador(es) Involucrado(s)"
+  },
+  {
+   "default": "0",
+   "fieldname": "conoce_involucrados",
+   "fieldtype": "Check",
+   "label": "\u00bfConoce los datos de la(s) persona(s) involucrada(s)?",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "table_16",
+   "fieldtype": "Table",
+   "options": "tabla_involucrados"
+  },
+  {
+   "description": "Por favor, describa de manera concreta y precisa los hechos denunciados",
+   "fieldname": "detalle",
+   "fieldtype": "Long Text",
+   "label": "Detalle de lo sucedido",
+   "reqd": 1
+  },
+  {
+   "description": "Si usted desea adjuntar archivos como fotos, v\u00eddeos o documentos, agr\u00e9guelos aqu\u00ed. El tama\u00f1o m\u00e1ximo del conjunto de archivos es de 20Mb.",
+   "fieldname": "archivo",
+   "fieldtype": "Long Text",
+   "label": "Adjuntar archivo"
+  },
+  {
+   "default": "0",
+   "description": "Me comprometo a permanecer a disposici\u00f3n de la empresa, para brindar aclaraciones que hagan falta o proveer m\u00e1s informaci\u00f3n sobre los presuntos hechos que motivaron la denuncia presentada. Asimismo, declaro que toda la informaci\u00f3n alcanzada se ajusta a la verdad y puede ser comprobada.",
+   "fieldname": "compromiso",
+   "fieldtype": "Check",
+   "label": "Compromiso"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Denuncias",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "PENDIENTE",
+   "fieldname": "estado_denuncias",
+   "fieldtype": "Select",
+   "label": "Estado Denuncias",
+   "options": "PENDIENTE\nEN PROCESO\nATENDIDA"
+  },
+  {
+   "fieldname": "fecha_proceso",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "fecha_proceso"
+  },
+  {
+   "fieldname": "fecha_atendido",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "fecha_atendido"
+  },
+  {
+   "fieldname": "codigo_aleatorio",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "codigo_aleatorio"
+  },
+  {
+   "fieldname": "ver_archivo_adjunto",
+   "fieldtype": "Button",
+   "label": "Ver archivo adjunto"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-09-21 20:19:29.569631",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Denuncias",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

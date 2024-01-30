@@ -1,0 +1,1078 @@
+{
+ "actions": [],
+ "autoname": "TRIA-POS-.#####",
+ "creation": "2023-02-06 08:36:57.491172",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "datos_personales_section",
+  "estado",
+  "fecha_de_control_1",
+  "column_break_8",
+  "examen_vigilancia_ocupacional",
+  "fecha_de_control_2",
+  "column_break_14",
+  "fecha_de_examen_medico",
+  "fecha_de_control_3",
+  "section_break_10",
+  "documento",
+  "personal_externo",
+  "agencia",
+  "nombre_del_trabajador",
+  "column_break_15",
+  "direccion",
+  "celular",
+  "area",
+  "fecha_de_nacimiento",
+  "column_break_20",
+  "distrito",
+  "puesto",
+  "edad",
+  "aspectos_generales_section",
+  "hta",
+  "e_renal",
+  "fuma",
+  "practica_algun_deporte",
+  "tiene_dificultad_para_levantar_mercaderia_mayor_o_igual_a_25_kg",
+  "medicamento_al_que_es_alergico",
+  "diabetes_mellitus",
+  "hernias",
+  "frecuencia_1",
+  "column_break_27",
+  "tipo_de_deporte",
+  "alguna_operaci\u00f3n_que_se_haya_realizado",
+  "esta_recibiendo_alguna_medicacion_de_manera_cronica",
+  "musculo_esqueletica_degenerativa",
+  "gastrtitis",
+  "alcohol",
+  "sufre_de_dolores_de_cabeza",
+  "column_break_34",
+  "nombre",
+  "transtorno_congenito_que_repercutan_en_la_manipulacion",
+  "enfermedad_o_accidente_de_trabajo",
+  "frecuencia_2",
+  "tiene_problemas_para_conciliar_el_sue\u00f1o",
+  "alergico",
+  "por_que__para_que",
+  "antecedentes_ocupacionales_section",
+  "empresa_donde_laboro",
+  "fecha_de_inicio",
+  "column_break_51",
+  "puesto_laboral",
+  "fecha_de_fin",
+  "column_break_54",
+  "funciones",
+  "triaje_signos_vitales_section",
+  "peso",
+  "04__peso",
+  "recomendaciones_del_peso",
+  "fc",
+  "column_break_60",
+  "talla",
+  "pa",
+  "temperatura",
+  "column_break_64",
+  "imc",
+  "conclusi\u00f3n_de_las_funciones_vitales",
+  "so2",
+  "column_break_68",
+  "conclusi\u00f3n_del_peso",
+  "recomendaciones_de_las_funciones_vitales",
+  "vacunas_sar_cov2_section",
+  "vacunas_covid_19__1_dosis",
+  "vacunas_covid_19__3_dosis",
+  "column_break_74",
+  "vacunas_covid_19___2_dosis",
+  "completo_incompleto",
+  "examen_oftalmologico_section",
+  "uso_de_lentes",
+  "enfermedad_visual",
+  "oftalmologico_cerca_section",
+  "c_sin_lentes_od",
+  "c_sin_lentes_oi",
+  "column_break_83",
+  "c_con_lentes_od",
+  "c_con_lentes_oi",
+  "oftalmologico_lejos_section",
+  "l_sin_lentes_od",
+  "l_sin_lentes_oi",
+  "column_break_89",
+  "l_con_lentes_od",
+  "l_con_lentes_oi",
+  "oftalmologico_resultados_section",
+  "examen_externo",
+  "conclusiones_de_oftalmologia",
+  "column_break_95",
+  "test_de_colores_o_ishihara",
+  "recomendaciones_de_oftalmologia",
+  "examen_audiologico_section",
+  "antecedentes_section",
+  "uso_de_protectores_tapones",
+  "uso_de_protectores_orejeras",
+  "servicio_militar",
+  "hobbies_con_exposicion_a_ruido",
+  "escucha_musica_con_auriculares",
+  "cuanto_tiempo_esta_expuesto_a_ruido",
+  "sintomas_section",
+  "disminucion_de_la_audicion",
+  "dolor_de_oido",
+  "infecci\u00f3n_al_o\u00eddo",
+  "zumbido",
+  "otros",
+  "column_break_113",
+  "antecedentes_s",
+  "resultados_section",
+  "conclusion_de_audiologia",
+  "column_break_116",
+  "recomendaciones_de_audiologia",
+  "examen_de_musculoesqueletico_section",
+  "antecedentes_ex",
+  "flexibilidad_section",
+  "flexibilidad_fuerza_abdomen",
+  "cadera",
+  "total_puntos_flex",
+  "column_break_124",
+  "muslo",
+  "abdomen_____________________lateral",
+  "rangos_articulares_section",
+  "abducci\u00f3n_de_hombro_normal_0_a_180",
+  "abducci\u00f3n_de_hombro_normal_0_a_80",
+  "total_puntos_rangos",
+  "column_break_131",
+  "rotaci\u00f3n_externa_0_a_90",
+  "rotaci\u00f3n_externa_de_hombro_interna",
+  "columna_vertebral_section",
+  "desviacion_del_eje_lateral",
+  "dandy",
+  "lasegue",
+  "column_break_138",
+  "contractura_muscular",
+  "test_de_adams",
+  "cicatricez_post_operaci\u00f3n",
+  "resultados_ee_section",
+  "conclusiones_de_musculoesqueletico",
+  "column_break_141",
+  "recomendaciones_de_musculoesqueletico",
+  "resultados_del_triaje_section",
+  "aptitud_laboral",
+  "imc_section",
+  "diagnostico",
+  "recomendaciones",
+  "signos_vitales_section",
+  "diagnostico_sv",
+  "recomendacion_sv",
+  "oftalmologia_section",
+  "diagnostico_of",
+  "recomendaciones_of",
+  "audiologia_section",
+  "diagnostico_au",
+  "recomendaciones_au",
+  "musculoesqueletico_section",
+  "diagnostico_mu",
+  "recomendaciones_mus",
+  "otros_section",
+  "diagnostico_ot",
+  "recomendaciones_ot"
+ ],
+ "fields": [
+  {
+   "fieldname": "datos_personales_section",
+   "fieldtype": "Section Break",
+   "label": "Datos Personales"
+  },
+  {
+   "fieldname": "estado",
+   "fieldtype": "Select",
+   "label": "Estado",
+   "options": "ACTIVO\nCESADO"
+  },
+  {
+   "fieldname": "fecha_de_control_1",
+   "fieldtype": "Data",
+   "label": "Fecha de Control 1"
+  },
+  {
+   "fieldname": "agencia",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Agencia"
+  },
+  {
+   "fieldname": "nombre_del_trabajador",
+   "fieldtype": "Data",
+   "label": "Nombre del trabajador"
+  },
+  {
+   "fieldname": "direccion",
+   "fieldtype": "Data",
+   "label": "Direccion"
+  },
+  {
+   "fieldname": "celular",
+   "fieldtype": "Data",
+   "label": "Celular"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "examen_vigilancia_ocupacional",
+   "fieldtype": "Data",
+   "label": "Examen vigilancia Ocupacional"
+  },
+  {
+   "fieldname": "fecha_de_control_2",
+   "fieldtype": "Data",
+   "label": "Fecha de Control 2"
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Data",
+   "label": "Area"
+  },
+  {
+   "fieldname": "fecha_de_nacimiento",
+   "fieldtype": "Data",
+   "label": "Fecha de Nacimiento"
+  },
+  {
+   "fieldname": "distrito",
+   "fieldtype": "Data",
+   "label": "Distrito"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fecha_de_examen_medico",
+   "fieldtype": "Data",
+   "label": "Fecha de Examen medico"
+  },
+  {
+   "fieldname": "fecha_de_control_3",
+   "fieldtype": "Data",
+   "label": "Fecha de Control 3"
+  },
+  {
+   "fieldname": "puesto",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Puesto"
+  },
+  {
+   "fieldname": "edad",
+   "fieldtype": "Data",
+   "label": "Edad"
+  },
+  {
+   "fieldname": "documento",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Documento"
+  },
+  {
+   "fieldname": "aspectos_generales_section",
+   "fieldtype": "Section Break",
+   "label": "Aspectos Generales"
+  },
+  {
+   "default": "NO",
+   "fieldname": "hta",
+   "fieldtype": "Select",
+   "label": "HTA",
+   "options": "NO\nSI"
+  },
+  {
+   "default": "NO",
+   "fieldname": "diabetes_mellitus",
+   "fieldtype": "Select",
+   "label": "DIABETES MELLITUS",
+   "options": "NO\nSI"
+  },
+  {
+   "default": "NO",
+   "fieldname": "musculo_esqueletica_degenerativa",
+   "fieldtype": "Select",
+   "label": "MUSCULO ESQUELETICA DEGENERATIVA",
+   "options": "NO\nSI"
+  },
+  {
+   "default": "NO",
+   "fieldname": "hernias",
+   "fieldtype": "Select",
+   "label": "HERNIAS",
+   "options": "NO\nSI"
+  },
+  {
+   "default": "NO",
+   "fieldname": "e_renal",
+   "fieldtype": "Select",
+   "label": "E. RENAL",
+   "options": "NO\nSI"
+  },
+  {
+   "default": "NO",
+   "fieldname": "gastrtitis",
+   "fieldtype": "Select",
+   "label": "GASTRTITIS",
+   "options": "NO\nSI"
+  },
+  {
+   "default": "NO",
+   "fieldname": "transtorno_congenito_que_repercutan_en_la_manipulacion",
+   "fieldtype": "Select",
+   "label": "TRANSTORNO CONGENITO QUE REPERCUTAN EN LA MANIPULACION",
+   "options": "NO\nSI\n0\nVITILIGO EN LAS MANOS"
+  },
+  {
+   "fieldname": "enfermedad_o_accidente_de_trabajo",
+   "fieldtype": "Data",
+   "label": "ENFERMEDAD O ACCIDENTE DE TRABAJO"
+  },
+  {
+   "default": "NO",
+   "fieldname": "fuma",
+   "fieldtype": "Select",
+   "label": "FUMA",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "frecuencia_1",
+   "fieldtype": "Data",
+   "label": "FRECUENCIA 1"
+  },
+  {
+   "default": "NO",
+   "fieldname": "alcohol",
+   "fieldtype": "Select",
+   "label": "ALCOHOL",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "frecuencia_2",
+   "fieldtype": "Data",
+   "label": "FRECUENCIA 2"
+  },
+  {
+   "default": "NO",
+   "fieldname": "practica_algun_deporte",
+   "fieldtype": "Select",
+   "label": "PRACTICA ALGUN DEPORTE",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "tipo_de_deporte",
+   "fieldtype": "Data",
+   "label": "TIPO DE DEPORTE"
+  },
+  {
+   "default": "NO",
+   "fieldname": "sufre_de_dolores_de_cabeza",
+   "fieldtype": "Select",
+   "label": "SUFRE DE DOLORES DE CABEZA",
+   "options": "NO\nSI"
+  },
+  {
+   "default": "NO",
+   "fieldname": "tiene_problemas_para_conciliar_el_sue\u00f1o",
+   "fieldtype": "Select",
+   "label": "TIENE PROBLEMAS PARA CONCILIAR EL SUE\u00d1O",
+   "options": "NO\nSI"
+  },
+  {
+   "default": "NO",
+   "fieldname": "tiene_dificultad_para_levantar_mercaderia_mayor_o_igual_a_25_kg",
+   "fieldtype": "Select",
+   "label": "TIENE DIFICULTAD PARA LEVANTAR MERCADERIA MAYOR O IGUAL A 25 KG",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "alguna_operaci\u00f3n_que_se_haya_realizado",
+   "fieldtype": "Small Text",
+   "label": "ALGUNA OPERACI\u00d3N QUE SE HAYA REALIZADO ( INDICAR)"
+  },
+  {
+   "default": "NO",
+   "fieldname": "alergico",
+   "fieldtype": "Select",
+   "label": "ALERGICO",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "medicamento_al_que_es_alergico",
+   "fieldtype": "Data",
+   "label": "MEDICAMENTO AL QUE ES ALERGICO"
+  },
+  {
+   "fieldname": "esta_recibiendo_alguna_medicacion_de_manera_cronica",
+   "fieldtype": "Select",
+   "label": "ESTA RECIBIENDO ALGUNA MEDICACION DE MANERA CRONICA ",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "nombre",
+   "fieldtype": "Data",
+   "label": "NOMBRE"
+  },
+  {
+   "fieldname": "por_que__para_que",
+   "fieldtype": "Small Text",
+   "label": "POR QUE / PARA QUE"
+  },
+  {
+   "fieldname": "antecedentes_ocupacionales_section",
+   "fieldtype": "Section Break",
+   "label": "ANTECEDENTES OCUPACIONALES"
+  },
+  {
+   "fieldname": "empresa_donde_laboro",
+   "fieldtype": "Data",
+   "label": "EMPRESA DONDE LABORO"
+  },
+  {
+   "fieldname": "puesto_laboral",
+   "fieldtype": "Data",
+   "label": "PUESTO LABORAL"
+  },
+  {
+   "fieldname": "fecha_de_inicio",
+   "fieldtype": "Data",
+   "label": "FECHA DE INICIO"
+  },
+  {
+   "fieldname": "fecha_de_fin",
+   "fieldtype": "Data",
+   "label": "FECHA DE FIN"
+  },
+  {
+   "fieldname": "funciones",
+   "fieldtype": "Data",
+   "label": "FUNCIONES"
+  },
+  {
+   "fieldname": "triaje_signos_vitales_section",
+   "fieldtype": "Section Break",
+   "label": "TRIAJE SIGNOS VITALES"
+  },
+  {
+   "fieldname": "peso",
+   "fieldtype": "Data",
+   "label": "PESO"
+  },
+  {
+   "fieldname": "talla",
+   "fieldtype": "Data",
+   "label": "TALLA"
+  },
+  {
+   "fieldname": "imc",
+   "fieldtype": "Data",
+   "label": "IMC"
+  },
+  {
+   "fieldname": "conclusi\u00f3n_del_peso",
+   "fieldtype": "Data",
+   "label": "CONCLUSI\u00d3N DEL PESO"
+  },
+  {
+   "fieldname": "recomendaciones_del_peso",
+   "fieldtype": "Data",
+   "label": "RECOMENDACIONES DEL PESO"
+  },
+  {
+   "fieldname": "pa",
+   "fieldtype": "Data",
+   "label": "P.A"
+  },
+  {
+   "fieldname": "conclusi\u00f3n_de_las_funciones_vitales",
+   "fieldtype": "Data",
+   "label": "CONCLUSI\u00d3N DE LAS FUNCIONES VITALES"
+  },
+  {
+   "fieldname": "recomendaciones_de_las_funciones_vitales",
+   "fieldtype": "Data",
+   "label": "RECOMENDACIONES DE LAS FUNCIONES VITALES"
+  },
+  {
+   "fieldname": "fc",
+   "fieldtype": "Data",
+   "label": "FC"
+  },
+  {
+   "fieldname": "temperatura",
+   "fieldtype": "Data",
+   "label": "TEMPERATURA"
+  },
+  {
+   "fieldname": "so2",
+   "fieldtype": "Data",
+   "label": "SO2"
+  },
+  {
+   "fieldname": "vacunas_sar_cov2_section",
+   "fieldtype": "Section Break",
+   "label": "VACUNAS SAR COV2"
+  },
+  {
+   "fieldname": "vacunas_covid_19__1_dosis",
+   "fieldtype": "Data",
+   "label": "VACUNAS COVID 19  1 DOSIS"
+  },
+  {
+   "fieldname": "vacunas_covid_19___2_dosis",
+   "fieldtype": "Data",
+   "label": "VACUNAS COVID 19   2 DOSIS"
+  },
+  {
+   "fieldname": "vacunas_covid_19__3_dosis",
+   "fieldtype": "Data",
+   "label": "VACUNAS COVID 19  3 DOSIS"
+  },
+  {
+   "fieldname": "completo_incompleto",
+   "fieldtype": "Data",
+   "label": "COMPLETO INCOMPLETO"
+  },
+  {
+   "fieldname": "examen_oftalmologico_section",
+   "fieldtype": "Section Break",
+   "label": "EXAMEN OFTALMOLOGICO"
+  },
+  {
+   "default": "NO",
+   "fieldname": "uso_de_lentes",
+   "fieldtype": "Select",
+   "label": "USO DE LENTES",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "enfermedad_visual",
+   "fieldtype": "Long Text",
+   "label": "ENFERMEDAD VISUAL"
+  },
+  {
+   "fieldname": "oftalmologico_cerca_section",
+   "fieldtype": "Section Break",
+   "label": "OFTALMOLOGICO CERCA"
+  },
+  {
+   "default": "20/",
+   "fieldname": "c_sin_lentes_od",
+   "fieldtype": "Data",
+   "label": "C SIN LENTES OD"
+  },
+  {
+   "default": "20/",
+   "fieldname": "c_con_lentes_od",
+   "fieldtype": "Data",
+   "label": "C CON LENTES OD"
+  },
+  {
+   "default": "20/",
+   "fieldname": "c_sin_lentes_oi",
+   "fieldtype": "Data",
+   "label": "C SIN LENTES OI"
+  },
+  {
+   "default": "20/",
+   "fieldname": "c_con_lentes_oi",
+   "fieldtype": "Data",
+   "label": "C CON LENTES OI"
+  },
+  {
+   "fieldname": "oftalmologico_lejos_section",
+   "fieldtype": "Section Break",
+   "label": "OFTALMOLOGICO LEJOS"
+  },
+  {
+   "default": "20/",
+   "fieldname": "l_sin_lentes_od",
+   "fieldtype": "Data",
+   "label": "L SIN LENTES OD"
+  },
+  {
+   "default": "20/",
+   "fieldname": "l_con_lentes_od",
+   "fieldtype": "Data",
+   "label": "L CON LENTES OD"
+  },
+  {
+   "default": "20/",
+   "fieldname": "l_sin_lentes_oi",
+   "fieldtype": "Data",
+   "label": "L SIN LENTES OI"
+  },
+  {
+   "default": "20/",
+   "fieldname": "l_con_lentes_oi",
+   "fieldtype": "Data",
+   "label": "L CON LENTES OI"
+  },
+  {
+   "fieldname": "oftalmologico_resultados_section",
+   "fieldtype": "Section Break",
+   "label": "OFTALMOLOGICO RESULTADOS"
+  },
+  {
+   "fieldname": "examen_externo",
+   "fieldtype": "Select",
+   "label": "EXAMEN EXTERNO",
+   "options": "ANORMAL\nCATARATA\nNORMAL"
+  },
+  {
+   "fieldname": "test_de_colores_o_ishihara",
+   "fieldtype": "Data",
+   "label": "TEST DE COLORES O ISHIHARA"
+  },
+  {
+   "fieldname": "conclusiones_de_oftalmologia",
+   "fieldtype": "Data",
+   "label": "CONCLUSIONES DE OFTALMOLOGIA"
+  },
+  {
+   "fieldname": "recomendaciones_de_oftalmologia",
+   "fieldtype": "Data",
+   "label": "RECOMENDACIONES DE OFTALMOLOGIA"
+  },
+  {
+   "fieldname": "examen_audiologico_section",
+   "fieldtype": "Section Break",
+   "label": "EXAMEN AUDIOLOGICO"
+  },
+  {
+   "fieldname": "antecedentes_section",
+   "fieldtype": "Section Break",
+   "label": "ANTECEDENTES"
+  },
+  {
+   "fieldname": "uso_de_protectores_tapones",
+   "fieldtype": "Select",
+   "label": "USO DE PROTECTORES TAPONES",
+   "options": "NO\nFALTA\nSI"
+  },
+  {
+   "fieldname": "uso_de_protectores_orejeras",
+   "fieldtype": "Select",
+   "label": "USO DE PROTECTORES OREJERAS",
+   "options": "NO\nFALTA\nSI"
+  },
+  {
+   "fieldname": "servicio_militar",
+   "fieldtype": "Select",
+   "label": "SERVICIO MILITAR",
+   "options": "NO\nFALTA\nSI"
+  },
+  {
+   "fieldname": "hobbies_con_exposicion_a_ruido",
+   "fieldtype": "Select",
+   "label": "HOBBIES CON EXPOSICION A RUIDO",
+   "options": "NO\nFALTA\nSI"
+  },
+  {
+   "fieldname": "escucha_musica_con_auriculares",
+   "fieldtype": "Select",
+   "label": "ESCUCHA MUSICA CON AURICULARES",
+   "options": "NO\nFALTA\nSI"
+  },
+  {
+   "fieldname": "cuanto_tiempo_esta_expuesto_a_ruido",
+   "fieldtype": "Select",
+   "label": "CUANTO TIEMPO ESTA EXPUESTO A RUIDO",
+   "options": "1 a 2 horas\n2 a 3 horas\n3 a 4 horas\n4 a 5 horas\n5 a 6 horas\n6 a 8 horas"
+  },
+  {
+   "fieldname": "sintomas_section",
+   "fieldtype": "Section Break",
+   "label": "SINTOMAS"
+  },
+  {
+   "fieldname": "disminucion_de_la_audicion",
+   "fieldtype": "Data",
+   "label": "DISMINUCION DE LA AUDICION"
+  },
+  {
+   "fieldname": "dolor_de_oido",
+   "fieldtype": "Data",
+   "label": "DOLOR DE OIDO"
+  },
+  {
+   "fieldname": "infecci\u00f3n_al_o\u00eddo",
+   "fieldtype": "Data",
+   "label": "INFECCI\u00d3N AL O\u00cdDO"
+  },
+  {
+   "fieldname": "zumbido",
+   "fieldtype": "Data",
+   "label": "ZUMBIDO"
+  },
+  {
+   "fieldname": "otros",
+   "fieldtype": "Data",
+   "label": "OTROS"
+  },
+  {
+   "fieldname": "antecedentes_s",
+   "fieldtype": "Text",
+   "label": "ANTECEDENTES"
+  },
+  {
+   "fieldname": "resultados_section",
+   "fieldtype": "Section Break",
+   "label": "RESULTADOS"
+  },
+  {
+   "fieldname": "conclusion_de_audiologia",
+   "fieldtype": "Data",
+   "label": "CONCLUSION DE AUDIOLOGIA"
+  },
+  {
+   "fieldname": "recomendaciones_de_audiologia",
+   "fieldtype": "Data",
+   "label": "RECOMENDACIONES DE AUDIOLOGIA"
+  },
+  {
+   "fieldname": "examen_de_musculoesqueletico_section",
+   "fieldtype": "Section Break",
+   "label": "EXAMEN DE MUSCULOESQUELETICO"
+  },
+  {
+   "fieldname": "antecedentes_ex",
+   "fieldtype": "Text",
+   "label": "ANTECEDENTES EX"
+  },
+  {
+   "fieldname": "flexibilidad_section",
+   "fieldtype": "Section Break",
+   "label": "FLEXIBILIDAD"
+  },
+  {
+   "fieldname": "flexibilidad_fuerza_abdomen",
+   "fieldtype": "Data",
+   "label": "FLEXIBILIDAD/ FUERZA ABDOMEN"
+  },
+  {
+   "fieldname": "cadera",
+   "fieldtype": "Data",
+   "label": "CADERA"
+  },
+  {
+   "fieldname": "muslo",
+   "fieldtype": "Data",
+   "label": "MUSLO"
+  },
+  {
+   "fieldname": "abdomen_____________________lateral",
+   "fieldtype": "Data",
+   "label": "ABDOMEN                     LATERAL"
+  },
+  {
+   "fieldname": "total_puntos_flex",
+   "fieldtype": "Data",
+   "label": "TOTAL PUNTOS FLEX",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rangos_articulares_section",
+   "fieldtype": "Section Break",
+   "label": "RANGOS ARTICULARES"
+  },
+  {
+   "fieldname": "abducci\u00f3n_de_hombro_normal_0_a_180",
+   "fieldtype": "Data",
+   "label": "ABDUCCI\u00d3N DE HOMBRO (NORMAL 0 a 180)"
+  },
+  {
+   "fieldname": "rotaci\u00f3n_externa_0_a_90",
+   "fieldtype": "Data",
+   "label": "ROTACI\u00d3N EXTERNA 0 a 90"
+  },
+  {
+   "fieldname": "rotaci\u00f3n_externa_de_hombro_interna",
+   "fieldtype": "Data",
+   "label": "ROTACI\u00d3N EXTERNA DE HOMBRO INTERNA"
+  },
+  {
+   "fieldname": "total_puntos_rangos",
+   "fieldtype": "Data",
+   "label": "TOTAL PUNTOS RANGOS",
+   "read_only": 1
+  },
+  {
+   "fieldname": "columna_vertebral_section",
+   "fieldtype": "Section Break",
+   "label": "COLUMNA VERTEBRAL"
+  },
+  {
+   "fieldname": "desviacion_del_eje_lateral",
+   "fieldtype": "Data",
+   "label": "DESVIACION DEL EJE LATERAL"
+  },
+  {
+   "fieldname": "dandy",
+   "fieldtype": "Data",
+   "label": "DANDY"
+  },
+  {
+   "fieldname": "lasegue",
+   "fieldtype": "Data",
+   "label": "LASEGUE"
+  },
+  {
+   "fieldname": "contractura_muscular",
+   "fieldtype": "Data",
+   "label": "CONTRACTURA MUSCULAR"
+  },
+  {
+   "fieldname": "test_de_adams",
+   "fieldtype": "Data",
+   "label": "TEST DE ADAMS"
+  },
+  {
+   "fieldname": "cicatricez_post_operaci\u00f3n",
+   "fieldtype": "Data",
+   "label": "CICATRICEZ POST OPERACI\u00d3N"
+  },
+  {
+   "fieldname": "resultados_ee_section",
+   "fieldtype": "Section Break",
+   "label": "RESULTADOS EE"
+  },
+  {
+   "fieldname": "conclusiones_de_musculoesqueletico",
+   "fieldtype": "Data",
+   "label": "CONCLUSIONES DE MUSCULOESQUELETICO"
+  },
+  {
+   "fieldname": "recomendaciones_de_musculoesqueletico",
+   "fieldtype": "Data",
+   "label": "RECOMENDACIONES DE MUSCULOESQUELETICO"
+  },
+  {
+   "fieldname": "resultados_del_triaje_section",
+   "fieldtype": "Section Break",
+   "label": "RESULTADOS DEL TRIAJE"
+  },
+  {
+   "fieldname": "aptitud_laboral",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "APTITUD LABORAL",
+   "options": "CONFORME CON RESTRICCION\nCONFORME"
+  },
+  {
+   "fieldname": "imc_section",
+   "fieldtype": "Section Break",
+   "label": "IMC"
+  },
+  {
+   "fieldname": "diagnostico",
+   "fieldtype": "Data",
+   "label": "DIAGNOSTICO"
+  },
+  {
+   "fieldname": "recomendaciones",
+   "fieldtype": "Small Text",
+   "label": "RECOMENDACIONES"
+  },
+  {
+   "fieldname": "signos_vitales_section",
+   "fieldtype": "Section Break",
+   "label": "SIGNOS VITALES"
+  },
+  {
+   "fieldname": "diagnostico_sv",
+   "fieldtype": "Data",
+   "label": "DIAGNOSTICO SV"
+  },
+  {
+   "fieldname": "recomendacion_sv",
+   "fieldtype": "Small Text",
+   "label": "RECOMENDACION SV"
+  },
+  {
+   "fieldname": "oftalmologia_section",
+   "fieldtype": "Section Break",
+   "label": "OFTALMOLOGIA"
+  },
+  {
+   "fieldname": "diagnostico_of",
+   "fieldtype": "Data",
+   "label": "DIAGNOSTICO OF"
+  },
+  {
+   "fieldname": "recomendaciones_of",
+   "fieldtype": "Small Text",
+   "label": "RECOMENDACIONES OF"
+  },
+  {
+   "fieldname": "audiologia_section",
+   "fieldtype": "Section Break",
+   "label": "AUDIOLOGIA"
+  },
+  {
+   "fieldname": "diagnostico_au",
+   "fieldtype": "Data",
+   "label": "DIAGNOSTICO AU"
+  },
+  {
+   "fieldname": "recomendaciones_au",
+   "fieldtype": "Small Text",
+   "label": "RECOMENDACIONES AU"
+  },
+  {
+   "fieldname": "musculoesqueletico_section",
+   "fieldtype": "Section Break",
+   "label": "MUSCULOESQUELETICO"
+  },
+  {
+   "fieldname": "diagnostico_mu",
+   "fieldtype": "Data",
+   "label": "DIAGNOSTICO MU"
+  },
+  {
+   "fieldname": "recomendaciones_mus",
+   "fieldtype": "Small Text",
+   "label": "RECOMENDACIONES MUS"
+  },
+  {
+   "fieldname": "otros_section",
+   "fieldtype": "Section Break",
+   "label": "OTROS"
+  },
+  {
+   "fieldname": "diagnostico_ot",
+   "fieldtype": "Data",
+   "label": "DIAGNOSTICO OT"
+  },
+  {
+   "fieldname": "recomendaciones_ot",
+   "fieldtype": "Small Text",
+   "label": "RECOMENDACIONES OT"
+  },
+  {
+   "fieldname": "abducci\u00f3n_de_hombro_normal_0_a_80",
+   "fieldtype": "Data",
+   "label": "ABDUCCI\u00d3N DE HOMBRO (NORMAL 0 a 80)"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "personal_externo",
+   "fieldtype": "Check",
+   "label": "Personal Externo"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_51",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_54",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_60",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_64",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_68",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_74",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_83",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_89",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_95",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_113",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_116",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_124",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_131",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_138",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_141",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "04__peso",
+   "fieldtype": "Data",
+   "label": "04 / PESO"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-02-09 23:52:31.726876",
+ "modified_by": "Administrator",
+ "module": "Healthcare",
+ "name": "Triaje del Postulante",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "nombre_del_trabajador",
+ "track_changes": 1
+}

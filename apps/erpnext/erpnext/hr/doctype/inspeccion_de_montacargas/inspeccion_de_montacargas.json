@@ -1,0 +1,194 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-09-19 15:42:42.773327",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "section_break_1",
+  "codigo",
+  "version",
+  "column_break_4",
+  "aprobado",
+  "agencia",
+  "section_break_7",
+  "tablas_check_list_montacargas",
+  "section_break_9",
+  "inspector",
+  "nombre_del_responsable",
+  "column_break_12",
+  "fecha",
+  "section_break_14",
+  "tabla_resumen_inspeccion_1",
+  "tabla_resumen_inspeccion_2",
+  "tabla_resumen_inspeccion_3",
+  "estado",
+  "amended_from",
+  "guardar_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "options": "IM-"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "bold": 1,
+   "default": "SHA-REG-HSE-009",
+   "fieldname": "codigo",
+   "fieldtype": "Data",
+   "label": "Codigo ",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "default": "04",
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Version ",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "2023-07-12",
+   "fetch_from": "link_4.fecha_de_creaci\u00f3n",
+   "fieldname": "aprobado",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Aprobado",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "agencia",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Agencia ",
+   "options": "Branch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tablas_check_list_montacargas",
+   "fieldtype": "Table",
+   "label": "Tablas Check List Montacargas",
+   "options": "Tabla Check List Montacargas"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "inspector",
+   "fieldtype": "Link",
+   "label": "Nombre de Inspector",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "inspector.nombre_completo",
+   "fieldname": "nombre_del_responsable",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fecha",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fecha"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "estado",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_standard_filter": 1,
+   "label": "Estado",
+   "options": "Proceso\nCerrado\nObservado\nRecibido\nApproved\nRechazado"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Inspeccion de Montacargas",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "guardar_name",
+   "fieldtype": "Check",
+   "label": "guardar name"
+  },
+  {
+   "fieldname": "tabla_resumen_inspeccion_1",
+   "fieldtype": "Table",
+   "label": "Tabla de Resumen",
+   "options": "Tabla de Resumen Montacargas",
+   "read_only_depends_on": "eval:!frappe.user_roles.includes(\"Usuario SSOMA\")"
+  },
+  {
+   "fieldname": "tabla_resumen_inspeccion_2",
+   "fieldtype": "Table",
+   "label": "Tabla de Resumen Mes 2",
+   "options": "Tabla de Resumen Montacargas",
+   "read_only_depends_on": "eval:!frappe.user_roles.includes(\"Usuario SSOMA\")"
+  },
+  {
+   "fieldname": "tabla_resumen_inspeccion_3",
+   "fieldtype": "Table",
+   "label": "Tabla de Resumen Mes 3",
+   "options": "Tabla de Resumen Montacargas",
+   "read_only_depends_on": "eval:!frappe.user_roles.includes(\"Usuario SSOMA\")"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-11-02 11:56:51.554727",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Inspeccion de Montacargas",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "agencia"
+}

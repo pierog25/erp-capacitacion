@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-01-03 10:00:24.109606",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "datos_del_arrendador_section",
+  "nombre_del_arrendador",
+  "departamento",
+  "column_break_5",
+  "dni",
+  "provincia",
+  "column_break_8",
+  "direccion_del_arrendador",
+  "distrito",
+  "column_break_9",
+  "dirrecion_del_local"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "SCA-"
+  },
+  {
+   "fieldname": "datos_del_arrendador_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del Arrendador"
+  },
+  {
+   "fieldname": "nombre_del_arrendador",
+   "fieldtype": "Data",
+   "label": "Nombre del Arrendador"
+  },
+  {
+   "fieldname": "departamento",
+   "fieldtype": "Data",
+   "label": "Departamento"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "direccion_del_arrendador",
+   "fieldtype": "Data",
+   "label": "Direccion del Arrendador"
+  },
+  {
+   "fieldname": "provincia",
+   "fieldtype": "Data",
+   "label": "Provincia"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dirrecion_del_local",
+   "fieldtype": "Data",
+   "label": "Dirrecion del Local"
+  },
+  {
+   "fieldname": "distrito",
+   "fieldtype": "Data",
+   "label": "Distrito"
+  },
+  {
+   "fieldname": "dni",
+   "fieldtype": "Data",
+   "label": "DNI"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-01-03 10:08:36.514334",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "Solicitud Contratos Alquiler",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

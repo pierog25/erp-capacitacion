@@ -1,0 +1,458 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2022-12-30 11:06:11.285423",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "datos_generales_section",
+  "tipo_de_contrato",
+  "id_sucursal",
+  "colum_column",
+  "sucursal",
+  "zona_nacional",
+  "datos_del_alquiler_section",
+  "fecha_de_inicio_contrato",
+  "metraje",
+  "fecha_del_contrato",
+  "fecha_inicio_de_pago",
+  "total_soles",
+  "column_break_5",
+  "fecha_de_fin_contrato",
+  "servicio_luz_y_agua",
+  "servicios_de_luz_agua",
+  "duracion_del_contrato",
+  "total_dolares",
+  "column_break_7",
+  "estado_del_documento",
+  "monto_total",
+  "montos_de_pago_section",
+  "fecha_de_pago",
+  "column_break_6",
+  "garantia",
+  "datos_del_arrendador_section",
+  "table_3",
+  "datos_de_pago_section",
+  "propietario",
+  "documento",
+  "column_break_24",
+  "tipo_de_cuenta",
+  "cuenta",
+  "column_break_26",
+  "moneda",
+  "monto",
+  "datos_de_pago_section2",
+  "propietario2",
+  "documento2",
+  "column_break_37",
+  "tipo_de_cuenta2",
+  "cuenta2",
+  "column_break_40",
+  "moneda2",
+  "monto2",
+  "datos_de_pago_section3",
+  "propietario3",
+  "documento3",
+  "column_break_46",
+  "tipo_de_cuenta3",
+  "cuenta3",
+  "column_break_48",
+  "moneda3",
+  "monto3",
+  "observacion_section",
+  "table_32",
+  "contratos_section",
+  "contrato_de_local",
+  "contrato_de_adenda",
+  "contrato_de_renovacion",
+  "descripcion",
+  "section_break_63",
+  "actualizar"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "SCA-"
+  },
+  {
+   "fieldname": "datos_del_arrendador_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del Propietario"
+  },
+  {
+   "fieldname": "table_3",
+   "fieldtype": "Table",
+   "options": "tabla_arrendadores"
+  },
+  {
+   "fieldname": "datos_de_pago_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de Pago"
+  },
+  {
+   "fieldname": "fecha_de_pago",
+   "fieldtype": "Date",
+   "label": "Fecha de Pago Garantia"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "garantia",
+   "fieldtype": "Currency",
+   "label": "Monto Garantia",
+   "precision": "2"
+  },
+  {
+   "fieldname": "montos_de_pago_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de la Garantia"
+  },
+  {
+   "fieldname": "datos_del_alquiler_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del Alquiler"
+  },
+  {
+   "fieldname": "fecha_de_inicio_contrato",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Fecha de Inicio Contrato",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fecha_de_fin_contrato",
+   "fieldtype": "Date",
+   "label": "Fecha de Fin Contrato",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "metraje",
+   "fieldtype": "Data",
+   "label": "Metraje (m2)"
+  },
+  {
+   "fieldname": "tipo_de_contrato",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Tipo de Contrato",
+   "options": "Nuevo\nRenovacion\nAdenda",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sucursal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sucursal",
+   "options": "Branch",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "sucursal.ideentificador",
+   "fieldname": "id_sucursal",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ID Sucursal",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "Habilitado",
+   "fieldname": "estado_del_documento",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Estado del Documento",
+   "options": "Habilitado\nDeshabilitado\nDeshabilitado para nuevo local",
+   "reqd": 1
+  },
+  {
+   "fieldname": "propietario",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Propietario",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tipo_de_cuenta",
+   "fieldtype": "Select",
+   "label": "Tipo de Cuenta",
+   "options": "\nBCP\nBBVA\nCCI\nCHEQUE\nDIR"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "moneda",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Moneda",
+   "options": "SOLES\nDOLARES",
+   "reqd": 1
+  },
+  {
+   "fieldname": "documento",
+   "fieldtype": "Data",
+   "label": "Documento"
+  },
+  {
+   "fieldname": "cuenta",
+   "fieldtype": "Data",
+   "label": "Cuenta"
+  },
+  {
+   "fieldname": "monto",
+   "fieldtype": "Currency",
+   "label": "Monto",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "observacion_section",
+   "fieldtype": "Section Break",
+   "label": "Observacion"
+  },
+  {
+   "fieldname": "table_32",
+   "fieldtype": "Table",
+   "options": "tabla_observaciones_alquiler"
+  },
+  {
+   "fieldname": "datos_generales_section",
+   "fieldtype": "Section Break",
+   "label": "Datos Generales"
+  },
+  {
+   "fieldname": "colum_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:frappe.user_roles.includes(\"Usuario Legal\")",
+   "fieldname": "contratos_section",
+   "fieldtype": "Section Break",
+   "label": "Contratos"
+  },
+  {
+   "depends_on": "eval:doc.tipo_de_contrato == 'Nuevo'",
+   "fieldname": "contrato_de_local",
+   "fieldtype": "Attach",
+   "label": "Contrato de Local"
+  },
+  {
+   "depends_on": "eval:doc.tipo_de_contrato == 'Adenda'",
+   "fieldname": "contrato_de_adenda",
+   "fieldtype": "Attach",
+   "label": "Contrato de Adenda"
+  },
+  {
+   "depends_on": "eval:doc.tipo_de_contrato == 'Renovacion'",
+   "fieldname": "contrato_de_renovacion",
+   "fieldtype": "Attach",
+   "label": "Contrato de Renovacion"
+  },
+  {
+   "fieldname": "fecha_del_contrato",
+   "fieldtype": "Date",
+   "label": "Fecha del contrato"
+  },
+  {
+   "fieldname": "duracion_del_contrato",
+   "fieldtype": "Select",
+   "label": "Duracion del contrato",
+   "options": "\n1 A\u00d1O\n2 A\u00d1OS\n3 A\u00d1OS\n4 A\u00d1OS\n5 A\u00d1OS\n6 A\u00d1OS\n7 A\u00d1OS\n8 A\u00d1OS\n8 A\u00d1OS y 6 MESES"
+  },
+  {
+   "fieldname": "propietario2",
+   "fieldtype": "Data",
+   "label": "Propietario"
+  },
+  {
+   "fieldname": "documento2",
+   "fieldtype": "Data",
+   "label": "Documento"
+  },
+  {
+   "fieldname": "column_break_37",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tipo_de_cuenta2",
+   "fieldtype": "Select",
+   "label": "Tipo de cuenta",
+   "options": "\nBCP\nBBVA\nCCI\nCHEQUE\nDIR"
+  },
+  {
+   "fieldname": "cuenta2",
+   "fieldtype": "Data",
+   "label": "Cuenta"
+  },
+  {
+   "fieldname": "column_break_40",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "moneda2",
+   "fieldtype": "Select",
+   "label": "Moneda",
+   "options": "SOLES\nDOLARES"
+  },
+  {
+   "fieldname": "monto2",
+   "fieldtype": "Currency",
+   "label": "Monto"
+  },
+  {
+   "fieldname": "datos_de_pago_section3",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Datos de Pago 3"
+  },
+  {
+   "fieldname": "propietario3",
+   "fieldtype": "Data",
+   "label": "Propietario"
+  },
+  {
+   "fieldname": "documento3",
+   "fieldtype": "Data",
+   "label": "Documento"
+  },
+  {
+   "fieldname": "column_break_46",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tipo_de_cuenta3",
+   "fieldtype": "Select",
+   "label": "Tipo de cuenta",
+   "options": "\nBCP\nBBVA\nCCI\nCHEQUE\nDIR"
+  },
+  {
+   "fieldname": "column_break_48",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cuenta3",
+   "fieldtype": "Data",
+   "label": "Cuenta"
+  },
+  {
+   "fieldname": "moneda3",
+   "fieldtype": "Select",
+   "label": "Moneda",
+   "options": "SOLES\nDOLARES"
+  },
+  {
+   "fieldname": "monto3",
+   "fieldtype": "Currency",
+   "label": "Monto"
+  },
+  {
+   "fieldname": "datos_de_pago_section2",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Datos de Pago 2"
+  },
+  {
+   "fieldname": "total_soles",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Total soles"
+  },
+  {
+   "fieldname": "total_dolares",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Total dolares"
+  },
+  {
+   "fieldname": "monto_total",
+   "fieldtype": "Currency",
+   "label": "Total"
+  },
+  {
+   "fetch_from": "sucursal.zona_nacional",
+   "fieldname": "zona_nacional",
+   "fieldtype": "Link",
+   "label": "Zona Nacional",
+   "options": "Zonas Nacional"
+  },
+  {
+   "fieldname": "descripcion",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "Descripcion"
+  },
+  {
+   "fieldname": "fecha_inicio_de_pago",
+   "fieldtype": "Date",
+   "label": "Fecha Inicio de Pago"
+  },
+  {
+   "default": "No Incluido",
+   "fieldname": "servicio_luz_y_agua",
+   "fieldtype": "Select",
+   "label": "Servicio Luz y Agua",
+   "options": "Incluido\nNo Incluido"
+  },
+  {
+   "default": "No Incluido",
+   "fieldname": "servicios_de_luz_agua",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Servicios de luz agua",
+   "options": "Incluido\nNo Incluido\n0.000000"
+  },
+  {
+   "fieldname": "section_break_63",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "actualizar",
+   "fieldtype": "Data",
+   "label": "actualizar"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-20 18:24:42.926455",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "Solicitud de Contratos Alquiler",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

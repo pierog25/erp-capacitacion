@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "autoname": "Bono-de-Transporte-.####",
+ "creation": "2023-03-06 22:54:28.801086",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "mes",
+  "actualizar_informacion",
+  "column_break_2",
+  "a\u00f1o",
+  "section_break_4",
+  "prueba",
+  "corresponde_a_todos",
+  "tabla_bono",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "mes",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Mes",
+   "options": "Enero\nFebrero\nMarzo\nAbril\nMayo\nJunio\nJulio\nAgosto\nSetiembre\nOctubre\nNoviembre\nDiciembre",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "a\u00f1o",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "A\u00f1o",
+   "options": "2022\n2023\n2024\n2025\n2026\n2027\n2028\n2029\n2030",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Bono de Transporte",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "prueba",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "prueba"
+  },
+  {
+   "fieldname": "corresponde_a_todos",
+   "fieldtype": "Button",
+   "label": "Corresponde a Todos"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "tabla_bono",
+   "fieldtype": "Table",
+   "options": "Tabla Bono de Transporte"
+  },
+  {
+   "fieldname": "actualizar_informacion",
+   "fieldtype": "Button",
+   "label": "Actualizar Informacion"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-07 19:19:45.673053",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Bono de Transporte",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

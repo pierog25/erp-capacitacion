@@ -1,0 +1,305 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2013-01-10 16:34:13",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "datos_de_la_asistencia_section",
+  "attendance_date",
+  "leave_type",
+  "column_break_333",
+  "status",
+  "attendance_details",
+  "employee",
+  "column_break_33",
+  "column_break_3",
+  "datos_de_la_agencia_section",
+  "department",
+  "column_break_11",
+  "company",
+  "naming_series",
+  "employee_name",
+  "working_hours",
+  "leave_application",
+  "zona_nacional",
+  "attendance_request",
+  "details_section",
+  "shift",
+  "in_time",
+  "out_time",
+  "late_entry",
+  "early_exit",
+  "amended_from",
+  "chofer_creado_desde_cron"
+ ],
+ "fields": [
+  {
+   "fieldname": "attendance_details",
+   "fieldtype": "Section Break",
+   "label": "Datos del Trabajador",
+   "oldfieldtype": "Section Break",
+   "options": "Simple"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "oldfieldname": "naming_series",
+   "oldfieldtype": "Select",
+   "options": "HR-ATT-.YYYY.-",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_standard_filter": 1,
+   "label": "Employee",
+   "oldfieldname": "employee",
+   "oldfieldtype": "Link",
+   "options": "Employee",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "Employee Name",
+   "oldfieldname": "employee_name",
+   "oldfieldtype": "Data"
+  },
+  {
+   "depends_on": "working_hours",
+   "fieldname": "working_hours",
+   "fieldtype": "Float",
+   "label": "Working Hours",
+   "precision": "1",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Present",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "oldfieldname": "status",
+   "oldfieldtype": "Select",
+   "options": "\nPresent\nAbsent\nOn Leave\nHalf Day\nWork From Home\nDM Observado\nMarcacion Incompleta",
+   "permlevel": 1,
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:in_list([\"On Leave\", \"Half Day\"], doc.status)",
+   "fieldname": "leave_type",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Leave Type",
+   "mandatory_depends_on": "eval:in_list([\"On Leave\", \"Half Day\"], doc.status)",
+   "oldfieldname": "leave_type",
+   "oldfieldtype": "Link",
+   "options": "Leave Type"
+  },
+  {
+   "fieldname": "leave_application",
+   "fieldtype": "Link",
+   "label": "Leave Application",
+   "no_copy": 1,
+   "options": "Leave Application",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attendance_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Attendance Date",
+   "oldfieldname": "attendance_date",
+   "oldfieldtype": "Date",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "oldfieldname": "company",
+   "oldfieldtype": "Link",
+   "options": "Company",
+   "remember_last_selected_value": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Link",
+   "label": "Shift",
+   "options": "Shift Type"
+  },
+  {
+   "fieldname": "attendance_request",
+   "fieldtype": "Link",
+   "label": "Attendance Request",
+   "options": "Attendance Request",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Attendance",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "late_entry",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Late Entry"
+  },
+  {
+   "default": "0",
+   "fieldname": "early_exit",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Early Exit"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "depends_on": "shift",
+   "fieldname": "in_time",
+   "fieldtype": "Datetime",
+   "label": "In Time",
+   "read_only": 1
+  },
+  {
+   "depends_on": "shift",
+   "fieldname": "out_time",
+   "fieldtype": "Datetime",
+   "label": "Out Time",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "sucursal.zona_nacional",
+   "fieldname": "zona_nacional",
+   "fieldtype": "Link",
+   "label": "Zona Nacional",
+   "options": "Zonas Nacional"
+  },
+  {
+   "default": "0",
+   "fieldname": "chofer_creado_desde_cron",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Creado desde cron"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "datos_de_la_asistencia_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de la Asistencia"
+  },
+  {
+   "fieldname": "datos_de_la_agencia_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de la Agencia"
+  },
+  {
+   "fieldname": "column_break_33",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_333",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "icon": "fa fa-ok",
+ "idx": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-09 17:03:45.772352",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Attendance",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "employee,employee_name,attendance_date,status",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "employee_name"
+}

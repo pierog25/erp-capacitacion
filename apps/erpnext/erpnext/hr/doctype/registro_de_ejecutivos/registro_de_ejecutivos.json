@@ -1,0 +1,187 @@
+{
+ "actions": [],
+ "autoname": "RE-EJE-.####",
+ "creation": "2023-01-24 17:26:40.662700",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1",
+  "estado",
+  "documento",
+  "primer_nombre",
+  "apellido_paterno",
+  "fecha_de_nacimiento",
+  "estado_registro",
+  "column_break_17",
+  "numero_de_documento",
+  "segundo_nombre",
+  "apellido_materno",
+  "correo",
+  "section_break_10",
+  "direccion",
+  "column_break_13",
+  "curriculum_vitae",
+  "section_break_13",
+  "numero_de_cuenta",
+  "certificado_policial",
+  "column_break_15",
+  "recibo_de_agua_o_luz",
+  "amended_from",
+  "estado_correo_fase_2"
+ ],
+ "fields": [
+  {
+   "fieldname": "estado",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_standard_filter": 1,
+   "label": "Estado",
+   "options": "Pending\nApproved\nReject"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Registro de Ejecutivos",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "documento",
+   "fieldtype": "Select",
+   "label": "Documento",
+   "options": "DNI\nPasaporte\nCarnet de Extranjeria"
+  },
+  {
+   "default": " ",
+   "fieldname": "numero_de_documento",
+   "fieldtype": "Int",
+   "label": "Numero de Documento"
+  },
+  {
+   "fieldname": "primer_nombre",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Primer Nombre"
+  },
+  {
+   "fieldname": "segundo_nombre",
+   "fieldtype": "Data",
+   "label": "Segundo Nombre"
+  },
+  {
+   "fieldname": "apellido_paterno",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Apellido Paterno"
+  },
+  {
+   "fieldname": "apellido_materno",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Apellido Materno"
+  },
+  {
+   "fieldname": "fecha_de_nacimiento",
+   "fieldtype": "Date",
+   "label": "Fecha de Nacimiento"
+  },
+  {
+   "fieldname": "direccion",
+   "fieldtype": "Data",
+   "label": "Direccion"
+  },
+  {
+   "fieldname": "curriculum_vitae",
+   "fieldtype": "Attach",
+   "label": "Curriculum Vitae"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "certificado_policial",
+   "fieldtype": "Attach",
+   "label": "Certificado Policial"
+  },
+  {
+   "fieldname": "recibo_de_agua_o_luz",
+   "fieldtype": "Attach",
+   "label": "Recibo de Agua o Luz"
+  },
+  {
+   "fieldname": "numero_de_cuenta",
+   "fieldtype": "Attach",
+   "label": "Numero de Cuenta"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "correo",
+   "fieldtype": "Data",
+   "label": "Correo"
+  },
+  {
+   "default": "Registrado",
+   "fieldname": "estado_registro",
+   "fieldtype": "Select",
+   "label": "Estado registro",
+   "options": "Registrado\nEntrevista Rechazada\nEntrevista Aprobada"
+  },
+  {
+   "default": "0",
+   "fieldname": "estado_correo_fase_2",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Estado Correo"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-09-21 20:19:20.598661",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Registro de Ejecutivos",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

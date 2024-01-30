@@ -1,0 +1,176 @@
+{
+ "actions": [],
+ "autoname": "field:empleado",
+ "creation": "2022-01-26 11:21:31.421452",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "detalles_section",
+  "empleado",
+  "nombre_de_empleado",
+  "sucursal",
+  "id_de_la_sucursal",
+  "departamento",
+  "estado",
+  "zona",
+  "fecha_de_relevo",
+  "column_break_3",
+  "planilla",
+  "dnis",
+  "fecha_de_ingreso",
+  "cargo",
+  "amended_from",
+  "section_break_22",
+  "table_22"
+ ],
+ "fields": [
+  {
+   "fieldname": "detalles_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del Trabajador"
+  },
+  {
+   "fieldname": "empleado",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Empleado",
+   "options": "Employee",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fetch_from": "empleado.employee_name",
+   "fieldname": "nombre_de_empleado",
+   "fieldtype": "Data",
+   "label": "Nombre de Empleado",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.branch",
+   "fieldname": "sucursal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sucursal",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "sucursal.ideentificador",
+   "fieldname": "id_de_la_sucursal",
+   "fieldtype": "Data",
+   "label": "Id de la sucursal",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.department",
+   "fieldname": "departamento",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Departamento",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.status",
+   "fieldname": "estado",
+   "fieldtype": "Data",
+   "label": "Estado",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "empleado.zona_recursos",
+   "fieldname": "zona",
+   "fieldtype": "Link",
+   "label": "Zona",
+   "options": "Zona",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.fecha_de_relevo",
+   "fieldname": "fecha_de_relevo",
+   "fieldtype": "Data",
+   "label": "Fecha de relevo",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "empleado.company",
+   "fieldname": "planilla",
+   "fieldtype": "Data",
+   "label": "Planilla",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.passport_number",
+   "fieldname": "dnis",
+   "fieldtype": "Data",
+   "label": "DNI",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.fecha_de_ingreso_real",
+   "fieldname": "fecha_de_ingreso",
+   "fieldtype": "Date",
+   "label": "Fecha de ingreso",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "empleado.designation",
+   "fieldname": "cargo",
+   "fieldtype": "Data",
+   "label": "Cargo",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Otros Descuentos Nomina",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break",
+   "label": "Documento de Descuento"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "table_22",
+   "fieldtype": "Table",
+   "options": "tabla_descuentos"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-09-21 20:25:10.564744",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Otros Descuentos Nomina",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "sucursal"
+}

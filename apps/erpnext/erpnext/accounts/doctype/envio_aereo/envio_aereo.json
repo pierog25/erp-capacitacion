@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "autoname": "ENV-AR-.#####",
+ "creation": "2023-02-16 18:19:56.672070",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "id_cierre",
+  "calculadora_section",
+  "general",
+  "valiosa",
+  "peligrosa",
+  "column_break_6",
+  "monto_general",
+  "monto_valiosa",
+  "monto_peligrosa",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "calculadora_section",
+   "fieldtype": "Section Break",
+   "label": "Calculadora"
+  },
+  {
+   "fieldname": "id_cierre",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "ID cierre"
+  },
+  {
+   "fieldname": "general",
+   "fieldtype": "Data",
+   "label": "Cantidad General"
+  },
+  {
+   "fieldname": "valiosa",
+   "fieldtype": "Data",
+   "label": "Cantidad Valiosa"
+  },
+  {
+   "fieldname": "peligrosa",
+   "fieldtype": "Data",
+   "label": "Cantidad Peligrosa"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "monto_general",
+   "fieldtype": "Currency",
+   "label": "Monto General"
+  },
+  {
+   "fieldname": "monto_valiosa",
+   "fieldtype": "Currency",
+   "label": "Monto Valiosa"
+  },
+  {
+   "fieldname": "monto_peligrosa",
+   "fieldtype": "Currency",
+   "label": "Monto Peligrosa"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Envio Aereo",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-02-16 18:34:56.450670",
+ "modified_by": "Administrator",
+ "module": "Accounts",
+ "name": "Envio Aereo",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1
+}

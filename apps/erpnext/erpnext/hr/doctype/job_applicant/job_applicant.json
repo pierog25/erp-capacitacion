@@ -1,0 +1,270 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "HR-APP-.YYYY.-.#####",
+ "creation": "2013-01-29 19:25:37",
+ "description": "Applicant for a Job",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "email_append_to": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "datos_del_trabajo_section",
+  "job_title",
+  "compania_de_trabajo",
+  "salto_columna_3_column",
+  "puesto_de_oportunidad",
+  "column_break_7",
+  "status",
+  "asd_section",
+  "applicant_name",
+  "email_id",
+  "phone_number",
+  "column_break_3",
+  "country",
+  "id_de_la_sucursal",
+  "resume_attachment",
+  "section_break_17",
+  "source",
+  "column_break_19",
+  "source_name",
+  "employee_referral",
+  "applicant_rating",
+  "section_break_6",
+  "notes",
+  "cover_letter",
+  "resume_link",
+  "section_break_16",
+  "currency",
+  "column_break_18",
+  "lower_range",
+  "upper_range"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "Applicant Name",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email Address",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Open\nReplied\nRejected\nHold\nAccepted\nContratado",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break",
+   "width": "50%"
+  },
+  {
+   "fieldname": "job_title",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Job Opening",
+   "options": "Job Opening"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Link",
+   "label": "Source",
+   "options": "Job Applicant Source"
+  },
+  {
+   "depends_on": "eval: doc.source==\"Employee Referral\" ",
+   "fieldname": "source_name",
+   "fieldtype": "Link",
+   "label": "Source Name",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cover_letter",
+   "fieldtype": "Text",
+   "label": "Cover Letter"
+  },
+  {
+   "fieldname": "resume_attachment",
+   "fieldtype": "Attach",
+   "label": "Resume Attachment"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Data",
+   "label": "Notes",
+   "read_only": 1
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "resume_link",
+   "fieldtype": "Data",
+   "label": "Resume Link"
+  },
+  {
+   "fieldname": "applicant_rating",
+   "fieldtype": "Rating",
+   "in_list_view": 1,
+   "label": "Applicant Rating"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break",
+   "label": "Salary Expectation"
+  },
+  {
+   "fieldname": "lower_range",
+   "fieldtype": "Currency",
+   "label": "Lower Range",
+   "options": "currency",
+   "precision": "0"
+  },
+  {
+   "fieldname": "upper_range",
+   "fieldtype": "Currency",
+   "label": "Upper Range",
+   "options": "currency",
+   "precision": "0"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "employee_referral",
+   "fieldtype": "Link",
+   "label": "Employee Referral",
+   "options": "Employee Referral",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "sucursal.ideentificador",
+   "fieldname": "id_de_la_sucursal",
+   "fieldtype": "Data",
+   "label": "Id de la sucursal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "datos_del_trabajo_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del Trabajo"
+  },
+  {
+   "fieldname": "salto_columna_3_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "job_title.designation",
+   "fieldname": "puesto_de_oportunidad",
+   "fieldtype": "Link",
+   "label": "Puesto de Oportunidad",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "asd_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "job_title.company",
+   "fieldname": "compania_de_trabajo",
+   "fieldtype": "Link",
+   "label": "Compania de Trabajo",
+   "options": "Company"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "icon": "fa fa-user",
+ "idx": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-10 11:16:07.343981",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Job Applicant",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrador de agencia",
+   "select": 1,
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 2,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrador de agencia",
+   "select": 1,
+   "share": 1
+  }
+ ],
+ "search_fields": "applicant_name",
+ "sender_field": "email_id",
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "subject_field": "notes",
+ "title_field": "applicant_name",
+ "track_changes": 1
+}

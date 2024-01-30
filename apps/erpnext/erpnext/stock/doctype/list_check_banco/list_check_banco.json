@@ -1,0 +1,38 @@
+{
+ "actions": [],
+ "creation": "2023-06-02 15:36:03.442626",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "codigo_contable",
+  "monto"
+ ],
+ "fields": [
+  {
+   "fieldname": "codigo_contable",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Codigo Contable"
+  },
+  {
+   "fieldname": "monto",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Monto"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-21 21:24:55.074882",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "List Check Banco",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

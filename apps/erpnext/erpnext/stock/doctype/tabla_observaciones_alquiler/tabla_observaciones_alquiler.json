@@ -1,0 +1,39 @@
+{
+ "actions": [],
+ "creation": "2023-01-09 13:00:02.074512",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "variable",
+  "monto_de_variacion"
+ ],
+ "fields": [
+  {
+   "columns": 3,
+   "fieldname": "variable",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Variable"
+  },
+  {
+   "columns": 7,
+   "fieldname": "monto_de_variacion",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Monto de Variacion",
+   "precision": "2"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-21 21:24:47.557286",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "tabla_observaciones_alquiler",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

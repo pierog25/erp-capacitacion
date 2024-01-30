@@ -1,0 +1,649 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2013-03-07 14:48:38",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "type_section",
+  "naming_series",
+  "title",
+  "datos_de_la_solicitud_section",
+  "material_request_type",
+  "fecha_estimada_para_transferencia_completa",
+  "transfer_status",
+  "no_guia",
+  "column_break_8",
+  "prop\u00f3sito_de_transferencia",
+  "customer",
+  "transaction_date",
+  "column_break_10",
+  "schedule_date",
+  "transfer_date",
+  "fecha_y_hora_de_transaccion_erp",
+  "column_break_12",
+  "status",
+  "company",
+  "confirmar_transferencia",
+  "datos_de_la_transferencia_section",
+  "fecha_y_hora_de_transferencia",
+  "column_break_24",
+  "a",
+  "col_24",
+  "numero_orden",
+  "aprobacion_de_solicitud_section",
+  "aprobador_por_",
+  "column_break_29",
+  "aprobado_nombre_completo",
+  "column_break_21",
+  "aprobacion_de_solicitud",
+  "cancelaci\u00f3n_de_la_solicitud_section",
+  "cancelado_por",
+  "column_break_35",
+  "cancelado_nombre_completo",
+  "column_break_37",
+  "detalle_cancelacion",
+  "datos_de_la_agencia_section",
+  "id_sucursal",
+  "zona_nacional",
+  "column_break_25",
+  "sucursal",
+  "division",
+  "departamento",
+  "warehouse_section",
+  "set_from_warehouse",
+  "column_break_33",
+  "scan_barcode",
+  "almacen_section",
+  "set_warehouse",
+  "items",
+  "more_info",
+  "per_ordered",
+  "column_break2",
+  "per_received",
+  "new_transfer_purpose",
+  "select_print_heading",
+  "printing_details",
+  "letter_head",
+  "terms_section_break",
+  "tc_name",
+  "terms",
+  "reference",
+  "job_card",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "type_section",
+   "fieldtype": "Section Break",
+   "options": "fa fa-pushpin"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "oldfieldname": "naming_series",
+   "oldfieldtype": "Select",
+   "options": "MAT-MR-.YYYY.-",
+   "print_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "{material_request_type}",
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Title",
+   "no_copy": 1,
+   "print_hide": 1
+  },
+  {
+   "fieldname": "datos_de_la_solicitud_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de la Solicitud"
+  },
+  {
+   "default": "Material Transfer",
+   "fieldname": "material_request_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Purpose",
+   "options": "Purchase\nMaterial Transfer",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.add_to_transit == 1",
+   "fieldname": "transfer_status",
+   "fieldtype": "Select",
+   "label": "Transfer Status",
+   "options": "\nNot Started\nIn Transit\nCompleted",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "oldfieldname": "status",
+   "oldfieldtype": "Select",
+   "options": "\nDraft\nSubmitted\nStopped\nCancelled\nPending\nPartially Ordered\nPartially Received\nOrdered\nIssued\nTransferred\nReceived",
+   "print_hide": 1,
+   "print_width": "100px",
+   "read_only": 1,
+   "search_index": 1,
+   "width": "100px"
+  },
+  {
+   "default": "Today",
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Transaction Date",
+   "no_copy": 1,
+   "oldfieldname": "transaction_date",
+   "oldfieldtype": "Date",
+   "print_width": "100px",
+   "read_only": 1,
+   "reqd": 1,
+   "search_index": 1,
+   "width": "100px"
+  },
+  {
+   "fieldname": "transfer_date",
+   "fieldtype": "Date",
+   "label": "Transfer_date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "schedule_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Required By"
+  },
+  {
+   "default": "Shalom Empresarial",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Company",
+   "oldfieldname": "company",
+   "oldfieldtype": "Link",
+   "options": "Company",
+   "print_hide": 1,
+   "print_width": "150px",
+   "remember_last_selected_value": 1,
+   "reqd": 1,
+   "search_index": 1,
+   "width": "150px"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Material Request",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "datos_de_la_agencia_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de la Agencia"
+  },
+  {
+   "fieldname": "warehouse_section",
+   "fieldtype": "Section Break",
+   "label": "Warehouse"
+  },
+  {
+   "depends_on": "eval:doc.material_request_type == 'Material Transfer'",
+   "description": "Sets 'Source Warehouse' in each row of the Items table.",
+   "fieldname": "set_from_warehouse",
+   "fieldtype": "Link",
+   "label": "Set Source Warehouse",
+   "options": "Warehouse",
+   "permlevel": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "description": "Sets 'Target Warehouse' in each row of the Items table.",
+   "fieldname": "set_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Set Target Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "scan_barcode",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Scan Barcode"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "allow_on_submit": 1,
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "oldfieldname": "indent_details",
+   "oldfieldtype": "Table",
+   "options": "Material Request Item",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "more_info",
+   "fieldtype": "Section Break",
+   "label": "More Information",
+   "oldfieldtype": "Section Break",
+   "options": "fa fa-file-text"
+  },
+  {
+   "depends_on": "eval:doc.per_ordered > 0",
+   "fieldname": "per_ordered",
+   "fieldtype": "Percent",
+   "label": "% Ordered",
+   "no_copy": 1,
+   "oldfieldname": "per_ordered",
+   "oldfieldtype": "Currency",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break2",
+   "fieldtype": "Column Break",
+   "oldfieldtype": "Column Break",
+   "print_width": "50%",
+   "width": "50%"
+  },
+  {
+   "depends_on": "eval:doc.per_received > 0",
+   "fieldname": "per_received",
+   "fieldtype": "Percent",
+   "label": "% Received",
+   "no_copy": 1,
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "printing_details",
+   "fieldtype": "Section Break",
+   "label": "Printing Details"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "letter_head",
+   "fieldtype": "Link",
+   "label": "Letter Head",
+   "oldfieldname": "letter_head",
+   "oldfieldtype": "Select",
+   "options": "Letter Head",
+   "print_hide": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "select_print_heading",
+   "fieldtype": "Link",
+   "label": "Print Heading",
+   "options": "Print Heading",
+   "print_hide": 1
+  },
+  {
+   "collapsible": 1,
+   "collapsible_depends_on": "terms",
+   "fieldname": "terms_section_break",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Terms and Conditions",
+   "oldfieldtype": "Section Break",
+   "options": "fa fa-legal"
+  },
+  {
+   "fieldname": "tc_name",
+   "fieldtype": "Link",
+   "label": "Terms",
+   "oldfieldname": "tc_name",
+   "oldfieldtype": "Link",
+   "options": "Terms and Conditions",
+   "print_hide": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "terms",
+   "fieldtype": "Text Editor",
+   "label": "Terms and Conditions Content",
+   "oldfieldname": "terms",
+   "oldfieldtype": "Text Editor"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "reference",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "job_card",
+   "fieldtype": "Link",
+   "label": "Job Card",
+   "options": "Job Card",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Material Request",
+   "print_hide": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "sucursal",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Sucursal",
+   "options": "Branch"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "departamento",
+   "fieldtype": "Link",
+   "label": "Departamento",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "sucursal.ideentificador",
+   "fieldname": "id_sucursal",
+   "fieldtype": "Data",
+   "label": "ID Sucursal",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "fecha_y_hora_de_transaccion_erp",
+   "fieldtype": "Datetime",
+   "label": "Fecha y Hora de Transacci\u00f3n",
+   "read_only": 1
+  },
+  {
+   "fieldname": "aprobacion_de_solicitud_section",
+   "fieldtype": "Section Break",
+   "label": "Aprobacion de Solicitud"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "aprobador_por_",
+   "fieldtype": "Link",
+   "label": "Aprobador Por",
+   "options": "User"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Sin confirmar",
+   "fieldname": "confirmar_transferencia",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "confirmar_transferencia",
+   "options": "Sin confirmar\nConforme\nNo Conforme"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "fecha_estimada_para_transferencia_completa",
+   "fieldtype": "Date",
+   "label": "Fecha Estimada Transferencia Completa"
+  },
+  {
+   "fieldname": "prop\u00f3sito_de_transferencia",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Prop\u00f3sito de Transferencia",
+   "options": "\nTienda\nEmbalaje\nUNIFORMEEPP\nUtiles/Suministros/Consumibles\nEquipamiento\nEquipos\nInmobiliario\nServicios\nHerramientas",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "new_transfer_purpose",
+   "fieldtype": "Data",
+   "label": "new_transfer_purpose"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "allow_on_submit": 1,
+   "default": "Sin confirmar",
+   "fieldname": "a",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Confirmar Transferencia",
+   "options": "Sin confirmar\nConforme\nNo Conforme"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "En Espera",
+   "fieldname": "aprobacion_de_solicitud",
+   "fieldtype": "Select",
+   "label": "Aprobacion de Solicitud",
+   "options": "En Espera\nNo Necesita Aprobaci\u00f3n\nAprobado\nRechazado"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "almacen_section",
+   "fieldtype": "Section Break",
+   "label": "Productos Solicitados"
+  },
+  {
+   "fieldname": "column_break_33",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "no_guia",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Estado de Orden"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "numero_orden",
+   "fieldtype": "Data",
+   "label": " Numero de Orden"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "fecha_y_hora_de_transferencia",
+   "fieldtype": "Datetime",
+   "label": "Fecha y Hora de Transferencia",
+   "read_only": 1
+  },
+  {
+   "fieldname": "datos_de_la_transferencia_section",
+   "fieldtype": "Section Break",
+   "label": "Datos de la Transferencia"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "col_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "sucursal.zona_nacional",
+   "fieldname": "zona_nacional",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Zonas nacional",
+   "options": "Zonas Nacional"
+  },
+  {
+   "fetch_from": "zona_nacional.division",
+   "fieldname": "division",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Division",
+   "options": "Lima\nProvincias"
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "aprobado_nombre_completo",
+   "fieldtype": "Data",
+   "label": "Nombre completo",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cancelaci\u00f3n_de_la_solicitud_section",
+   "fieldtype": "Section Break",
+   "label": "Cancelaci\u00f3n de la Solicitud"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "cancelado_por",
+   "fieldtype": "Link",
+   "label": "Cancelado por",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "cancelado_nombre_completo",
+   "fieldtype": "Data",
+   "label": "Nombre Completo",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_37",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "detalle_cancelacion",
+   "fieldtype": "Small Text",
+   "label": "Detalle de la Cancelaci\u00f3n"
+  }
+ ],
+ "hide_toolbar": 1,
+ "icon": "fa fa-ticket",
+ "idx": 70,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-02 10:19:11.749268",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "Material Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Purchase Manager",
+   "set_user_permissions": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Purchase User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "status,transaction_date",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "title",
+ "track_changes": 1
+}

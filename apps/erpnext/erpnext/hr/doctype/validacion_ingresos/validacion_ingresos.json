@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "autoname": "VAL-INGR-.####",
+ "creation": "2023-03-21 16:09:25.702170",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tipo_match",
+  "banco",
+  "numero_cuenta",
+  "monto",
+  "column_break_5",
+  "fecha_de_inicio",
+  "fecha_de_fin",
+  "limpiar",
+  "section_break_8",
+  "ingresos_validados"
+ ],
+ "fields": [
+  {
+   "fieldname": "banco",
+   "fieldtype": "Select",
+   "label": "Banco",
+   "options": "BCP\nBBVA"
+  },
+  {
+   "fieldname": "fecha_de_inicio",
+   "fieldtype": "Date",
+   "label": "Fecha de Inicio"
+  },
+  {
+   "fieldname": "fecha_de_fin",
+   "fieldtype": "Date",
+   "label": "Fecha de Fin"
+  },
+  {
+   "fieldname": "tipo_match",
+   "fieldtype": "Data",
+   "label": "Tipo de Match"
+  },
+  {
+   "fieldname": "numero_cuenta",
+   "fieldtype": "Data",
+   "label": "Numero de cuenta"
+  },
+  {
+   "fieldname": "monto",
+   "fieldtype": "Currency",
+   "label": "Monto"
+  },
+  {
+   "fieldname": "ingresos_validados",
+   "fieldtype": "Table",
+   "options": "Ingresos Validados"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Ingresos validados"
+  },
+  {
+   "depends_on": "eval: (doc.name.includes('new') && frappe.user.has_role('System Manager'))",
+   "fieldname": "limpiar",
+   "fieldtype": "Button",
+   "label": "Limpiar"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-23 16:00:21.957897",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Validacion Ingresos",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

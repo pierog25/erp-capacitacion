@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "creation": "2023-08-04 17:06:11.427223",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "mes",
+  "dias_subsidiados",
+  "pago_adelantado",
+  "estado",
+  "fecha_de_pago"
+ ],
+ "fields": [
+  {
+   "fieldname": "mes",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Mes",
+   "options": "\nEnero\nFebrero\nMarzo\nAbril\nMayo\nJunio\nJulio\nAgosto\nSetiembre\nOctubre\nNoviembre\nDiciembre"
+  },
+  {
+   "fieldname": "dias_subsidiados",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Dias Subsidiados"
+  },
+  {
+   "fieldname": "pago_adelantado",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Pago Adelantado",
+   "precision": "2"
+  },
+  {
+   "fieldname": "estado",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Estado",
+   "options": "\nPagado\nPendiente"
+  },
+  {
+   "fieldname": "fecha_de_pago",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Fecha de Pago"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-21 21:25:01.843468",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Pago Subsidio por Mes",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

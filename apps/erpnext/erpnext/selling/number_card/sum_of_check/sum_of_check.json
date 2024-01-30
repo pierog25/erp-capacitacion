@@ -1,0 +1,22 @@
+{
+ "creation": "2023-12-05 12:52:27.435670",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "filters_json": "{\"date_init\":\"2023-11-15\",\"date_end\":\"2023-12-31\"}",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "label": "Sum of Check",
+ "modified": "2023-12-05 12:53:18.679926",
+ "modified_by": "Administrator",
+ "module": "Selling",
+ "name": "Sum of Check",
+ "owner": "Administrator",
+ "report_field": "check",
+ "report_function": "Sum",
+ "report_name": "Supervicion Almacen",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Report"
+}

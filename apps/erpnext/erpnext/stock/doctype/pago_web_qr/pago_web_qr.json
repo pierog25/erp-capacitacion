@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "creation": "2023-12-11 16:54:47.166930",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pagado",
+  "factura_pos",
+  "cliente",
+  "clave",
+  "telefono",
+  "correo"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "pagado",
+   "fieldtype": "Check",
+   "label": "Pagado"
+  },
+  {
+   "fieldname": "factura_pos",
+   "fieldtype": "Link",
+   "label": "Factura POS",
+   "options": "POS Invoice"
+  },
+  {
+   "fieldname": "cliente",
+   "fieldtype": "Data",
+   "label": "Cliente"
+  },
+  {
+   "fieldname": "clave",
+   "fieldtype": "Data",
+   "label": "Clave"
+  },
+  {
+   "fieldname": "telefono",
+   "fieldtype": "Data",
+   "label": "Telefono"
+  },
+  {
+   "fieldname": "correo",
+   "fieldtype": "Data",
+   "label": "Correo"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-11 16:54:47.166930",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "Pago Web Qr",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

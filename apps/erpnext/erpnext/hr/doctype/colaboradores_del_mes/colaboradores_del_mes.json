@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "autoname": "COL.-.MES.-.####",
+ "creation": "2022-12-14 18:58:51.675739",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "empleado",
+  "nombre_completo",
+  "column_break_3",
+  "sucursal",
+  "mes"
+ ],
+ "fields": [
+  {
+   "fieldname": "empleado",
+   "fieldtype": "Link",
+   "label": "Empleado",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "empleado.nombre_completo",
+   "fieldname": "nombre_completo",
+   "fieldtype": "Data",
+   "label": "Nombre Completo"
+  },
+  {
+   "fieldname": "mes",
+   "fieldtype": "Select",
+   "label": "Mes",
+   "options": "Enero\nFebrero\nMarzo\nAbril\nMayo\nJunio\nJulio\nAgosto\nSeptiembre\nOctubre\nNoviembre\nDiciembre"
+  },
+  {
+   "fetch_from": "empleado.branch",
+   "fieldname": "sucursal",
+   "fieldtype": "Data",
+   "label": "Sucursal"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-21 20:19:17.916259",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Colaboradores del Mes",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "creation": "2023-05-11 01:00:20.583462",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "datos_local",
+  "sucursal",
+  "supervisor",
+  "break_1",
+  "nombre_supervisor",
+  "imagen_y_presentacion",
+  "fachada_interior",
+  "letrero_banners"
+ ],
+ "fields": [
+  {
+   "fieldname": "imagen_y_presentacion",
+   "fieldtype": "Section Break",
+   "label": "Imagen y presentaci\u00f3n"
+  },
+  {
+   "fieldname": "fachada_interior",
+   "fieldtype": "Select",
+   "label": "\u00bfLa fachada del local e interior est\u00e1n pintado al color del modelo shalom?",
+   "options": "--SELECCIONAR--\nSi\nNo"
+  },
+  {
+   "fieldname": "letrero_banners",
+   "fieldtype": "Select",
+   "label": "\u00bfEl letrero principal y banners est\u00e1n en \u00f3ptimas condiciones?",
+   "options": "--SELECCIONAR--\nSi\nNo"
+  },
+  {
+   "fieldname": "datos_local",
+   "fieldtype": "Section Break",
+   "label": "Datos del Local "
+  },
+  {
+   "fieldname": "sucursal",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Sucursal",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Supervisor",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nombre_supervisor",
+   "fieldtype": "Data",
+   "label": "Nombre Supervisor"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-05-11 01:22:21.820262",
+ "modified_by": "Administrator",
+ "module": "Quality Management",
+ "name": "Check List Visual del Supervisor Nacional",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

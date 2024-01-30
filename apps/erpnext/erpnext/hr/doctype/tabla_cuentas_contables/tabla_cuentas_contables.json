@@ -1,0 +1,38 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-05-15 17:21:45.819062",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "nombre"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "CTA-CONTABLE-"
+  },
+  {
+   "fieldname": "nombre",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-21 21:24:54.243731",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Tabla Cuentas Contables",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

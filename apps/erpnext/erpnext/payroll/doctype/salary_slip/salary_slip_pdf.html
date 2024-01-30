@@ -1,0 +1,1732 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ticket ERP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    <style>
+        .main-container {
+            font-size: 7px;
+            font-family: 'Fira Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            line-height: 1.15; /* 1 */
+            -webkit-text-size-adjust: 100%; /* 2 */
+        }
+
+        @page {
+            size: A4;
+            margin: 0mm 0mm 0mm 0mm;
+        }
+
+        body {
+            margin: 0 !important;
+            padding:0 !important;
+            border:0 !important;
+            outline:0 !important;
+        }
+
+        main {
+            display: block;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: 0.67em 0;
+        }
+
+
+        hr {
+            box-sizing: content-box; /* 1 */
+            height: 0; /* 1 */
+            overflow: visible; /* 2 */
+        }
+
+
+        a {
+            background-color: transparent;
+        }
+
+        abbr[title] {
+            border-bottom: none; /* 1 */
+            text-decoration: underline; /* 2 */
+            text-decoration: underline dotted; /* 2 */
+        }
+
+        code,
+        kbd,
+
+        small {
+            font-size: 80%;
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+        }
+
+        sub {
+            bottom: -0.25em;
+        }
+
+        sup {
+            top: -0.5em;
+        }
+
+
+        img {
+            border-style: none;
+        }
+
+
+        button,
+        input,
+        optgroup,
+        select,
+            /**
+             * Show the overflow in IE.
+             * 1. Show the overflow in Edge.
+             */
+
+        button,
+        input { /* 1 */
+            overflow: visible;
+        }
+
+        /**
+         * Remove the inheritance of text transform in Edge, Firefox, and IE.
+         * 1. Remove the inheritance of text transform in Firefox.
+         */
+
+        button,
+        select { /* 1 */
+            text-transform: none;
+        }
+
+        /**
+         * Correct the inability to style clickable types in iOS and Safari.
+         */
+
+        button,
+        [type="button"],
+        [type="reset"],
+        [type="submit"] {
+            -webkit-appearance: button;
+        }
+
+        /**
+         * Remove the inner border and padding in Firefox.
+         */
+
+        button::-moz-focus-inner,
+        [type="button"]::-moz-focus-inner,
+        [type="reset"]::-moz-focus-inner,
+        [type="submit"]::-moz-focus-inner {
+            border-style: none;
+            padding: 0;
+        }
+
+        /**
+         * Restore the focus styles unset by the previous rule.
+         */
+
+        button:-moz-focusring,
+        [type="button"]:-moz-focusring,
+        [type="reset"]:-moz-focusring,
+        [type="submit"]:-moz-focusring {
+            outline: 1px dotted ButtonText;
+        }
+
+        /**
+         * Correct the padding in Firefox.
+         */
+
+        fieldset {
+            padding: 0.35em 0.75em 0.625em;
+        }
+
+        /**
+         * 1. Correct the text wrapping in Edge and IE.
+         * 2. Correct the color inheritance from `fieldset` elements in IE.
+         * 3. Remove the padding so developers are not caught out when they zero out
+         *    `fieldset` elements in all browsers.
+         */
+
+        legend {
+            box-sizing: border-box; /* 1 */
+            color: inherit; /* 2 */
+            display: table; /* 1 */
+            max-width: 100%; /* 1 */
+            padding: 0; /* 3 */
+            white-space: normal; /* 1 */
+        }
+
+        /**
+         * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+         */
+
+        progress {
+            vertical-align: baseline;
+        }
+
+        /**
+         * Remove the default vertical scrollbar in IE 10+.
+         */
+
+        textarea {
+            overflow: auto;
+        }
+
+        /**
+         * 1. Add the correct box sizing in IE 10.
+         * 2. Remove the padding in IE 10.
+         */
+
+        [type="checkbox"],
+        [type="radio"] {
+            box-sizing: border-box; /* 1 */
+            padding: 0; /* 2 */
+        }
+
+        /**
+         * Correct the cursor style of increment and decrement buttons in Chrome.
+         */
+
+        [type="number"]::-webkit-inner-spin-button,
+        [type="number"]::-webkit-outer-spin-button {
+            height: auto;
+        }
+
+        /**
+         * 1. Correct the odd appearance in Chrome and Safari.
+         * 2. Correct the outline style in Safari.
+         */
+
+        [type="search"] {
+            -webkit-appearance: textfield; /* 1 */
+            outline-offset: -2px; /* 2 */
+        }
+
+        /**
+         * Remove the inner padding in Chrome and Safari on macOS.
+         */
+
+        [type="search"]::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+
+        /**
+         * 1. Correct the inability to style clickable types in iOS and Safari.
+         * 2. Change font properties to `inherit` in Safari.
+         */
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button; /* 1 */
+            font: inherit; /* 2 */
+        }
+
+        /* Interactive
+           ========================================================================== */
+
+        /*
+         * Add the correct display in Edge, IE 10+, and Firefox.
+         */
+
+        details {
+            display: block;
+        }
+
+        /*
+         * Add the correct display in all browsers.
+         */
+
+        summary {
+            display: list-item;
+        }
+
+        /* Misc
+           ========================================================================== */
+
+        /**
+         * Add the correct display in IE 10+.
+         */
+
+        template {
+            display: none;
+        }
+
+        /**
+         * Add the correct display in IE 10.
+         */
+
+        [hidden] {
+            display: none;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        main {
+            display: block;
+        }
+
+        .izquierda {
+            text-align: left;
+        }
+
+        .derecha {
+            text-align: right;
+        }
+
+        .centro {
+            text-align: center;
+        }
+
+        /*@page {*/
+        /*margin: 10em auto;*/
+        /*}*/
+
+        .img__logo {
+            width: 150px;
+
+        }
+
+        .tablaa {
+            display: inline-block;
+        }
+        .tda{
+            width: 100%;
+        }
+        .tdb{
+            width: 35%;
+        }
+        div {
+            border-color: black;
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container centro" style="height: 50%;width: 98%">
+    <!--Encabezado-->
+    <table width="100%" height="35%"  style="font-size: 6px;margin: 5px;">
+        <tr>
+            <td width="33.3%">
+                <table width="100%">
+                    <tr>
+                        <td class="izquierda tda">
+                            <b>{{nombre_compania}}</b>
+                            <br>
+                            <b>{{direccion_compania}}</b>
+                            {% if ruc_compania == "20378157138" %}
+                            <br>
+                            <b >TELF {{telefono_compania}}</b>
+                            {% endif %}
+                            {% if ruc_compania == "20512528458" %}
+                            <br>
+                            <b >TELF {{telefono_compania}}</b>
+                            {% endif %}
+                            {% if ruc_compania == "20604667187" %}
+                            <br>
+                            <b >TELF {{telefono_compania}}</b>
+                            {% endif %}
+                            <br>
+                            <b>R.U.C</b><b style="  margin-left: 10px">{{ruc_compania}}</b>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td width="33.3%">
+                <table width="100%" class="centro">
+                    <tr>
+                        <td colspan="3">
+                            <b style="font-size: 10px">BOLETA DE PAGO - {{mes_boleta}} / {{ano_boleta}}</b>
+                            <br><b>DECRETO SUPREMO Nº001-98</b>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td width="33.3%">
+                <table width="100%" class="derecha tda">
+                    {% if ruc_compania == "20512528458" %}
+                    <tr>
+                        <img class="img__logo" src="/files/EMPRESARIAL.png" alt="logo shalom">
+                    </tr>
+                    {% endif %}
+                    {% if ruc_compania == "20604667187" %}
+                    <tr>
+                        <img class="img__logo" src="/files/CDTALLERES.png" alt="logo cd talleres">
+                    </tr>
+                    {% endif %}
+                    {% if ruc_compania == "20378157138" %}
+                    <tr>
+                        <img class="img__logo" src="/files/EXPRESSd05f43.png" alt="logo express">
+                    </tr>
+                    {% endif %}
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!--Datos del trabajador-->
+    <table width="100%" height="35%" style="font-size: 7px;margin: 5px;">
+        <tr>
+            <td width="33.3%">
+                <table width="100%">
+                    <tr>
+                        <td class="izquierda"><b>NOMBRE</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{employee_name}}</td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>TIPO DE DOCUMENTO</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{tipo_de_documento}}</td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>NRO DE DOCUMENTO</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{documento_identidad}}</td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>F.NAC</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{fecha_final_nacimiento}}</td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>SEXO</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{sexo}}</td>
+                    </tr>
+                </table>
+            </td>
+            <td width="33.3%">
+                <table width="100%">
+                    <tr>
+                        <td class="izquierda"><b>FECHA DE INGRESO</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{fecha_final_ingreso}}</td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>CALIFICACION</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{calificacion}}</td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>SUELDO BASICO</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{sueldo_empleado}}</td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>AGENCIA</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{branch}}</td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>PUESTO</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{designation}}</td>
+                    </tr>
+                </table>
+            </td>
+            <td width="33.3%">
+                <table width="100%">
+                    <tr>
+                        <td class="izquierda"><b>AREA</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{department}}</td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>AFP</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{afp}}</td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>CUSPP</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{data_employee.cussp}}</td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>FECHA DE CESE</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{fecha_de_cese}}</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!--Ganancias y Deducciones-->
+    <table ALIGN="center" width="90%" style="font-size: 7px;border: black 1px solid; border-radius: 10px;">
+        <tr>
+            <td style="border-right: black solid 1px">
+                <table width="100%" height="100%" class="tablaa" style="margin-top: 8px">
+                    <thead>
+                    <tr>
+                        <th style="border-bottom: black 1px solid;margin-top: 20px;padding-bottom: 7px" colspan="2" class="centro"><b>INGRESOS</b></th>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="izquierda tda">CONCEPTO</th>
+                        <th scope="col" class="derecha tda">IMPORTE</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% if haber_mensual !=0 %}
+                    <tr>
+                        <td class="izquierda tda">REMUNERACION MENSUAL</td>
+                        <td class="derecha tda">{{haber_mensual}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if vacaciones !=0 %}
+                    <tr>
+                        <td class="izquierda tda">VACACIONES</td>
+                        <td class="derecha tda">{{vacaciones}}</td>
+                    </tr>
+                    {% endif %}
+                    <!--aea-->
+                    {% if LICENCIA_GOCE !=0 %}
+                    <tr>
+                        <td class="izquierda tda">LICENCIA CON GOCE</td>
+                        <td class="derecha tda">{{LICENCIA_GOCE}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if LICENCIA_FALLECIMIENTO !=0 %}
+                    <tr>
+                        <td class="izquierda tda">LICENCIA POR FALLECIMIENTO</td>
+                        <td class="derecha tda">{{LICENCIA_FALLECIMIENTO}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if LICENCIA_PATERNIDAD !=0 %}
+                    <tr>
+                        <td class="izquierda tda">LICENCIA POR PATERNIDAD</td>
+                        <td class="derecha tda">{{LICENCIA_PATERNIDAD}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if COMPENSATORIO !=0 %}
+                    <tr>
+                        <td class="izquierda tda">COMPENSATORIO</td>
+                        <td class="derecha tda">{{COMPENSATORIO}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if subsidio_accidente == total_working_days %}
+                    <tr>
+                        <td class="izquierda tda">SUBSIDIO POR ACCIDENTE</td>
+                        <td class="derecha tda">{{SUBSIDIO_ACCIDENTE}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if subsidio_enfermedad == total_working_days %}
+                    <tr>
+                        <td class="izquierda tda">SUBSIDIO POR ENFERMEDAD</td>
+                        <td class="derecha tda">{{SUBSIDIO_ENFERMEDAD}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if subsidio_por_maternidad == total_working_days %}
+                    <tr>
+                        <td class="izquierda tda">SUBSIDIO POR MATERNIDAD</td>
+                        <td class="derecha tda">{{SUBSIDIO_MATERNIDAD}}</td>
+                    </tr>
+                    {% endif %}
+                    <!--aea-->
+                    {% if asignacion_familiar !=0 %}
+                    <tr>
+                        <td class="izquierda tda">ASIGNACION FAMILIAR</td>
+                        <td class="derecha tda">{{asignacion_familiar}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if horas_25 !=0 %}
+                    <tr>
+                        <td class="izquierda tda">HORAS EXTRAS AL 25%</td>
+                        <td class="derecha tda">{{horas_25}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if horas_35 !=0 %}
+                    <tr>
+                        <td class="izquierda tda">HORAS EXTRAS AL 35%</td>
+                        <td class="derecha tda">{{horas_35}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if horas_100 !=0 %}
+                    <tr>
+                        <td class="izquierda tda">HORAS EXTRAS AL 100%</td>
+                        <td class="derecha tda">{{horas_100}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if horas_nocturnas !=0 %}
+                    <tr>
+                        <td class="izquierda tda">HORAS NOCTURNAS</td>
+                        <td class="derecha tda">{{horas_nocturnas}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if sumAllMobility !=0 %}
+                    <tr>
+                        <td class="izquierda tda">MOVILIDAD</td>
+                        <td class="derecha tda">{{sumAllMobility}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if condiciones_trabajo !=0 %}
+                    <tr>
+                        <td class="izquierda tda">CONDICION DE TRABAJO</td>
+                        <td class="derecha tda">{{condiciones_trabajo}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if otros_ingresos !=0 %}
+                    <tr>
+                        <td class="izquierda tda">BONIFICACION</td>
+                        <td class="derecha tda">{{otros_ingresos}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if gratificacion !=0 %}
+                    <tr>
+                        <td class="izquierda tda">GRATIFICACION</td>
+                        <td class="derecha tda">{{gratificacion}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if bonif_ext !=0 %}
+                    <tr>
+                        <td class="izquierda tda">BONIF EXT 9%</td>
+                        <td class="derecha tda">{{bonif_ext}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if viaticos_earn != 0 and viaticos_ingreso == 0 %}
+                    <tr>
+                        <td class="izquierda tda">VIATICOS</td>
+                        <td class="derecha tda">{{viaticos_earn}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if viaticos_earn == 0 and viaticos_ingreso != 0 %}
+                    <tr>
+                        <td class="izquierda tda">VIATICOS</td>
+                        <td class="derecha tda">{{viaticos_ingreso}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if viaticos_earn != 0 and viaticos_ingreso != 0 %}
+                    <tr>
+                        <td class="izquierda tda">VIATICOS</td>
+                        <td class="derecha tda">{{suma_viaticos}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if apoyos !=0 %}
+                    <tr>
+                        <td class="izquierda tda">OTROS INGRESOS</td>
+                        <td class="derecha tda">{{apoyos}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if descando_medico !=0 %}
+                    <tr>
+                        <td class="izquierda tda">DESCANDO MEDICO</td>
+                        <td class="derecha tda">{{descando_medico}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if licencia !=0 %}
+                    <tr>
+                        <td class="izquierda tda">LICENCIA</td>
+                        <td class="derecha tda">{{licencia}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if canasta_navidad_in !=0 %}
+                    <tr>
+                        <td class="izquierda tda">CANASTA DE NAVIDAD</td>
+                        <td class="derecha tda">{{canasta_navidad_in}}</td>
+                    </tr>
+                    {% endif %}
+                    </tbody>
+                </table>
+            </td>
+            <td style="border-right: black solid 1px">
+                <table width="100%" height="100%" class="tablaa" style="margin-top: 8px">
+                    <thead>
+                    <tr>
+                        <th style="border-bottom: black 1px solid;padding-bottom: 7px" colspan="2" class="centro"><b>DESCUENTOS</b></th>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="izquierda tda">CONCEPTO</th>
+                        <th scope="col" class="derecha tda">IMPORTE</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% if snp !=0 %}
+                    <tr>
+                        <td class="izquierda">SNP</td>
+                        <td class="derecha">{{snp}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if afp_fondo !=0 %}
+                    <tr>
+                        <td class="izquierda">AFP FONDO</td>
+                        <td class="derecha">{{afp_fondo}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if afp_seguro !=0 %}
+                    <tr>
+                        <td class="izquierda">AFP SEGURO</td>
+                        <td class="derecha">{{afp_seguro}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if afp_comision !=0 %}
+                    <tr>
+                        <td class="izquierda">AFP COMISION</td>
+                        <td class="derecha">{{afp_comision}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if faltas_y_permisos !=0 %}
+                    <tr>
+                        <td class="izquierda">FALTAS Y/O PERMISOS</td>
+                        <td class="derecha">{{faltas_y_permisos}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if ta_categoria !=0 %}
+                    <tr>
+                        <td class="izquierda">5TA CATEGORIA</td>
+                        <td class="derecha">{{ta_categoria}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if viaticos_earn !=0 %}
+                    <tr>
+                        <td class="izquierda">VIATICOS</td>
+                        <td class="derecha">{{viaticos_earn}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if gratificacion_bonificacion !=0 %}
+                    <tr>
+                        <td class="izquierda">GRATIFICACION / BONIF 9%</td>
+                        <td class="derecha">{{gratificacion_bonificacion}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if seguros_rimac !=0 %}
+                    <tr>
+                        <td class="izquierda">SEGUROS RIMAC</td>
+                        <td class="derecha">{{seguros_rimac}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if adelantos !=0 %}
+                    <tr>
+                        <td class="izquierda">ADELANTOS</td>
+                        <td class="derecha">{{adelantos}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if desc_alimentos !=0 %}
+                    <tr>
+                        <td class="izquierda">DESC ALIMENTOS</td>
+                        <td class="derecha">{{desc_alimentos}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if epp !=0 %}
+                    <tr>
+                        <td class="izquierda">EPP</td>
+                        <td class="derecha">{{epp}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if otros_descuentos !=0 %}
+                    <tr>
+                        <td class="izquierda">OTROS DESCUENTOS</td>
+                        <td class="derecha">{{otros_descuentos}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if apoyos_deductions !=0 %}
+                    <tr>
+                        <td class="izquierda">OTROS INGRESOS</td>
+                        <td class="derecha">{{apoyos_deductions}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if canasta_navidad_eg !=0 %}
+                    <tr>
+                        <td class="izquierda">CANASTA DE NAVIDAD</td>
+                        <td class="derecha">{{canasta_navidad_eg}}</td>
+                    </tr>
+                    {% endif %}
+                    </tbody>
+                </table>
+            </td>
+            <td>
+                <table width="100%" height="100%" class="tablaa" style="margin-top: 8px">
+                    <thead>
+                    <tr>
+                        <th style="border-bottom: black 1px solid;padding-bottom: 7px" colspan="2" class="centro"><b>APORTACIONES</b></th>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="izquierda tda">CONCEPTO</th>
+                        <th scope="col" class="derecha tda">IMPORTE</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% if seguro_salud_erp !=0 %}
+                    <tr>
+                        <td class="izquierda">ESSALUD</td>
+                        <td class="derecha">{{seguro_salud_erp}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if vida_ley_componente !=0 %}
+                    <tr>
+                        <td class="izquierda">VIDA LEY</td>
+                        <td class="derecha">{{vida_ley_componente}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if essalud !=0 and seguro_salud_erp==0 %}
+                    <tr>
+                        <td class="izquierda">ESSALUD</td>
+                        <td class="derecha">{{essalud}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if sctr_componente_pension !=0 %}
+                    <tr>
+                        <td class="izquierda">SCTR PENSION</td>
+                        <td class="derecha">{{sctr_componente_pension}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if sctr_componente_salud !=0 %}
+                    <tr>
+                        <td class="izquierda">SCTR SALUD</td>
+                        <td class="derecha">{{sctr_componente_salud}}</td>
+                    </tr>
+                    {% endif %}
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+
+
+        <!--prueba-->
+        <tr>
+            <td style="border-right: black solid 1px">
+                <table width="100%" style="font-size: 7px;border-top: black 1px solid;">
+                    <tr>
+                        <td>
+                            <table width="100%" class="tablaa" >
+                                <tr>
+                                    <td class="izquierda tda"><b>TOTAL INGRESOS</b></td>
+                                    <td class="derecha tda"><b>{{total_ingresos_nomina}}</b></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td style="border-right: black solid 1px">
+                <table width="100%" style="font-size: 7px;border-top: black 1px solid;">
+                    <tr>
+                        <td>
+                            <table width="100%" class="tablaa">
+                                <tr>
+                                    <td class="izquierda tda"><b>TOTAL DESCUENTOS</b></td>
+                                    <td class="derecha tda"><b>{{total_deduciones_nomina}}</b></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table width="100%" style="font-size: 7px;border-top: black 1px solid">
+                    <tr>
+                        <td>
+                            <table width="100%" class="tablaa">
+                                {% if total_aportes_componente !=0 %}
+                                <tr>
+                                    <td class="izquierda tda"><b>TOTAL APORTES</b></td>
+                                    <td class="derecha tda"><b>{{total_aportes_componente}}</b></td>
+                                </tr>
+                                {% endif %}
+                                {% if essalud !=0 and seguro_salud_erp==0 %}
+                                <tr>
+                                    <td class="izquierda tda"><b>TOTAL APORTES</b></td>
+                                    <td class="derecha tda"><b>{{essalud}}</b></td>
+                                </tr>
+                                {% endif %}
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!--Datos de trabajo-->
+    <table width="100%" ALIGN="center" height="35%" style="font-size: 7px;margin: 3px;margin-top: 7px;">
+        <tr>
+            <td width="21.6%">
+                <table width="80%" style="margin-left: 20px">
+                    <tr>
+                        <td class="izquierda"><b>Dias Trabajados</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda"><b> {{total_dias_trabajo}}</b></td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>Dias No Laborados</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda"><b>{{Dias_No_Laborados_ERP}}</b></td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>Dias Subsidiados</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda"><b> {{dias_subsidio_total}}</b></td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>Dias No Subsidiados</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda"><b> {{desca_medico}}</b></td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>Dias de Inasistencia</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda"><b> {{ausencias}}</b></td>
+                    </tr>
+                </table>
+            </td>
+            <td width="21.6%">
+                <table width="80%" style="margin-left: 15px">
+                    {% if dias_vaciones == 0 %}
+                    <tr>
+                        <td class="izquierda"><b>Vacaciones</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda"><b>0</b></td>
+                    </tr>
+                    {% endif %}
+                    <tr>
+                        <td class="izquierda"><b>H.Extras 25%</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda"><b> {{horas_25_cantidad}}</b></td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>H.Extras 35%</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda"><b> {{horas_35_cantidad}}</b></td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>H.Extras 100%</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda"><b> {{horas_100_cantidad}}</b></td>
+                    </tr>
+                    {% if vacaciones_uno.holidays_validation %}
+                    <tr>
+                        <td class="izquierda"><b>Vacaciones</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">
+                            <b>{{vacaciones_uno.holidays_periodo}}</b>
+                            <br>
+                            <b>{{vacaciones_uno.holidays_from_date}}</b>
+                            <br>
+                            <b>{{vacaciones_uno.holidays_to_date}}</b>
+                        </td>
+                    </tr>
+                    {% endif %}
+                </table>
+            </td>
+            <td width="21.6%">
+                <table width="83%" >
+                    <tr>
+                        <td class="izquierda"><b>Dias Vac.Gozadas</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda"><b> {{vacaciones_cantidad}}</b></td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>Dias Vac.Vendidas</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda"><b> {{vacaciones_compradas_cantidad}}</b></td>
+                    </tr>
+                    {% if vacaciones_compradas_dos.holidays_validation %}
+                    <tr>
+                        <td class="izquierda"><b>Vacaciones Vendidas</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">
+                            <b>{{vacaciones_compradas_dos.holidays_periodo}}</b>
+                        </td>
+                    </tr>
+                    {% endif %}
+                </table>
+            </td>
+            <td width="35%">
+                <table width="85%" style="border: black 1px solid">
+                    <tr>
+                        <td class="izquierda tda" style="width: 50%"><b>Nombre de Banco</b></td>
+                        <td style="width: 5%">: </td>
+                        <td class="derecha tda" style="width: 40%">{{nombre_banco_erp}}</td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda tda" style="width: 50%"><b>N° de Cuenta</b></td>
+                        <td style="width: 5%">: </td>
+                        <td class="derecha tda" style="width: 40%">{{numero_de_cuenta}}</td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        {% if pago_neto|int < 0 %}
+                        <td class="izquierda tda" style="width: 50%"><b>NETO A PAGAR S/</b></td>
+                        <td style="width: 5%">: </td>
+                        <td class="derecha tda" style="width: 40%">0.00</td>
+                        {% else %}
+                        <td class="izquierda tda" style="width: 50%"><b>NETO A PAGAR S/</b></td>
+                        <td style="width: 5%">: </td>
+                        <td class="derecha tda" style="width: 40%">{{ pago_neto }}</td>
+                        {% endif %}
+                    </tr>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!--Firma del trabajor y jefe-->
+    <table width="100%" height="35%" style="margin-left: 20px;font-size: 7px">
+        <tr>
+            <td class="centro" width="33.3%">
+                <table width="100%">
+                    <tr>
+                        <td colspan="2" rowspan="3" class="izquierda tda">
+                            <b>Fecha de Pago: {{fecha_final_pago}}</b>
+                            <br>
+                            <b>RECIBO CONFORME</b>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table >
+        <tr class="derecha">
+            <td width="31%"></td>
+            <td width="30%">
+                <table width="100%" style=" margin-top: 35px;font-size: 5px;" class="derecha">
+                    <tr>
+                        <td class="centro"></td>
+                    </tr>
+                    <tr>
+                        <td class="centro" style="border-top: black 1px solid; width: 10px"><b>EMPLEADO</b></td>
+                    </tr>
+                    <tr>
+                        <td class="centro"><b>{{nombre_completo}}</b></td>
+                    </tr>
+                </table>
+            </td>
+            <td width="9%"></td>
+            <td width="30%" >
+                <table width="100%" style=" margin-top: 10px;margin-left: 30px;font-size: 5px;">
+                    <tr>
+                        <td class="centro">
+                            <img
+                                    src="/files/FIRMAAA.png" width="50%"
+                                    alt="Italian Trulli"></td>
+                    </tr>
+                    <tr>
+                        <td class="centro" style="border-top: black 1px solid;"><b>EMPLEADOR</b></td>
+                    </tr>
+                    <tr>
+                        <td class="centro"><b>MALDONADO DE MAMANI, CARMEN</b></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+<br style="margin-top: 15px">
+<div class="main-container centro" style="height: 50%;width: 98%">
+    <!--Encabezado-->
+    <table width="100%" height="35%"  style="font-size: 6px;margin: 5px;">
+        <tr>
+            <td width="33.3%">
+                <table width="100%">
+                    <tr>
+                        <td class="izquierda tda">
+                            <b>{{nombre_compania}}</b>
+                            <br>
+                            <b>{{direccion_compania}}</b>
+                            {% if ruc_compania == "20378157138" %}
+                            <br>
+                            <b >TELF {{telefono_compania}}</b>
+                            {% endif %}
+                            {% if ruc_compania == "20512528458" %}
+                            <br>
+                            <b >TELF {{telefono_compania}}</b>
+                            {% endif %}
+                            {% if ruc_compania == "20604667187" %}
+                            <br>
+                            <b >TELF {{telefono_compania}}</b>
+                            {% endif %}
+                            <br>
+                            <b>R.U.C</b><b style="  margin-left: 10px">{{ruc_compania}}</b>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td width="33.3%">
+                <table width="100%" class="centro">
+                    <tr>
+                        <td colspan="3">
+                            <b style="font-size: 10px">BOLETA DE PAGO - {{mes_boleta}} / {{ano_boleta}}</b>
+                            <br><b>DECRETO SUPREMO Nº001-98</b>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td width="33.3%">
+                <table width="100%" class="derecha tda">
+                    {% if ruc_compania == "20512528458" %}
+                    <tr>
+                        <img class="img__logo" src="/files/EMPRESARIAL.png" alt="logo shalom">
+                    </tr>
+                    {% endif %}
+                    {% if ruc_compania == "20604667187" %}
+                    <tr>
+                        <img class="img__logo" src="/files/CDTALLERES.png" alt="logo cd talleres">
+                    </tr>
+                    {% endif %}
+                    {% if ruc_compania == "20378157138" %}
+                    <tr>
+                        <img class="img__logo" src="/files/EXPRESSd05f43.png" alt="logo express">
+                    </tr>
+                    {% endif %}
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!--Datos del trabajador-->
+    <table width="100%" height="35%" style="font-size: 7px;margin: 5px;">
+        <tr>
+            <td width="33.3%">
+                <table width="100%">
+                    <tr>
+                        <td class="izquierda"><b>NOMBRE</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{employee_name}}</td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>TIPO DE DOCUMENTO</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{tipo_de_documento}}</td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>NRO DE DOCUMENTO</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{documento_identidad}}</td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>F.NAC</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{fecha_final_nacimiento}}</td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>SEXO</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{sexo}}</td>
+                    </tr>
+                </table>
+            </td>
+            <td width="33.3%">
+                <table width="100%">
+                    <tr>
+                        <td class="izquierda"><b>FECHA DE INGRESO</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{fecha_final_ingreso}}</td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>CALIFICACION</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{calificacion}}</td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>SUELDO BASICO</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{sueldo_empleado}}</td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>AGENCIA</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{branch}}</td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>PUESTO</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{designation}}</td>
+                    </tr>
+                </table>
+            </td>
+            <td width="33.3%">
+                <table width="100%">
+                    <tr>
+                        <td class="izquierda"><b>AREA</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{department}}</td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>AFP</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{afp}}</td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>CUSPP</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{data_employee.cussp}}</td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>FECHA DE CESE</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">{{fecha_de_cese}}</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!--Ganancias y Deducciones-->
+    <table ALIGN="center" width="90%" style="font-size: 7px;border: black 1px solid; border-radius: 10px;">
+        <tr>
+            <td style="border-right: black solid 1px">
+                <table width="100%" height="100%" class="tablaa" style="margin-top: 8px">
+                    <thead>
+                    <tr>
+                        <th style="border-bottom: black 1px solid;margin-top: 20px;padding-bottom: 7px" colspan="2" class="centro"><b>INGRESOS</b></th>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="izquierda tda">CONCEPTO</th>
+                        <th scope="col" class="derecha tda">IMPORTE</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% if haber_mensual !=0 %}
+                    <tr>
+                        <td class="izquierda tda">REMUNERACION MENSUAL</td>
+                        <td class="derecha tda">{{haber_mensual}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if vacaciones !=0 %}
+                    <tr>
+                        <td class="izquierda tda">VACACIONES</td>
+                        <td class="derecha tda">{{vacaciones}}</td>
+                    </tr>
+                    {% endif %}
+                    <!--aea-->
+                    {% if LICENCIA_GOCE !=0 %}
+                    <tr>
+                        <td class="izquierda tda">LICENCIA CON GOCE</td>
+                        <td class="derecha tda">{{LICENCIA_GOCE}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if LICENCIA_FALLECIMIENTO !=0 %}
+                    <tr>
+                        <td class="izquierda tda">LICENCIA POR FALLECIMIENTO</td>
+                        <td class="derecha tda">{{LICENCIA_FALLECIMIENTO}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if LICENCIA_PATERNIDAD !=0 %}
+                    <tr>
+                        <td class="izquierda tda">LICENCIA POR PATERNIDAD</td>
+                        <td class="derecha tda">{{LICENCIA_PATERNIDAD}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if COMPENSATORIO !=0 %}
+                    <tr>
+                        <td class="izquierda tda">COMPENSATORIO</td>
+                        <td class="derecha tda">{{COMPENSATORIO}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if subsidio_accidente == total_working_days %}
+                    <tr>
+                        <td class="izquierda tda">SUBSIDIO POR ACCIDENTE</td>
+                        <td class="derecha tda">{{SUBSIDIO_ACCIDENTE}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if subsidio_enfermedad == total_working_days %}
+                    <tr>
+                        <td class="izquierda tda">SUBSIDIO POR ENFERMEDAD</td>
+                        <td class="derecha tda">{{SUBSIDIO_ENFERMEDAD}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if subsidio_por_maternidad == total_working_days %}
+                    <tr>
+                        <td class="izquierda tda">SUBSIDIO POR MATERNIDAD</td>
+                        <td class="derecha tda">{{SUBSIDIO_MATERNIDAD}}</td>
+                    </tr>
+                    {% endif %}
+                    <!--aea-->
+                    {% if asignacion_familiar !=0 %}
+                    <tr>
+                        <td class="izquierda tda">ASIGNACION FAMILIAR</td>
+                        <td class="derecha tda">{{asignacion_familiar}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if horas_25 !=0 %}
+                    <tr>
+                        <td class="izquierda tda">HORAS EXTRAS AL 25%</td>
+                        <td class="derecha tda">{{horas_25}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if horas_35 !=0 %}
+                    <tr>
+                        <td class="izquierda tda">HORAS EXTRAS AL 35%</td>
+                        <td class="derecha tda">{{horas_35}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if horas_100 !=0 %}
+                    <tr>
+                        <td class="izquierda tda">HORAS EXTRAS AL 100%</td>
+                        <td class="derecha tda">{{horas_100}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if horas_nocturnas !=0 %}
+                    <tr>
+                        <td class="izquierda tda">HORAS NOCTURNAS</td>
+                        <td class="derecha tda">{{horas_nocturnas}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if sumAllMobility !=0 %}
+                    <tr>
+                        <td class="izquierda tda">MOVILIDAD</td>
+                        <td class="derecha tda">{{sumAllMobility}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if condiciones_trabajo !=0 %}
+                    <tr>
+                        <td class="izquierda tda">CONDICION DE TRABAJO</td>
+                        <td class="derecha tda">{{condiciones_trabajo}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if otros_ingresos !=0 %}
+                    <tr>
+                        <td class="izquierda tda">BONIFICACION</td>
+                        <td class="derecha tda">{{otros_ingresos}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if gratificacion !=0 %}
+                    <tr>
+                        <td class="izquierda tda">GRATIFICACION</td>
+                        <td class="derecha tda">{{gratificacion}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if bonif_ext !=0 %}
+                    <tr>
+                        <td class="izquierda tda">BONIF EXT 9%</td>
+                        <td class="derecha tda">{{bonif_ext}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if viaticos_earn != 0 and viaticos_ingreso == 0 %}
+                    <tr>
+                        <td class="izquierda tda">VIATICOS</td>
+                        <td class="derecha tda">{{viaticos_earn}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if viaticos_earn == 0 and viaticos_ingreso != 0 %}
+                    <tr>
+                        <td class="izquierda tda">VIATICOS</td>
+                        <td class="derecha tda">{{viaticos_ingreso}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if viaticos_earn != 0 and viaticos_ingreso != 0 %}
+                    <tr>
+                        <td class="izquierda tda">VIATICOS</td>
+                        <td class="derecha tda">{{suma_viaticos}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if apoyos !=0 %}
+                    <tr>
+                        <td class="izquierda tda">OTROS INGRESOS</td>
+                        <td class="derecha tda">{{apoyos}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if descando_medico !=0 %}
+                    <tr>
+                        <td class="izquierda tda">DESCANDO MEDICO</td>
+                        <td class="derecha tda">{{descando_medico}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if licencia !=0 %}
+                    <tr>
+                        <td class="izquierda tda">LICENCIA</td>
+                        <td class="derecha tda">{{licencia}}</td>
+                    </tr>
+                    {% endif %}
+                    </tbody>
+                </table>
+            </td>
+            <td style="border-right: black solid 1px">
+                <table width="100%" height="100%" class="tablaa" style="margin-top: 8px">
+                    <thead>
+                    <tr>
+                        <th style="border-bottom: black 1px solid;padding-bottom: 7px" colspan="2" class="centro"><b>DESCUENTOS</b></th>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="izquierda tda">CONCEPTO</th>
+                        <th scope="col" class="derecha tda">IMPORTE</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% if snp !=0 %}
+                    <tr>
+                        <td class="izquierda">SNP</td>
+                        <td class="derecha">{{snp}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if afp_fondo !=0 %}
+                    <tr>
+                        <td class="izquierda">AFP FONDO</td>
+                        <td class="derecha">{{afp_fondo}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if afp_seguro !=0 %}
+                    <tr>
+                        <td class="izquierda">AFP SEGURO</td>
+                        <td class="derecha">{{afp_seguro}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if afp_comision !=0 %}
+                    <tr>
+                        <td class="izquierda">AFP COMISION</td>
+                        <td class="derecha">{{afp_comision}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if faltas_y_permisos !=0 %}
+                    <tr>
+                        <td class="izquierda">FALTAS Y/O PERMISOS</td>
+                        <td class="derecha">{{faltas_y_permisos}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if ta_categoria !=0 %}
+                    <tr>
+                        <td class="izquierda">5TA CATEGORIA</td>
+                        <td class="derecha">{{ta_categoria}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if viaticos_earn !=0 %}
+                    <tr>
+                        <td class="izquierda">VIATICOS</td>
+                        <td class="derecha">{{viaticos_earn}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if gratificacion_bonificacion !=0 %}
+                    <tr>
+                        <td class="izquierda">GRATIFICACION / BONIF 9%</td>
+                        <td class="derecha">{{gratificacion_bonificacion}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if seguros_rimac !=0 %}
+                    <tr>
+                        <td class="izquierda">SEGUROS RIMAC</td>
+                        <td class="derecha">{{seguros_rimac}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if adelantos !=0 %}
+                    <tr>
+                        <td class="izquierda">ADELANTOS</td>
+                        <td class="derecha">{{adelantos}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if desc_alimentos !=0 %}
+                    <tr>
+                        <td class="izquierda">DESC ALIMENTOS</td>
+                        <td class="derecha">{{desc_alimentos}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if epp !=0 %}
+                    <tr>
+                        <td class="izquierda">EPP</td>
+                        <td class="derecha">{{epp}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if otros_descuentos !=0 %}
+                    <tr>
+                        <td class="izquierda">OTROS DESCUENTOS</td>
+                        <td class="derecha">{{otros_descuentos}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if apoyos_deductions !=0 %}
+                    <tr>
+                        <td class="izquierda">OTROS INGRESOS</td>
+                        <td class="derecha">{{apoyos_deductions}}</td>
+                    </tr>
+                    {% endif %}
+                    </tbody>
+                </table>
+            </td>
+            <td>
+                <table width="100%" height="100%" class="tablaa" style="margin-top: 8px">
+                    <thead>
+                    <tr>
+                        <th style="border-bottom: black 1px solid;padding-bottom: 7px" colspan="2" class="centro"><b>APORTACIONES</b></th>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="izquierda tda">CONCEPTO</th>
+                        <th scope="col" class="derecha tda">IMPORTE</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% if seguro_salud_erp !=0 %}
+                    <tr>
+                        <td class="izquierda">ESSALUD</td>
+                        <td class="derecha">{{seguro_salud_erp}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if vida_ley_componente !=0 %}
+                    <tr>
+                        <td class="izquierda">VIDA LEY</td>
+                        <td class="derecha">{{vida_ley_componente}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if essalud !=0 and seguro_salud_erp==0 %}
+                    <tr>
+                        <td class="izquierda">ESSALUD</td>
+                        <td class="derecha">{{essalud}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if sctr_componente_pension !=0 %}
+                    <tr>
+                        <td class="izquierda">SCTR PENSION</td>
+                        <td class="derecha">{{sctr_componente_pension}}</td>
+                    </tr>
+                    {% endif %}
+                    {% if sctr_componente_salud !=0 %}
+                    <tr>
+                        <td class="izquierda">SCTR SALUD</td>
+                        <td class="derecha">{{sctr_componente_salud}}</td>
+                    </tr>
+                    {% endif %}
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+
+
+        <!--prueba-->
+        <tr>
+            <td style="border-right: black solid 1px">
+                <table width="100%" style="font-size: 7px;border-top: black 1px solid;">
+                    <tr>
+                        <td>
+                            <table width="100%" class="tablaa" >
+                                <tr>
+                                    <td class="izquierda tda"><b>TOTAL INGRESOS</b></td>
+                                    <td class="derecha tda"><b>{{total_ingresos_nomina}}</b></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td style="border-right: black solid 1px">
+                <table width="100%" style="font-size: 7px;border-top: black 1px solid;">
+                    <tr>
+                        <td>
+                            <table width="100%" class="tablaa">
+                                <tr>
+                                    <td class="izquierda tda"><b>TOTAL DESCUENTOS</b></td>
+                                    <td class="derecha tda"><b>{{total_deduciones_nomina}}</b></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table width="100%" style="font-size: 7px;border-top: black 1px solid">
+                    <tr>
+                        <td>
+                            <table width="100%" class="tablaa">
+                                {% if total_aportes_componente !=0 %}
+                                <tr>
+                                    <td class="izquierda tda"><b>TOTAL APORTES</b></td>
+                                    <td class="derecha tda"><b>{{total_aportes_componente}}</b></td>
+                                </tr>
+                                {% endif %}
+                                {% if essalud !=0 and seguro_salud_erp==0 %}
+                                <tr>
+                                    <td class="izquierda tda"><b>TOTAL APORTES</b></td>
+                                    <td class="derecha tda"><b>{{essalud}}</b></td>
+                                </tr>
+                                {% endif %}
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!--Datos de trabajo-->
+    <table width="100%" ALIGN="center" height="35%" style="font-size: 7px;margin: 3px;margin-top: 7px;">
+        <tr>
+            <td width="21.6%">
+                <table width="80%" style="margin-left: 20px">
+                    <tr>
+                        <td class="izquierda"><b>Dias Trabajados</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda"><b> {{total_dias_trabajo}}</b></td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>Dias No Laborados</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda"><b>{{Dias_No_Laborados_ERP}}</b></td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>Dias Subsidiados</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda"><b> {{dias_subsidio_total}}</b></td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>Dias No Subsidiados</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda"><b> {{desca_medico}}</b></td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>Dias de Inasistencia</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda"><b> {{ausencias}}</b></td>
+                    </tr>
+                </table>
+            </td>
+            <td width="21.6%">
+                <table width="80%" style="margin-left: 15px">
+                    {% if dias_vaciones == 0 %}
+                    <tr>
+                        <td class="izquierda"><b>Vacaciones</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda"><b>0</b></td>
+                    </tr>
+                    {% endif %}
+                    <tr>
+                        <td class="izquierda"><b>H.Extras 25%</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda"><b> {{horas_25_cantidad}}</b></td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>H.Extras 35%</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda"><b> {{horas_35_cantidad}}</b></td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>H.Extras 100%</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda"><b> {{horas_100_cantidad}}</b></td>
+                    </tr>
+                    {% if vacaciones_uno.holidays_validation %}
+                    <tr>
+                        <td class="izquierda"><b>Vacaciones</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">
+                            <b>{{vacaciones_uno.holidays_periodo}}</b>
+                            <br>
+                            <b>{{vacaciones_uno.holidays_from_date}}</b>
+                            <br>
+                            <b>{{vacaciones_uno.holidays_to_date}}</b>
+                        </td>
+                    </tr>
+                    {% endif %}
+                </table>
+            </td>
+            <td width="21.6%">
+                <table width="83%" >
+                    <tr>
+                        <td class="izquierda"><b>Dias Vac.Gozadas</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda"><b> {{vacaciones_cantidad}}</b></td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda"><b>Dias Vac.Vendidas</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda"><b> {{vacaciones_compradas_cantidad}}</b></td>
+                    </tr>
+                    {% if vacaciones_compradas_dos.holidays_validation %}
+                    <tr>
+                        <td class="izquierda"><b>Vacaciones Vendidas</b></td>
+                        <td class="centro"><b>:</b></td>
+                        <td class="izquierda">
+                            <b>{{vacaciones_compradas_dos.holidays_periodo}}</b>
+                        </td>
+                    </tr>
+                    {% endif %}
+                </table>
+            </td>
+            <td width="35%">
+                <table width="85%" style="border: black 1px solid">
+                    <tr>
+                        <td class="izquierda tda" style="width: 50%"><b>Nombre de Banco</b></td>
+                        <td style="width: 5%">: </td>
+                        <td class="derecha tda" style="width: 40%">{{nombre_banco_erp}}</td>
+                    </tr>
+                    <tr>
+                        <td class="izquierda tda" style="width: 50%"><b>N° de Cuenta</b></td>
+                        <td style="width: 5%">: </td>
+                        <td class="derecha tda" style="width: 40%">{{numero_de_cuenta}}</td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        {% if pago_neto|int < 0 %}
+                        <td class="izquierda tda" style="width: 50%"><b>NETO A PAGAR S/</b></td>
+                        <td style="width: 5%">: </td>
+                        <td class="derecha tda" style="width: 40%">0.00</td>
+                        {% else %}
+                        <td class="izquierda tda" style="width: 50%"><b>NETO A PAGAR S/</b></td>
+                        <td style="width: 5%">: </td>
+                        <td class="derecha tda" style="width: 40%">{{ pago_neto }}</td>
+                        {% endif %}
+                    </tr>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!--Firma del trabajor y jefe-->
+    <table width="100%" height="35%" style="margin-left: 20px;font-size: 7px">
+        <tr>
+            <td class="centro" width="33.3%">
+                <table width="100%">
+                    <tr>
+                        <td colspan="2" rowspan="3" class="izquierda tda">
+                            <b>Fecha de Pago: {{fecha_final_pago}}</b>
+                            <br>
+                            <b>RECIBO CONFORME</b>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table >
+        <tr class="derecha">
+            <td width="31%"></td>
+            <td width="30%">
+                <table width="100%" style=" margin-top: 35px;font-size: 5px;" class="derecha">
+                    <tr>
+                        <td class="centro"></td>
+                    </tr>
+                    <tr>
+                        <td class="centro" style="border-top: black 1px solid; width: 10px"><b>EMPLEADO</b></td>
+                    </tr>
+                    <tr>
+                        <td class="centro"><b>{{nombre_completo}}</b></td>
+                    </tr>
+                </table>
+            </td>
+            <td width="9%"></td>
+            <td width="30%" >
+                <table width="100%" style=" margin-top: 10px;margin-left: 30px;font-size: 5px;">
+                    <tr>
+                        <td class="centro">
+                            <img
+                                    src="/files/FIRMAAA.png" width="50%"
+                                    alt="Italian Trulli"></td>
+                    </tr>
+                    <tr>
+                        <td class="centro" style="border-top: black 1px solid;"><b>EMPLEADOR</b></td>
+                    </tr>
+                    <tr>
+                        <td class="centro"><b>MALDONADO DE MAMANI, CARMEN</b></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

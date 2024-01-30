@@ -1,0 +1,183 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-06-13 22:01:31.374977",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "section_break_2",
+  "codigo",
+  "versi\u00f3n",
+  "column_break_5",
+  "aprobado",
+  "agencia",
+  "section_break_7",
+  "tabla_inspeccextint",
+  "section_break_10",
+  "inspeccionado",
+  "nombre_del_responsable",
+  "column_break_13",
+  "fecha_guardar",
+  "section_break_16",
+  "tabla_resumen_inspeccion_1",
+  "tabla_resumen_inspeccion_2",
+  "tabla_resumen_inspeccion_3",
+  "estado",
+  "estado_ft"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "IE-"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "SHA-REG-HSE-015",
+   "fieldname": "codigo",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Codigo",
+   "reqd": 1
+  },
+  {
+   "default": "2",
+   "fieldname": "versi\u00f3n",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Versi\u00f3n",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "2023-07-05",
+   "fetch_from": "link_4.fecha_de_creaci\u00f3n",
+   "fieldname": "aprobado",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Aprobado",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tabla_inspeccextint",
+   "fieldtype": "Table",
+   "label": "Tabla InspeccExtint",
+   "options": "Tabla InspeccExtint"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "agencia",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Agencia",
+   "options": "Branch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "inspeccionado",
+   "fieldtype": "Link",
+   "label": "Nombre del Inspector",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "inspeccionado.nombre_completo",
+   "fieldname": "nombre_del_responsable",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "estado",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Estado",
+   "options": "Proceso\nCerrado\nObservado\nRecibido\nApproved\nRechazado"
+  },
+  {
+   "fieldname": "estado_ft",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Estado flujo",
+   "options": "Proceso\nCerrado\nObservado\nRecibido\nApproved\nRechazado"
+  },
+  {
+   "fieldname": "tabla_resumen_inspeccion_1",
+   "fieldtype": "Table",
+   "label": "Tabla de Resumen",
+   "options": "Tabla de Resumen de AccionesC",
+   "read_only_depends_on": "eval:!frappe.user.has_role('Usuario SSOMA') "
+  },
+  {
+   "fieldname": "tabla_resumen_inspeccion_2",
+   "fieldtype": "Table",
+   "label": "Tabla Resumen Mes 2",
+   "options": "Tabla de Resumen de AccionesC",
+   "read_only_depends_on": "eval:!frappe.user_roles.includes(\"Usuario SSOMA\")"
+  },
+  {
+   "fieldname": "tabla_resumen_inspeccion_3",
+   "fieldtype": "Table",
+   "label": "Tabla Resumen Mes 3",
+   "options": "Tabla de Resumen de AccionesC",
+   "read_only_depends_on": "eval:!frappe.user_roles.includes(\"Usuario SSOMA\")"
+  },
+  {
+   "fieldname": "fecha_guardar",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "FECHA",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-11-02 11:48:52.743266",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Inspecciones de Extintores",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "agencia"
+}

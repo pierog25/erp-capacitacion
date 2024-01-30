@@ -1,0 +1,37 @@
+{
+ "actions": [],
+ "creation": "2018-10-15 14:05:28.601274",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "option",
+  "is_correct"
+ ],
+ "fields": [
+  {
+   "fieldname": "option",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Option"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_correct",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Correct"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-21 19:48:21.289595",
+ "modified_by": "Administrator",
+ "module": "Education",
+ "name": "Options",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

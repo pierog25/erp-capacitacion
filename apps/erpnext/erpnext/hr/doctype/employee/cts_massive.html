@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;400;600&display=swap" crossorigin="anonymous">
+    <title>CTS Masivo</title>
+    <style>
+        .container{
+            text-align: justify;
+        }
+        .derecha{
+            width: 46% !important;
+            float:right;
+            padding:10px;
+        }
+        .izquierda{
+            width: 46% !important;
+            float:left;
+            padding:10px;
+        }
+        .contenedor{
+            width:480;
+            height:auto;
+        }
+        b{
+            font-family:'Barlow';
+            font-weight:600;
+        }
+        div{
+            font-family:'Barlow';
+            font-weight:400;
+
+        }
+        p{
+            font-family:'Barlow';
+            font-weight:400;
+            font-size:10px;
+        }
+        .parrafo{
+            line-height : 18px
+        }
+        .derecha1 {
+            text-align: right;
+        }
+        .centro1 {
+            text-align: center;
+        }
+        page-break {
+            page-break-after: always;
+        }
+    </style>
+</head>
+<body>
+{% for doc in data_cts %}
+    <div style="height: 677px; width: 100%">
+        <div class="izquierda">
+            <div style="text-align: center">
+                <b><u style="font-size:13px">LIQUIDACION DE DEPOSITO DE CTS</u></b>
+            </div>
+            <div class="container" style="margin-top:20px">
+                <section>
+                    <div class="contenedor" style="font-size:10px">
+                        <p class="parrafo">
+                            {{doc.nombre_de_compañia}} con RUC N° {{doc.ruc}}, domiciliado en {{doc.ubicacion}}, representada
+                            por su Gerente General Sra. CARMEN MALDONADO DE MAMANI
+                            en aplicación del artículo 24° del TUO del D. Leg N° 650, Ley de Compensacion por Tiempo de
+                            Servicios aprobado mediante D.S N° 001-97-TR, otorga al Sr(a) {{doc.nombre_completo}}
+                            la constancia de deposito de su Compensación por Tiempo de Servicios realizado el dia
+                            15 de Mayo del 2023, en la cuenta CTS soles N° {{doc.cuenta_de_banco}} del Banco {{doc.nombre_de_banco}}, por los montos y periodos.
+                        </p>
+                    </div>
+                </section>
+                <section style="margin-top:12px">
+                    <b style="font-size:10px">1.Periodos que se liquidan: </b><br>
+                    <p style="margin-left: 30px;font-size:10px">Del 01 de Noviembre del 2022 al 30 de Abril del 2023</p>
+                </section>
+                <section style="margin-top:12px">
+                    <b style="font-size:10px">2.Remuneracion Computable: </b><br>
+                </section>
+                <section>
+                    <div class="contenedor" style="margin-left:20px; font-size:10px">
+                        <div class="row">
+                            <div class="col-1 a" style="display:inline-block;width:10px;margin-top:5px;text-align:right">-</div>
+                            <div class="col-1 a" style="display:inline-block;width:200px;margin-top:5px">Basico</div>
+                            <div class="col-1 a" style="display:inline-block;width:50px;text-align:right">S/.</div>
+                            <div class="col-1 a" style="display:inline-block;width:50px;text-align:right">{{ '{:.2f}'.format(doc.column_break_16) }}</div>
+                        </div>
+                        {% if doc.asignacion_familiar == "0" %}
+                        <div class="row">
+                            <div class="col-1 a" style="display:inline-block;width:10px;margin-top:5px;text-align:right">-</div>
+                            <div class="col-1 a" style="display:inline-block;width:200px;margin-top:5px">Asignacion Familiar</div>
+                            <div class="col-1 a" style="display:inline-block;width:50px;text-align:right">S/.</div>
+                            <div class="col-1 a" style="display:inline-block;width:50px;text-align:right">0.00</div>
+                        </div>
+                        {% else %}
+                        <div class="row">
+                            <div class="col-1 a" style="display:inline-block;width:10px;margin-top:5px;text-align:right">-</div>
+                            <div class="col-1 a" style="display:inline-block;width:200px;margin-top:5px">Asignacion Familiar</div>
+                            <div class="col-1 a" style="display:inline-block;width:50px;text-align:right">S/.</div>
+                            <div class="col-1 a" style="display:inline-block;width:50px;text-align:right">102.50</div>
+                        </div>
+                        {% endif %}
+                        <div class="row">
+                            <div class="col-1 a" style="display:inline-block;width:10px;margin-top:5px;text-align:right">-</div>
+                            <div class="col-1 a" style="display:inline-block;width:200px;margin-top:5px">Gratificaciones (1 sexto)</div>
+                            <div class="col-1 a" style="display:inline-block;width:50px;text-align:right">S/.</div>
+                            <div class="col-1 a" style="display:inline-block;width:50px;text-align:right">{{ '{:.2f}'.format(doc.gratificacion_entre_seis) }}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1 a" style="display:inline-block;width:10px;margin-top:5px;text-align:right">-</div>
+                            <div class="col-1 a" style="display:inline-block;width:200px;margin-top:5px">Horas Extras</div>
+                            <div class="col-1 a" style="display:inline-block;width:50px;text-align:right">S/.</div>
+                            <div class="col-1 a" style="display:inline-block;width:50px;text-align:right">{{ '{:.2f}'.format(doc.horas_extras_entre_seis) }}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1 a" style="display:inline-block;width:10px;margin-top:5px;text-align:right">-</div>
+                            <div class="col-1 a" style="display:inline-block;width:200px;margin-top:5px">Horas Nocturnas</div>
+                            <div class="col-1 a" style="display:inline-block;width:50px;text-align:right">S/.</div>
+                            <div class="col-1 a" style="display:inline-block;width:50px;text-align:right">{{ '{:.2f}'.format(doc.horas_nocturnas_entre_seis) }}</div>
+                        </div>
+                        <div class="row" style="margin-top:18px">
+                            <div class="col-1 a" style="display:inline-block;width:242px;margin-top:5px;text-align:left"><b>Total</b></div>
+
+                            <div class="col-1 a" style="display:inline-block;width:70px;border-top:1px solid black;"><b style="margin-left: 7px">S/.</b><b style="margin-left: 21px">{{ '{:.2f}'.format(doc.remuneracion_computable_cts) }}</b></div>
+                        </div>
+                    </div>
+                </section>
+                <section style="margin-top:15px">
+                    <b style="font-size:9px">CALCULO </b><br>
+                </section>
+                <section>
+                    <div class="contenedor" style="margin-left:20px; font-size:10px">
+                        <div class="row">
+                            <div class="col-1 a" style="display:inline-block;width:10px;margin-top:5px;text-align:right">-</div>
+                            <div class="col-1 a" style="display:inline-block;width:120px">Por los meses completos</div>
+                            <div class="col-1 a" style="display:inline-block;width:20px;text-align:center">:</div>
+                            <div class="col-1 a" style="display:inline-block;width:20px;text-align:right">S/.</div>
+                            <div class="col-1 a" style="display:inline-block;width:30px">{{ '{:.2f}'.format(doc.remuneracion_computable_cts) }}</div>
+                            <div class="col-1 a" style="display:inline-block;width:20px;text-align:center">/</div>
+                            <div class="col-1 a" style="display:inline-block;width:15px;">12</div>
+                            <div class="col-1 a" style="display:inline-block;width:15px;text-align:center">X</div>
+                            <div class="col-1 a" style="display:inline-block;width:10px;">{{ doc.meses_computables_cts }}</div>
+                            <div class="col-1 a" style="display:inline-block;width:40px;text-align:center">=</div>
+                            <div class="col-1 a" style="display:inline-block;width:20px;text-align:right">S/.</div>
+                            <div class="col-1 a" style="display:inline-block;width:40px;;text-align:right">{{ '{:.2f}'.format(doc.pago_meses) }}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1 a" style="display:inline-block;width:10px;margin-top:5px;text-align:right">-</div>
+                            <div class="col-1 a" style="display:inline-block;width:120px">Por los dias</div>
+                            <div class="col-1 a" style="display:inline-block;width:20px;text-align:center">:</div>
+                            <div class="col-1 a" style="display:inline-block;width:20px;text-align:right">S/.</div>
+                            <div class="col-1 a" style="display:inline-block;width:30px">{{ '{:.2f}'.format(doc.remuneracion_computable_cts) }}</div>
+                            <div class="col-1 a" style="display:inline-block;width:20px;text-align:center">/</div>
+                            <div class="col-1 a" style="display:inline-block;width:15px;">360</div>
+                            <div class="col-1 a" style="display:inline-block;width:15px;text-align:center">X</div>
+                            <div class="col-1 a" style="display:inline-block;width:10px;">{{ doc.dias_computables_cts }}</div>
+                            <div class="col-1 a" style="display:inline-block;width:40px;text-align:center">=</div>
+                            <div class="col-1 a" style="display:inline-block;width:20px;text-align:right">S/.</div>
+                            <div class="col-1 a" style="display:inline-block;width:40px;;text-align:right">{{ '{:.2f}'.format(doc.pago_dias) }}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1 a" style="display:inline-block;width:319px;margin-top:20px;"><b style="margin-left: 200px">MONTO DEPOSITADO</b></div>
+                            <div class="col-1 a" style="display:inline-block;width:61px;border-top:1px solid black;"><b style="margin-left: 6px">S/.</b><b style="margin-left: 17px">{{ '{:.2f}'.format(doc.cts_total_a_pagar) }}</b></div>
+                        </div>
+                    </div>
+                </section>
+                <section style="margin-top:62px">
+                    <table width="92%" style="margin: 0 10px 0 10px">
+                        <tr class="centro1">
+                            <td width="3%"></td>
+                            <td width="42%">
+                                <table width="100%" class="derecha1" style="margin-top:30px">
+                                    <tr>
+                                        <td class="centro1"><img
+                                                src="https://fileserver.shalomcontrol.com/file-view/images/7UZgdz6L9dtGccFyehUYSin título4.png" width="60%"
+                                                alt="Italian Trulli"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="centro1" style="border-top: black 1px solid; width: 10px">
+                                            <p class="text-center" style="font-size:8px"><b>{{ doc.nombre_completo }}</b><br>
+                                                <b style="font-size:8px">{{doc.tipo_de_documento}} {{doc.dni}}</b></p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td width="10%"></td>
+                            <td width="42%">
+                                <table width="100%">
+                                    <tr>
+                                        <td class="centro1">
+                                            <img
+                                                    src="https://fileserver.shalomcontrol.com/file-view/images/uk824qa55cc8Y4I0CoaDFIRMA.jpg" width="75%"
+                                                    alt="Italian Trulli"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="centro1" style="border-top: black 1px solid;">
+                                            <p class="text-center" style="font-size:8px"><b>CARMEN MALDONADO DE MAMANI</b><br>
+                                                <b style="font-size:8px">GERENTE GENERAL</b></p>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="centro1">
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td width="3%"></td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+        </div>
+        <div class="derecha">
+            <div style="text-align: center">
+                <b><u style="font-size:13px">LIQUIDACION DE DEPOSITO DE CTS</u></b>
+            </div>
+            <div class="container" style="margin-top:20px">
+                <section>
+                    <div class="contenedor" style="font-size:10px">
+                        <p class="parrafo">
+                            {{doc.nombre_de_compañia}} con RUC N° {{doc.ruc}}, domiciliado en {{doc.ubicacion}}, representada
+                            por su Gerente General Sra. CARMEN MALDONADO DE MAMANI
+                            en aplicación del artículo 24° del TUO del D. Leg N° 650, Ley de Compensacion por Tiempo de
+                            Servicios aprobado mediante D.S N° 001-97-TR, otorga al Sr(a) {{doc.nombre_completo}}
+                            la constancia de deposito de su Compensación por Tiempo de Servicios realizado el dia
+                            15 de Mayo del 2023, en la cuenta CTS soles N° {{doc.cuenta_de_banco}} del Banco {{doc.nombre_de_banco}}, por los montos y periodos.
+                        </p>
+                    </div>
+                </section>
+                <section style="margin-top:12px">
+                    <b style="font-size:10px">1.Periodos que se liquidan: </b><br>
+                    <p style="margin-left: 30px;font-size:10px">Del 01 de Noviembre del 2022 al 30 de Abril del 2023</p>
+                </section>
+                <section style="margin-top:12px">
+                    <b style="font-size:10px">2.Remuneracion Computable: </b><br>
+                </section>
+                <section>
+                    <div class="contenedor" style="margin-left:20px; font-size:10px">
+                        <div class="row">
+                            <div class="col-1 a" style="display:inline-block;width:10px;margin-top:5px;text-align:right">-</div>
+                            <div class="col-1 a" style="display:inline-block;width:200px;margin-top:5px">Basico</div>
+                            <div class="col-1 a" style="display:inline-block;width:50px;text-align:right">S/.</div>
+                            <div class="col-1 a" style="display:inline-block;width:50px;text-align:right">{{ '{:.2f}'.format(doc.column_break_16) }}</div>
+                        </div>
+                        {% if doc.asignacion_familiar == "0" %}
+                        <div class="row">
+                            <div class="col-1 a" style="display:inline-block;width:10px;margin-top:5px;text-align:right">-</div>
+                            <div class="col-1 a" style="display:inline-block;width:200px;margin-top:5px">Asignacion Familiar</div>
+                            <div class="col-1 a" style="display:inline-block;width:50px;text-align:right">S/.</div>
+                            <div class="col-1 a" style="display:inline-block;width:50px;text-align:right">0.00</div>
+                        </div>
+                        {% else %}
+                        <div class="row">
+                            <div class="col-1 a" style="display:inline-block;width:10px;margin-top:5px;text-align:right">-</div>
+                            <div class="col-1 a" style="display:inline-block;width:200px;margin-top:5px">Asignacion Familiar</div>
+                            <div class="col-1 a" style="display:inline-block;width:50px;text-align:right">S/.</div>
+                            <div class="col-1 a" style="display:inline-block;width:50px;text-align:right">102.50</div>
+                        </div>
+                        {% endif %}
+                        <div class="row">
+                            <div class="col-1 a" style="display:inline-block;width:10px;margin-top:5px;text-align:right">-</div>
+                            <div class="col-1 a" style="display:inline-block;width:200px;margin-top:5px">Gratificaciones (1 sexto)</div>
+                            <div class="col-1 a" style="display:inline-block;width:50px;text-align:right">S/.</div>
+                            <div class="col-1 a" style="display:inline-block;width:50px;text-align:right">{{ '{:.2f}'.format(doc.gratificacion_entre_seis) }}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1 a" style="display:inline-block;width:10px;margin-top:5px;text-align:right">-</div>
+                            <div class="col-1 a" style="display:inline-block;width:200px;margin-top:5px">Horas Extras</div>
+                            <div class="col-1 a" style="display:inline-block;width:50px;text-align:right">S/.</div>
+                            <div class="col-1 a" style="display:inline-block;width:50px;text-align:right">{{ '{:.2f}'.format(doc.horas_extras_entre_seis) }}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1 a" style="display:inline-block;width:10px;margin-top:5px;text-align:right">-</div>
+                            <div class="col-1 a" style="display:inline-block;width:200px;margin-top:5px">Horas Nocturnas</div>
+                            <div class="col-1 a" style="display:inline-block;width:50px;text-align:right">S/.</div>
+                            <div class="col-1 a" style="display:inline-block;width:50px;text-align:right">{{ '{:.2f}'.format(doc.horas_nocturnas_entre_seis) }}</div>
+                        </div>
+                        <div class="row" style="margin-top:18px">
+                            <div class="col-1 a" style="display:inline-block;width:242px;margin-top:5px;text-align:left"><b>Total</b></div>
+
+                            <div class="col-1 a" style="display:inline-block;width:70px;border-top:1px solid black;"><b style="margin-left: 7px">S/.</b><b style="margin-left: 21px">{{ '{:.2f}'.format(doc.remuneracion_computable_cts) }}</b></div>
+                        </div>
+                    </div>
+                </section>
+                <section style="margin-top:15px">
+                    <b style="font-size:9px">CALCULO </b><br>
+                </section>
+                <section>
+                    <div class="contenedor" style="margin-left:20px; font-size:10px">
+                        <div class="row">
+                            <div class="col-1 a" style="display:inline-block;width:10px;margin-top:5px;text-align:right">-</div>
+                            <div class="col-1 a" style="display:inline-block;width:120px">Por los meses completos</div>
+                            <div class="col-1 a" style="display:inline-block;width:20px;text-align:center">:</div>
+                            <div class="col-1 a" style="display:inline-block;width:20px;text-align:right">S/.</div>
+                            <div class="col-1 a" style="display:inline-block;width:30px">{{ '{:.2f}'.format(doc.remuneracion_computable_cts) }}</div>
+                            <div class="col-1 a" style="display:inline-block;width:20px;text-align:center">/</div>
+                            <div class="col-1 a" style="display:inline-block;width:15px;">12</div>
+                            <div class="col-1 a" style="display:inline-block;width:15px;text-align:center">X</div>
+                            <div class="col-1 a" style="display:inline-block;width:10px;">{{ doc.meses_computables_cts }}</div>
+                            <div class="col-1 a" style="display:inline-block;width:40px;text-align:center">=</div>
+                            <div class="col-1 a" style="display:inline-block;width:20px;text-align:right">S/.</div>
+                            <div class="col-1 a" style="display:inline-block;width:40px;;text-align:right">{{ '{:.2f}'.format(doc.pago_meses) }}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1 a" style="display:inline-block;width:10px;margin-top:5px;text-align:right">-</div>
+                            <div class="col-1 a" style="display:inline-block;width:120px">Por los dias</div>
+                            <div class="col-1 a" style="display:inline-block;width:20px;text-align:center">:</div>
+                            <div class="col-1 a" style="display:inline-block;width:20px;text-align:right">S/.</div>
+                            <div class="col-1 a" style="display:inline-block;width:30px">{{ '{:.2f}'.format(doc.remuneracion_computable_cts) }}</div>
+                            <div class="col-1 a" style="display:inline-block;width:20px;text-align:center">/</div>
+                            <div class="col-1 a" style="display:inline-block;width:15px;">360</div>
+                            <div class="col-1 a" style="display:inline-block;width:15px;text-align:center">X</div>
+                            <div class="col-1 a" style="display:inline-block;width:10px;">{{ doc.dias_computables_cts }}</div>
+                            <div class="col-1 a" style="display:inline-block;width:40px;text-align:center">=</div>
+                            <div class="col-1 a" style="display:inline-block;width:20px;text-align:right">S/.</div>
+                            <div class="col-1 a" style="display:inline-block;width:40px;;text-align:right">{{ '{:.2f}'.format(doc.pago_dias) }}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1 a" style="display:inline-block;width:319px;margin-top:20px;"><b style="margin-left: 200px">MONTO DEPOSITADO</b></div>
+                            <div class="col-1 a" style="display:inline-block;width:61px;border-top:1px solid black;"><b style="margin-left: 6px">S/.</b><b style="margin-left: 17px">{{ '{:.2f}'.format(doc.cts_total_a_pagar) }}</b></div>
+                        </div>
+                    </div>
+                </section>
+                <section style="margin-top:62px">
+                    <table width="92%" style="margin: 0 10px 0 10px">
+                        <tr class="centro1">
+                            <td width="3%"></td>
+                            <td width="42%">
+                                <table width="100%" class="derecha1" style="margin-top:30px">
+                                    <tr>
+                                        <td class="centro1"><img
+                                                src="https://fileserver.shalomcontrol.com/file-view/images/7UZgdz6L9dtGccFyehUYSin título4.png" width="60%"
+                                                alt="Italian Trulli"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="centro1" style="border-top: black 1px solid; width: 10px">
+                                            <p class="text-center" style="font-size:8px"><b>{{ doc.nombre_completo }}</b><br>
+                                                <b style="font-size:8px">{{doc.tipo_de_documento}} {{doc.dni}}</b></p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td width="10%"></td>
+                            <td width="42%">
+                                <table width="100%">
+                                    <tr>
+                                        <td class="centro1">
+                                            <img
+                                                    src="https://fileserver.shalomcontrol.com/file-view/images/uk824qa55cc8Y4I0CoaDFIRMA.jpg" width="75%"
+                                                    alt="Italian Trulli"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="centro1" style="border-top: black 1px solid;">
+                                            <p class="text-center" style="font-size:8px"><b>CARMEN MALDONADO DE MAMANI</b><br>
+                                                <b style="font-size:8px">GERENTE GENERAL</b></p>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="centro1">
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td width="3%"></td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="page-break"></div>
+{% endfor %}
+</body>
+</html>

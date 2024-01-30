@@ -1,0 +1,1117 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "TRIA-POST-.####",
+ "creation": "2023-02-10 15:11:48.086396",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "salto_0",
+  "fecha_de_control_1",
+  "estado",
+  "personal_externo",
+  "documento",
+  "buscar_informaci\u00f3n",
+  "nombre_del_trabajador",
+  "estado_triaje",
+  "salto_1",
+  "fecha_de_control_2",
+  "celular",
+  "agencia",
+  "direccion",
+  "distrito",
+  "salto_2",
+  "fecha_de_examen_medico",
+  "fecha_de_control_3",
+  "area",
+  "fecha_de_nacimiento",
+  "puesto",
+  "edad",
+  "salto_3",
+  "hta",
+  "e_renal",
+  "fuma",
+  "alcohol",
+  "tiene_dificultad_para_levantar_mercaderia",
+  "alguna_operaci\u00f3n_que_se_haya_realizado_indicar",
+  "gastritis",
+  "salto_4",
+  "practica_algun_deporte",
+  "alergico",
+  "medicamento_al_que_es_alergico",
+  "esta_recibiendo_alguna_medicacion_de_manera_cronica",
+  "nombre",
+  "por_que__para_que",
+  "salto_5",
+  "musculo_esqueletica_degenerativa",
+  "hernias",
+  "diabetes_mellitus",
+  "sufre_de_dolores_de_cabeza",
+  "transtorno_congenito_que_repercutan",
+  "tiene_problemas_para_conciliar_el_sue\u00f1o",
+  "salto_6",
+  "empresa_donde_laboro",
+  "fecha_de_inicio",
+  "salto_7",
+  "puesto_laboral",
+  "fecha_de_fin",
+  "salto_8",
+  "funciones",
+  "salto_9",
+  "peso",
+  "peso_3",
+  "peso_6",
+  "peso_9",
+  "peso_12",
+  "conclusion_peso",
+  "salto_10",
+  "peso_1",
+  "peso_4",
+  "peso_7",
+  "peso_10",
+  "talla",
+  "salto_11",
+  "peso_2",
+  "peso_5",
+  "peso_8",
+  "peso_11",
+  "imc",
+  "salto_15",
+  "pa",
+  "temperatura",
+  "conclusion_vitales",
+  "salto_16",
+  "fc",
+  "so2",
+  "monitoreo_de_presion_arterial_salud_section",
+  "pa1_monitoreo",
+  "pa2_monitoreo",
+  "column_break_82",
+  "pa3_monitoreo",
+  "pa4_monitoreo",
+  "column_break_84",
+  "pa5_monitoreo",
+  "pa6_monitoreo",
+  "salto_17",
+  "n_vacunas",
+  "salto_18",
+  "vacunas_completas_sars_cov2",
+  "salto_19",
+  "uso_de_lentes",
+  "enfermedad_visual",
+  "of_cerca",
+  "c_sin_lentes_od",
+  "salto_20",
+  "c_sin_lentes_oi",
+  "salto_21",
+  "c_con_lentes_od",
+  "salto_22",
+  "c_con_lentes_oi",
+  "salto_23",
+  "l_sin_lentes_od",
+  "salto_24",
+  "l_sin_lentes_oi",
+  "salto_25",
+  "l_con_lentes_od",
+  "salto_26",
+  "l_con_lentes_oi",
+  "salto_27",
+  "examen_externo",
+  "conclusiones_de_oftalmologia_select",
+  "conclusiones_de_oftalmologia",
+  "salto_28",
+  "test_de_colores_o_ishihara",
+  "recomendaciones_de_oftalmologia_select",
+  "recomendaciones_de_oftalmologia",
+  "salto_29",
+  "antecedentes_auditivos",
+  "antecedentes_auditivo",
+  "salto_30",
+  "conclusion_de_audiologia",
+  "salto_31",
+  "recomendaciones_de_audiologia",
+  "salto_32",
+  "antecedentes_musculoesqueletico",
+  "antecedentes_ex",
+  "salto_33",
+  "flexibilidad_fuerza_abdomen",
+  "cadera",
+  "total_puntos_flex",
+  "salto_34",
+  "muslo",
+  "abdomen_lateral",
+  "salto_35",
+  "abducci\u00f3n_de_hombro_normal_0_a_180",
+  "abducci\u00f3n_de_hombro_normal_0_a_80",
+  "total_puntos_rangos",
+  "salto_36",
+  "rotaci\u00f3n_externa_0_a_90",
+  "rotaci\u00f3n_externa_de_hombro_interna",
+  "salto_37",
+  "desviacion_del_eje_lateral",
+  "dandy",
+  "lasegue",
+  "salto_38",
+  "contractura_muscular",
+  "test_de_adams",
+  "salto_39",
+  "conclusiones_de_musculoesqueletico",
+  "salto_40",
+  "recomendaciones_de_musculoesqueletico",
+  "salto_41",
+  "aptitud_laboral",
+  "observacion",
+  "salto_42",
+  "recomendaciones_select",
+  "recomendaciones",
+  "id_de_oferta",
+  "equipamiento_epp_section",
+  "botas",
+  "column_break_157",
+  "polo",
+  "column_break_159",
+  "pantalon",
+  "column_break_161",
+  "chaleco",
+  "adjuntar_vacuna_sars_cov2"
+ ],
+ "fields": [
+  {
+   "fieldname": "estado",
+   "fieldtype": "Select",
+   "label": "Estado",
+   "options": "ACTIVO\nCESADO"
+  },
+  {
+   "fieldname": "fecha_de_control_1",
+   "fieldtype": "Date",
+   "label": "Fecha de Control 1"
+  },
+  {
+   "fieldname": "documento",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Documento"
+  },
+  {
+   "default": "0",
+   "fieldname": "personal_externo",
+   "fieldtype": "Check",
+   "label": "Personal Externo"
+  },
+  {
+   "fieldname": "nombre_del_trabajador",
+   "fieldtype": "Small Text",
+   "in_standard_filter": 1,
+   "label": "Nombre del Trabajador"
+  },
+  {
+   "fieldname": "salto_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fecha_de_control_2",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Fecha de Control 2"
+  },
+  {
+   "fieldname": "celular",
+   "fieldtype": "Data",
+   "label": "Celular"
+  },
+  {
+   "fieldname": "agencia",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Agencia"
+  },
+  {
+   "fieldname": "direccion",
+   "fieldtype": "Small Text",
+   "label": "Direccion"
+  },
+  {
+   "fieldname": "distrito",
+   "fieldtype": "Small Text",
+   "label": "Distrito"
+  },
+  {
+   "fieldname": "salto_0",
+   "fieldtype": "Section Break",
+   "label": "DATOS PERSONALES"
+  },
+  {
+   "fieldname": "salto_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fecha_de_examen_medico",
+   "fieldtype": "Date",
+   "label": "Fecha de Examen Medico"
+  },
+  {
+   "fieldname": "fecha_de_control_3",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Fecha de Control 3"
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Small Text",
+   "label": "Zona"
+  },
+  {
+   "fieldname": "fecha_de_nacimiento",
+   "fieldtype": "Date",
+   "label": "Fecha de Nacimiento"
+  },
+  {
+   "fieldname": "puesto",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Puesto"
+  },
+  {
+   "fieldname": "edad",
+   "fieldtype": "Int",
+   "label": "Edad"
+  },
+  {
+   "fieldname": "salto_3",
+   "fieldtype": "Section Break",
+   "label": "ASPECTOS GENERALES"
+  },
+  {
+   "fieldname": "hta",
+   "fieldtype": "Select",
+   "label": "HTA",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "e_renal",
+   "fieldtype": "Select",
+   "label": "E. RENAL",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "fuma",
+   "fieldtype": "Select",
+   "label": "FUMA",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "alguna_operaci\u00f3n_que_se_haya_realizado_indicar",
+   "fieldtype": "Small Text",
+   "label": "ALGUNA OPERACI\u00d3N QUE SE HAYA REALIZADO (INDICAR)"
+  },
+  {
+   "fieldname": "gastritis",
+   "fieldtype": "Select",
+   "label": "GASTRITIS",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "salto_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "alergico",
+   "fieldtype": "Select",
+   "label": "ALERGICO",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "medicamento_al_que_es_alergico",
+   "fieldtype": "Small Text",
+   "label": "MEDICAMENTO AL QUE ES ALERGICO"
+  },
+  {
+   "fieldname": "esta_recibiendo_alguna_medicacion_de_manera_cronica",
+   "fieldtype": "Select",
+   "label": "ESTA RECIBIENDO ALGUNA MEDICACION DE MANERA CRONICA",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "nombre",
+   "fieldtype": "Small Text",
+   "label": "NOMBRE"
+  },
+  {
+   "fieldname": "por_que__para_que",
+   "fieldtype": "Small Text",
+   "label": "POR QUE / PARA QUE"
+  },
+  {
+   "fieldname": "salto_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "musculo_esqueletica_degenerativa",
+   "fieldtype": "Select",
+   "label": "MUSCULO ESQUELETICA DEGENERATIVA",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "hernias",
+   "fieldtype": "Select",
+   "label": "HERNIAS",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "diabetes_mellitus",
+   "fieldtype": "Select",
+   "label": "DIABETES MELLITUS",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "sufre_de_dolores_de_cabeza",
+   "fieldtype": "Select",
+   "label": "SUFRE DE DOLORES DE CABEZA",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "tiene_problemas_para_conciliar_el_sue\u00f1o",
+   "fieldtype": "Select",
+   "label": "TIENE PROBLEMAS PARA CONCILIAR EL SUE\u00d1O",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "tiene_dificultad_para_levantar_mercaderia",
+   "fieldtype": "Select",
+   "label": "TIENE DIFICULTAD PARA LEVANTAR MERCADERIA MAYOR O IGUAL A 25 KG",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "salto_6",
+   "fieldtype": "Section Break",
+   "label": "ANTECEDENTES OCUPACIONALES"
+  },
+  {
+   "fieldname": "transtorno_congenito_que_repercutan",
+   "fieldtype": "Select",
+   "label": "TRANSTORNO CONGENITO QUE REPERCUTAN EN LA MANIPULACION",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "empresa_donde_laboro",
+   "fieldtype": "Small Text",
+   "label": "EMPRESA DONDE LABORO"
+  },
+  {
+   "fieldname": "fecha_de_inicio",
+   "fieldtype": "Data",
+   "label": "FECHA DE INICIO"
+  },
+  {
+   "fieldname": "salto_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "puesto_laboral",
+   "fieldtype": "Small Text",
+   "label": "PUESTO LABORAL"
+  },
+  {
+   "fieldname": "fecha_de_fin",
+   "fieldtype": "Data",
+   "label": "FECHA DE FIN"
+  },
+  {
+   "fieldname": "salto_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "funciones",
+   "fieldtype": "Small Text",
+   "label": "FUNCIONES"
+  },
+  {
+   "fieldname": "salto_9",
+   "fieldtype": "Section Break",
+   "label": "MONITOREO DE PESO"
+  },
+  {
+   "fieldname": "peso",
+   "fieldtype": "Small Text",
+   "label": "PESO"
+  },
+  {
+   "fieldname": "peso_3",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "03 / PESO"
+  },
+  {
+   "fieldname": "peso_6",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "06 / PESO"
+  },
+  {
+   "fieldname": "peso_9",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "09/PESO"
+  },
+  {
+   "fieldname": "peso_12",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "12 / PESO"
+  },
+  {
+   "default": "NORMAL",
+   "fieldname": "conclusion_peso",
+   "fieldtype": "Select",
+   "label": "CONCLUSI\u00d3N DEL PESO",
+   "options": "NORMAL\nDELGADEZ\nSOBREPESO\nOBESIDAD I\nOBESIDAD II\nOBESIDAD III"
+  },
+  {
+   "fieldname": "salto_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "peso_1",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "01 / PESO"
+  },
+  {
+   "fieldname": "peso_4",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "04 / PESO"
+  },
+  {
+   "fieldname": "peso_7",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "07 / PESO"
+  },
+  {
+   "fieldname": "peso_10",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "10 / PESO"
+  },
+  {
+   "fieldname": "talla",
+   "fieldtype": "Small Text",
+   "label": "TALLA"
+  },
+  {
+   "fieldname": "salto_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "peso_2",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "02 / PESO"
+  },
+  {
+   "fieldname": "peso_5",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "05 / PESO"
+  },
+  {
+   "fieldname": "peso_8",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "08 / PESO"
+  },
+  {
+   "fieldname": "peso_11",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "11 / PESO"
+  },
+  {
+   "fieldname": "imc",
+   "fieldtype": "Small Text",
+   "label": "IMC"
+  },
+  {
+   "fieldname": "salto_15",
+   "fieldtype": "Section Break",
+   "label": "SIGNOS VITALES"
+  },
+  {
+   "fieldname": "pa",
+   "fieldtype": "Small Text",
+   "label": "P.A"
+  },
+  {
+   "fieldname": "temperatura",
+   "fieldtype": "Small Text",
+   "label": "TEMPERATURA"
+  },
+  {
+   "fieldname": "fc",
+   "fieldtype": "Int",
+   "label": "FC"
+  },
+  {
+   "fieldname": "so2",
+   "fieldtype": "Small Text",
+   "label": "SO2"
+  },
+  {
+   "fieldname": "salto_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "NORMAL",
+   "fieldname": "conclusion_vitales",
+   "fieldtype": "Select",
+   "label": "CONCLUSI\u00d3N DE LAS FUNCIONES VITALES",
+   "options": "NORMAL\nANORMAL"
+  },
+  {
+   "fieldname": "salto_17",
+   "fieldtype": "Section Break",
+   "label": "VACUNAS"
+  },
+  {
+   "default": "1",
+   "fieldname": "n_vacunas",
+   "fieldtype": "Select",
+   "label": "N\u00b0 DE VACUNAS",
+   "options": "0\n1\n2\n3\n4"
+  },
+  {
+   "fieldname": "salto_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "INCOMPLETO",
+   "fieldname": "vacunas_completas_sars_cov2",
+   "fieldtype": "Select",
+   "label": "VACUNAS COMPLETAS SARS COV2",
+   "options": "FALTA\nINCOMPLETO\nCOMPLETO\nFALTA"
+  },
+  {
+   "default": "NO",
+   "fieldname": "uso_de_lentes",
+   "fieldtype": "Select",
+   "label": "USO DE LENTES",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "enfermedad_visual",
+   "fieldtype": "Long Text",
+   "label": "ENFERMEDAD VISUAL"
+  },
+  {
+   "fieldname": "salto_19",
+   "fieldtype": "Section Break",
+   "label": "EXAMEN OFTALMOLOGICO"
+  },
+  {
+   "fieldname": "of_cerca",
+   "fieldtype": "Section Break",
+   "label": "OFTALMOLOGICO CERCA"
+  },
+  {
+   "fieldname": "salto_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "salto_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "salto_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "20/",
+   "fieldname": "c_sin_lentes_od",
+   "fieldtype": "Small Text",
+   "label": "C SIN LENTES OD"
+  },
+  {
+   "default": "20/",
+   "fieldname": "c_sin_lentes_oi",
+   "fieldtype": "Small Text",
+   "label": "C SIN LENTES OI"
+  },
+  {
+   "default": "20/",
+   "fieldname": "c_con_lentes_od",
+   "fieldtype": "Small Text",
+   "label": "C CON LENTES OD"
+  },
+  {
+   "default": "20/",
+   "fieldname": "c_con_lentes_oi",
+   "fieldtype": "Small Text",
+   "label": "C CON LENTES OI"
+  },
+  {
+   "fieldname": "salto_23",
+   "fieldtype": "Section Break",
+   "label": "OFTALMOLOGICO LEJOS"
+  },
+  {
+   "default": "20/",
+   "fieldname": "l_sin_lentes_od",
+   "fieldtype": "Small Text",
+   "label": "L SIN LENTES OD"
+  },
+  {
+   "fieldname": "salto_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "20/",
+   "fieldname": "l_sin_lentes_oi",
+   "fieldtype": "Small Text",
+   "label": "L SIN LENTES OI"
+  },
+  {
+   "fieldname": "salto_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "20/",
+   "fieldname": "l_con_lentes_od",
+   "fieldtype": "Small Text",
+   "label": "L CON LENTES OD"
+  },
+  {
+   "default": "20/",
+   "fieldname": "salto_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "20/",
+   "fieldname": "l_con_lentes_oi",
+   "fieldtype": "Small Text",
+   "label": "L CON LENTES OI"
+  },
+  {
+   "fieldname": "salto_27",
+   "fieldtype": "Section Break",
+   "label": "OFTALMOLOGICO RESULTADOS"
+  },
+  {
+   "fieldname": "examen_externo",
+   "fieldtype": "Select",
+   "label": "EXAMEN EXTERNO",
+   "options": "NORMAL\nANORMAL\nCATARATA"
+  },
+  {
+   "fieldname": "conclusiones_de_oftalmologia",
+   "fieldtype": "Small Text",
+   "label": "CONCLUSIONES DE OFTALMOLOGIA",
+   "read_only": 1
+  },
+  {
+   "fieldname": "test_de_colores_o_ishihara",
+   "fieldtype": "Select",
+   "label": "TEST DE COLORES O ISHIHARA",
+   "options": "NORMAL\nANORMAL\nDISCROMATOPSIA\nN/C\nNORMAL 12/14\nNORMAL 13/14"
+  },
+  {
+   "fieldname": "recomendaciones_de_oftalmologia",
+   "fieldtype": "Small Text",
+   "label": "RECOMENDACIONES DE OFTALMOLOGIA",
+   "read_only": 1
+  },
+  {
+   "fieldname": "salto_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "salto_29",
+   "fieldtype": "Section Break",
+   "label": "AUDIOLOGICO RESULTADOS"
+  },
+  {
+   "fieldname": "antecedentes_auditivo",
+   "fieldtype": "Small Text",
+   "label": "ANTECEDENTES DE PROBLEMA AUDITIVO"
+  },
+  {
+   "fieldname": "salto_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "conclusion_de_audiologia",
+   "fieldtype": "Small Text",
+   "label": "CONCLUSION DE AUDIOLOGIA"
+  },
+  {
+   "fieldname": "salto_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "recomendaciones_de_audiologia",
+   "fieldtype": "Small Text",
+   "label": "RECOMENDACIONES DE AUDIOLOGIA"
+  },
+  {
+   "fieldname": "salto_32",
+   "fieldtype": "Section Break",
+   "label": "EXAMEN DE MUSCULOESQUELETICO"
+  },
+  {
+   "fieldname": "antecedentes_ex",
+   "fieldtype": "Long Text",
+   "label": "ANTECEDENTES"
+  },
+  {
+   "fieldname": "salto_33",
+   "fieldtype": "Section Break",
+   "label": "FLEXIBILIDAD"
+  },
+  {
+   "fieldname": "cadera",
+   "fieldtype": "Select",
+   "label": "CADERA",
+   "options": "0\n1\n2\n3\n4"
+  },
+  {
+   "fieldname": "total_puntos_flex",
+   "fieldtype": "Small Text",
+   "label": "TOTAL PUNTOS FLEX",
+   "read_only": 1
+  },
+  {
+   "fieldname": "salto_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "muslo",
+   "fieldtype": "Select",
+   "label": "MUSLO",
+   "options": "0\n1\n2\n3\n4"
+  },
+  {
+   "fieldname": "abdomen_lateral",
+   "fieldtype": "Select",
+   "label": "ABDOMEN LATERAL",
+   "options": "0\n1\n2\n3\n4"
+  },
+  {
+   "fieldname": "salto_35",
+   "fieldtype": "Section Break",
+   "label": "RANGOS ARTICULARES"
+  },
+  {
+   "fieldname": "abducci\u00f3n_de_hombro_normal_0_a_180",
+   "fieldtype": "Select",
+   "label": "ABDUCCI\u00d3N DE HOMBRO (NORMAL 0 a 180)",
+   "options": "0\n1\n2\n3\n4"
+  },
+  {
+   "fieldname": "abducci\u00f3n_de_hombro_normal_0_a_80",
+   "fieldtype": "Select",
+   "label": "ABDUCCI\u00d3N DE HOMBRO (NORMAL 0 a 80)",
+   "options": "0\n1\n2\n3\n4"
+  },
+  {
+   "fieldname": "total_puntos_rangos",
+   "fieldtype": "Small Text",
+   "label": "TOTAL PUNTOS RANGOS",
+   "read_only": 1
+  },
+  {
+   "fieldname": "salto_36",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rotaci\u00f3n_externa_0_a_90",
+   "fieldtype": "Select",
+   "label": "ROTACI\u00d3N EXTERNA 0 a 90",
+   "options": "0\n1\n2\n3\n4"
+  },
+  {
+   "fieldname": "rotaci\u00f3n_externa_de_hombro_interna",
+   "fieldtype": "Select",
+   "label": "ROTACI\u00d3N EXTERNA DE HOMBRO INTERNA",
+   "options": "0\n1\n2\n3\n4"
+  },
+  {
+   "fieldname": "flexibilidad_fuerza_abdomen",
+   "fieldtype": "Select",
+   "label": "FLEXIBILIDAD/ FUERZA ABDOMEN",
+   "options": "0\n1\n2\n3\n4"
+  },
+  {
+   "fieldname": "salto_37",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "COLUMNA VERTEBRAL"
+  },
+  {
+   "fieldname": "desviacion_del_eje_lateral",
+   "fieldtype": "Select",
+   "label": "DESVIACION DEL EJE LATERAL",
+   "options": "0\n1\n2\n3\n4"
+  },
+  {
+   "fieldname": "dandy",
+   "fieldtype": "Select",
+   "label": "DANDY",
+   "options": "0\n1\n2\n3\n4"
+  },
+  {
+   "fieldname": "lasegue",
+   "fieldtype": "Select",
+   "label": "LASEGUE",
+   "options": "0\n1\n2\n3\n4"
+  },
+  {
+   "fieldname": "contractura_muscular",
+   "fieldtype": "Select",
+   "label": "CONTRACTURA MUSCULAR",
+   "options": "0\n1\n2\n3\n4"
+  },
+  {
+   "fieldname": "test_de_adams",
+   "fieldtype": "Select",
+   "label": "TEST DE ADAMS",
+   "options": "0\n1\n2\n3\n4"
+  },
+  {
+   "fieldname": "salto_38",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "salto_39",
+   "fieldtype": "Section Break",
+   "label": "RESULTADOS MUSCULOESQUELETICO"
+  },
+  {
+   "fieldname": "conclusiones_de_musculoesqueletico",
+   "fieldtype": "Small Text",
+   "label": "CONCLUSIONES DE MUSCULOESQUELETICO"
+  },
+  {
+   "fieldname": "salto_40",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "recomendaciones_de_musculoesqueletico",
+   "fieldtype": "Small Text",
+   "label": "RECOMENDACIONES DE MUSCULOESQUELETICO"
+  },
+  {
+   "fieldname": "salto_41",
+   "fieldtype": "Section Break",
+   "label": "RESULTADOS GENERALES"
+  },
+  {
+   "default": "PENDIENTE",
+   "fieldname": "aptitud_laboral",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "APTITUD LABORAL",
+   "options": "PENDIENTE\nCONFORME\nCONFORME CON RESTRICCION\nNO CONFORME"
+  },
+  {
+   "fieldname": "observacion",
+   "fieldtype": "Small Text",
+   "label": "OBSERVACION"
+  },
+  {
+   "fieldname": "salto_42",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "recomendaciones",
+   "fieldtype": "Small Text",
+   "label": "RECOMENDACIONES",
+   "read_only": 1
+  },
+  {
+   "fieldname": "alcohol",
+   "fieldtype": "Select",
+   "label": "ALCOHOL",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "practica_algun_deporte",
+   "fieldtype": "Select",
+   "label": "PRACTICA ALGUN DEPORTE",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "id_de_oferta",
+   "fieldtype": "Data",
+   "label": "ID DE OFERTA",
+   "read_only": 1
+  },
+  {
+   "default": "PENDIENTE",
+   "fieldname": "estado_triaje",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_standard_filter": 1,
+   "label": "Estado",
+   "options": "PENDIENTE\nREALIZADO"
+  },
+  {
+   "fieldname": "buscar_informaci\u00f3n",
+   "fieldtype": "Button",
+   "label": "Buscar Informaci\u00f3n"
+  },
+  {
+   "fieldname": "monitoreo_de_presion_arterial_salud_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "MONITOREO DE PRESION ARTERIAL"
+  },
+  {
+   "fieldname": "pa1_monitoreo",
+   "fieldtype": "Data",
+   "label": "P.A.1"
+  },
+  {
+   "fieldname": "pa2_monitoreo",
+   "fieldtype": "Data",
+   "label": "P.A.2"
+  },
+  {
+   "fieldname": "pa3_monitoreo",
+   "fieldtype": "Data",
+   "label": "P.A.3"
+  },
+  {
+   "fieldname": "pa4_monitoreo",
+   "fieldtype": "Data",
+   "label": "P.A.4"
+  },
+  {
+   "fieldname": "pa5_monitoreo",
+   "fieldtype": "Data",
+   "label": "P.A.5"
+  },
+  {
+   "fieldname": "pa6_monitoreo",
+   "fieldtype": "Data",
+   "label": "P.A.6"
+  },
+  {
+   "fieldname": "column_break_82",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_84",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "equipamiento_epp_section",
+   "fieldtype": "Section Break",
+   "label": "Equipamiento EPP"
+  },
+  {
+   "columns": 3,
+   "fieldname": "botas",
+   "fieldtype": "Select",
+   "label": "Botas",
+   "options": "\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45"
+  },
+  {
+   "columns": 3,
+   "fieldname": "polo",
+   "fieldtype": "Select",
+   "label": "Polo",
+   "options": "\nS\nM\nL\nXL"
+  },
+  {
+   "columns": 3,
+   "fieldname": "pantalon",
+   "fieldtype": "Select",
+   "label": "Pantal\u00f3n",
+   "options": "\nS\nM\nL\nXL"
+  },
+  {
+   "columns": 3,
+   "fieldname": "chaleco",
+   "fieldtype": "Select",
+   "label": "Chaleco",
+   "options": "\nS\nM\nL\nXL"
+  },
+  {
+   "fieldname": "column_break_157",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_159",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_161",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "adjuntar_vacuna_sars_cov2",
+   "fieldtype": "Text",
+   "hidden": 1,
+   "label": "VACUNAS SARS COV2"
+  },
+  {
+   "fieldname": "antecedentes_musculoesqueletico",
+   "fieldtype": "Select",
+   "label": "Antecedentes musculoesqueletico",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "antecedentes_auditivos",
+   "fieldtype": "Select",
+   "label": "TIENE ANTECEDENTES DE PROBLEMA AUDITIVO",
+   "options": "NO\nSI"
+  },
+  {
+   "fieldname": "conclusiones_de_oftalmologia_select",
+   "fieldtype": "Select",
+   "label": "CONCLUSIONES DE OFTALMOLOGIA",
+   "options": "\nEMETROPE\nAMETROPIA NO CORREGIDA\nAMETROPIA CORREGIDA"
+  },
+  {
+   "fieldname": "recomendaciones_de_oftalmologia_select",
+   "fieldtype": "Select",
+   "label": "RECOMENDACIONES DE OFTALMOLOGIA",
+   "options": "\nUSO DE LENTES PERMANENTES\nCONTROL ANUAL\nREEVALUACION CON LENTES CORRECTORES\nPASAR CONTROL POR OFTALMOLOGIA"
+  },
+  {
+   "fieldname": "recomendaciones_select",
+   "fieldtype": "Select",
+   "label": "RECOMENDACIONeS",
+   "options": "\nUSO DE LENTES PERMANENTES\nCONTROL ANUAL\nREEVALUACION CON LENTES CORRECTORES\nPASAR CONTROL POR OFTALMOLOGIA\nCONTROL DE PESO - HASTA VALORES NORMALES"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-21 17:07:41.465662",
+ "modified_by": "Administrator",
+ "module": "Healthcare",
+ "name": "Triaje de Postulante 2",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
